@@ -1,3 +1,6 @@
+//Divisors of an Integer  | Sum of Divisors of an Integer || Number of divisors
+//-----------------------------------------------------------------------------
+
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
