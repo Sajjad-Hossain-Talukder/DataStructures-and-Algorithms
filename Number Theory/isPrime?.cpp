@@ -1,9 +1,6 @@
 //prime or notPrime
 
-
-
 //------------------
-
 
 #include<bits/stdc++.h>
 #define ll long long
