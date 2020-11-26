@@ -1,4 +1,5 @@
 // Time Complexity : O(sqrt(n)) . For get Time Complexity : O(logn) , use Sieve .
+// All prime ..( input : 100  = output : 2 * 2 * 5 * 5 ) 
 
 vector<ll>v;
 void primeFactor ( ll n ){
