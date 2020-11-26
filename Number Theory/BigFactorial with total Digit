@@ -1,3 +1,6 @@
+//Time Complexity : O ( n )
+//-------------------------
+
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
@@ -8,18 +11,16 @@ vector<int>factorial;
 void multi ( int  m){
     
    int  d = factorial.size() , carry = 0 ,prod ;
-   
+
    for(int i = 0 ; i<d ; i++){
         prod = factorial[i]*m+carry;
         factorial[i]= prod%10;
         carry = prod/10;
    }
-   
    while(carry){
      factorial.pb(carry%10);
      carry/=10;
    }
-   
 }
 
 int main(){
