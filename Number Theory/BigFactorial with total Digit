@@ -1,5 +1,9 @@
 //Time Complexity : O ( n )
-//-------------------------
+//Factorials
+        Factorial of a number
+        Last n digits of  a factorial
+        Number of digits of a factorial
+//----------------------------------------
 
 #include<bits/stdc++.h>
 #define ll long long
