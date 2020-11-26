@@ -70,11 +70,11 @@ int main(){
 
     for(int i = 0 ; i<d; i++ )
         nod *=(occurence[i]+1);
-       
-       
-       
+
        d=nod/2;
 
+// matrix multiplication calling
+//---------------------------------
     for(int i = 1 ; i< d ; i++)
         multi(n);
     
@@ -83,6 +83,7 @@ int main(){
 
    reverse(vec.begin(),vec.end());
 
+//Result
    for(auto a : vec )
     cout<<a;
 
