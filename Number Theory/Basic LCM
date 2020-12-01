@@ -1,4 +1,5 @@
 // a * b = lcm(a,b) * gcd(a,b) 
+
 ---------------------------------
 
 #include<bits/stdc++.h>
