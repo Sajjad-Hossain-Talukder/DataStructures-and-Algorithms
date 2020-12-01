@@ -1,6 +1,7 @@
 //Time Complexity: O(Log min(a, b))
 //worst case : a, b are consecutive Fibonacci number 
 // gcd(13,8) = gcd( 8,5) = gcd ( 5,3 ) = gcd ( 3,2) = gcd ( 2,1) = gcd(1,0) = 1
+// gcd(x,0 ) = x 
 //---------------------------
 //recursive
 //---------------------------
