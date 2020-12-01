@@ -1,6 +1,10 @@
 Time Complexity :  O(nloglogn)
 using  Sieve of Eratosthenes
-//------------------------------
+
+There is a property called Divisor Sum Property which also help us to find ETF from 1 to N
+but its complexity is higher and it is :  O ( logn)
+Check : CP -Algorithms
+//---------------------------------------------------------------------------------------------
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
