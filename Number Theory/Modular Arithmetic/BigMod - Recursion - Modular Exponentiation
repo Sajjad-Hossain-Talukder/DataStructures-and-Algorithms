@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+using namespace std;
+
+ll bigmod ( ll a , ll b , ll m){
+    if(!b) return 1%m ;
+    ll ans = bigmod(a,b/2,m);
+    ans = (ans*ans)%m;
+    if(b&1) ans = (ans*a)%m;
+    return ans ;
+}
+
+int main(){
+    ll a,b,m,d;
+    cin>>a>>b>>m;
+    d = bigmod(a,b,m);
+    cout<<d<<endl;
+return 0;
+}
+
