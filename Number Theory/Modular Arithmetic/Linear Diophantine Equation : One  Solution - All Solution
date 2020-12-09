@@ -3,7 +3,9 @@
   To check , is it solveable or not?,  we first have to get the gcd of( a,b) .
   If gcd of a & b divides C , then this equation is solveable.
   
-  A LDE can have multiple Solution.in this code we just determined one solution. 
+  A LDE can have multiple Solution.
+  Note that if a or b is 0, then the problem only has one solution. We don't consider this case here.
+  
   Base Case : 
       a * x + b * y = gcd ( a,b ) = g   -------------(i)
       g * 1 + 0 * 0 = g                 ------------(ii)
