@@ -9,6 +9,10 @@
       g * 1 + 0 * 0 = g                 ------------(ii)
    Compare i and ii , base case will found .
    Link : https://cp-algorithms.com/algebra/linear-diophantine-equation.html
+   For All Solution : 
+            int x1 = x + ( k*b/g);
+            int y1 = y - ( k*a/g);
+            in where , k = (0 , infinity)
 */
 
 #include<bits/stdc++.h>
