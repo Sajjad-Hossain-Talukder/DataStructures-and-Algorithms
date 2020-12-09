@@ -8,6 +8,7 @@
       a * x + b * y = gcd ( a,b ) = g   -------------(i)
       g * 1 + 0 * 0 = g                 ------------(ii)
    Compare i and ii , base case will found .
+   Link : https://cp-algorithms.com/algebra/linear-diophantine-equation.html
 */
 
 #include<bits/stdc++.h>
