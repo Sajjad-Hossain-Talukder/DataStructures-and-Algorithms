@@ -12,7 +12,7 @@
    For All Solution : 
             int x1 = x + ( k*b/g);
             int y1 = y - ( k*a/g);
-            in where , k = (0 , infinity)
+            in where , k = (negative infinity , infinity)
 */
 
 #include<bits/stdc++.h>
