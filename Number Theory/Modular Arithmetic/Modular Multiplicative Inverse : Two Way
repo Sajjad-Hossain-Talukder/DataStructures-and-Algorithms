@@ -7,12 +7,20 @@
 এখন প্রশ্ন আসলো কিভাবে আমরা ইনভার্স করবো ?  ইনভার্স কি করা যাবে  ?
 
 ইনভার্স করা যাবে শুধুমাত্র যখন  a & m  কো প্রাইম হবে।  কো প্রাইম না হলে সম্ভব নয়। 
-দুই ভাবে করা যাবে । একটা হচ্ছে  ইউলার ফাঙ্কশন ব্যবহার করে।  
+দুই ভাবে করা যাবে । একটা হচ্ছে  ইউলার ফাঙ্কশন &  Fermat’s Little theorem ব্যবহার করে।  
     
     ইউলার ফাঙ্কশন  :  a ^ (m-2) % m = answer .
      আমরা বিগমড় এর সাহায্যে এটা সল্ভ করবো ।
 
 আরেকটা হচ্ছে  ইউক্লিডিয়ন এলগোরিদমস এর সাহায্যে  : 
+
+Time Complexity: O(Log m)
+
+We have discussed three methods to find multiplicative inverse modulo m. 
+1) Naive Method, O(m) 
+2) Extended Euler’s GCD algorithm, O(Log m) [Works when a and m are coprime] 
+3) Fermat’s Little theorem, O(Log m) [Works when ‘m’ is prime]
+
 Check out Following Code : 
 
 */
