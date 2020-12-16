@@ -1,4 +1,5 @@
 /*
+
 x =  ( ∑ (rem[i]*prod_div_num[i]*mod_inv[i]) ) % prod
    Where 0 <= i <= n-1
 
