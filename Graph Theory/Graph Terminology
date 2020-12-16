@@ -1,0 +1,23 @@
+A graph consists of nodes and edges.
+n = nodes
+m = egdes
+path : path leads node "a" to node "b" through using one or 
+       multiple egdes .
+       The length of path = number of edges one node to another .
+                          = sum of weigt of each edges involve in path ( weighted graph)
+                          
+Cycle : if first and last node is same .
+
+Simple Path : if each node appears at most once in the path .
+              so ,we can tell cycle can't be a cycle cause at cycle first and last node is same.
+            
+Connected Graph : if any there is a path between any two nodes. That means there is no single isolated node.
+                   if there is single isolated nodes available on graph that is not a connected graph.
+                   
+The connected components of a graph are called its components.
+
+Tree : A connected graph consists of n nodes and (n-1) edges .
+
+Directed Graph : A graph is directed if the edges can be traversed in one direction only.
+weighted Graph : A graph is weighted if every edges assigned a weight which can be it distance or anyting else.
+
