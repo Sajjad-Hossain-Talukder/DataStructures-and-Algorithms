@@ -115,63 +115,71 @@ It is similar to an Array of Vectors but with dynamic properties.
     
         vector<vector<int> > vec( size ,vector<int>(size));   
     Example :
+    
+	vector< vector<int> > vec ( 100 , vector<int>(100) );  
+	100 row
+	100 coloumn
+	Initialized -Zero.
 
-vector<vector<int>>vec(100,vector<int>(100));  
-100 row
-100 coloumn
-Initialized -Zero.
-
-To traverse:
- for (int i = 0; i < vect.size(); i++) 
-for (int j = 0; j < vect[i].size(); j++)
+	To traverse:
+	 for (int i = 0; i < vec.size(); i++) 
+		for (int j = 0; j < vec[i].size(); j++)
 
 Actually 2D vector is nothing but a vector of another vector.
 
-vector< vector<data_type> > vec;
+		vector< vector<data_type> > vec;
 
-Vector [0] = vector< type > v1;
-Vector [1] = vector< type > v2;
-Vector [2] = vector< type > v3;
-Vector [3] = vector< type > v4;
-Vector [4] = vector< type > v5;
+		Vector [0] = vector< type > v1;
+		Vector [1] = vector< type > v2;
+		Vector [2] = vector< type > v3;
+		Vector [3] = vector< type > v4;
+		Vector [4] = vector< type > v5;
 
-vector< type > v1;  has so many element.
+		vector< type > v1,v2,v3 and so on individually has so many element.
+
 Array of Vectors :
-array of vectors is two dimensional array with fixed number of rows where each row is vector of variable length. Each index of array stores a vector which can be traversed and accessed using iterators.
+==================
+
+array of vectors is two dimensional array with fixed number of rows where each row is 
+vector of variable length. Each index of array stores a vector which can be traversed 
+and accessed using iterators.
+
 Syntex :
-vector< data_type > v[ size ];
-Let’s assume size = 3 ,so row = 3(fixed)
+	vector< data_type > v[ size ];
+	Let’s assume size = 3 ,so row = 3(fixed)
  
-V[o]<---vector <data_type>v1  (vary )
-V[1]<---vector <data_type>v2  (vary )
-V[2]<---vector <data_type>v3  (vary )
+		V[o]<---vector <data_type>v1  (vary )
+		V[1]<---vector <data_type>v2  (vary )
+		V[2]<---vector <data_type>v3  (vary )
 
-Insertion :
- for i in [0, n) {
- 	 A[i].push_back(35)
-	} -- PYthon_code
-Traversal :
-for i in [0, n) {
-   for(iterator it = A[i].begin(); 
-       it!=A[i].end(); it++) {
-      print(*it)  }  }
-Specifying a default value for the Vector:
-
-vector <int>v (size ,defaultvalue );
+	Insertion :
+		 for i in [0, n) {
+			 A[i].push_back(35)
+			} -- PYthon_code
+	Traversal :
+		for i in [0, n) {
+		   for(iterator it = A[i].begin(); 
+		       it!=A[i].end(); it++) {
+		      print(*it)  }  
+		      }
+	Specifying a default value for the Vector:
+	vector <int>v (size ,defaultvalue );
 
 Mazimum size declareable :
-
 			Vector<int>v(108)
 
 upper_bound And lower_bound() :
-lower_bound : returns an iterator pointing to the first element in the range [first,last) which has a value not less than ‘val’.
-If the value is out of vector ,it returns vector.end() .
+===============================
 
-Iterator = lower_bound ( Iterator first, Iterator last , const val )
+	lower_bound : returns an iterator pointing to the first element in the range [first,last) which has a value not less than ‘val’.
+				If the value is out of vector , it returns vector.end() .
 
- 
-upper_bound : returns an iterator pointing to the first element in the range [first,last) which has a value greater than ‘val’.
-If the value is out of vector or equal to greatest element  , in this case , it return vector.end() . 
+			Iterator it = lower_bound ( Iterator first, Iterator last , const val )
 
-Iterator = upper_bound ( Iterator first, Iterator last , const val)
+	upper_bound : returns an iterator pointing to the first element in the range [first,last) which has a value greater than ‘val’.
+			If the value is out of vector or equal to greatest element  , in this case , it return vector.end() . 
+
+			Iterator it2 = upper_bound ( Iterator first, Iterator last , const val)
+			
+			
 
