@@ -26,7 +26,8 @@ QUEUE: (LIFO)
 				 pop() function deletes the first element of the queue.
 
 DEQUE:
-Double ended queues are sequence containers with the feature of expansion and contraction on both the ends.
+======
+		Double ended queues are sequence containers with the feature of expansion and contraction on both the ends.
 
 			Insertation Function :
 			Insert()  :
