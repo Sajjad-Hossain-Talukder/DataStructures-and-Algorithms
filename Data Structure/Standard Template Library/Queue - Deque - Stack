@@ -53,41 +53,43 @@ Double ended queues are sequence containers with the feature of expansion and co
 						begin()--return an iterator pointing to the first element of the deque container.
 						end() --return an iterator pointing to the last element of the deque container.
 						    Dq.begin()  ; 
-						 	Dq.end()  ;
+						    Dq.end()  ;
 
 
 			3.	rbegin() & rend() :
-			rbegin()  --which returns a reverse iterator which points to the last element of the deque (i.e., its reverse beginning).
-			rend()  -- vice-versa of rbegin() :
-			   Dq.rbegin() 
-			 Dq.rend();
+						rbegin()  --which returns a reverse iterator which points to the last element of 
+								the deque (i.e., its reverse beginning).
+						rend()  -- vice-versa of rbegin() :
+						   Dq.rbegin() 
+						   Dq.rend();
 			4.	cbegin() , cend() , crbegin() ,crend() . ----constant..can’t be changed
-			Accessing element :
+			
+	Accessing element :
 			1 . at()
-			dq . at( pos );
+					dq . at( pos );
 			2. operator[]
-			dq [ pos ];
+					dq [ pos ];
 
-			Difference  : at() function throws an out-of-range exception when the position is not in the bounds of the size of deque, while  operator[] causes undefined behaviour.
-			Other’s Function :
+			Difference  : at() function throws an out-of-range exception when the position is not in the 
+					bounds of the size of deque, while  operator[] causes undefined behaviour.
+	
+	Other’s Function :
 			swap() :  swap two deque with each other.   deque1 . swap ( deque2 )
-			swap( deque1 , deque2 )
+					swap( deque1 , deque2 )
 			operator ‘ =’ : this operator assign one deque’s value to others .
-			Deque1 = { 1 , 2 , 3 };
-			Deque2 = { 4 , 5 , 6 };
-			Deque1 = Deque2;
-			Deque1 = { 4 , 5 , 6 }; //new assignment
+					Deque1 = { 1 , 2 , 3 };
+					Deque2 = { 4 , 5 , 6 };
+					Deque1 = Deque2;
+					Deque1 = { 4 , 5 , 6 }; //new assignment
 
 			empty() :    deque . empty() ;
-			clear() :       deque.clear() ;
+			clear() :    deque.clear() ;
 			erase() :   it erase a particular element
-			range of a deque.
-			erase ( iterator position );
-			erase( starting iter ,ending iter);
+					range of a deque.
+						erase ( iterator position );
+						erase( starting iter ,ending iter);
 			size() :      deque . size() ;
 			resize(): it handle the size of deque. 
 			resize ( n ) ;
 			n = new size of deque.
-			max_size() :  dq.max_size() ;
-			return maximum size of
-			Deque.
+			max_size() :  dq.max_size() ; return maximum size of Deque.
