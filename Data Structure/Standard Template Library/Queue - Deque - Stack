@@ -1,50 +1,30 @@
-QUEUE: (LIFO)
- 
-empty() – Returns whether the queue is empty.  V.empty();
-
-size() – Returns the size of the queue.   V.size();
-
-swap() : Exchange the contents of two queues but the queues must be of same type, although sizes may differ.
-	     queue1.swap(queue2)
-            swap(queue1, queue2)
-
-emplace() in C++ STL: Insert a new element in the end of the queue.
- queuename.emplace(value)
-
-front() and back() – 
-front() function returns a reference to the first element of the queue.    V.front();
- back() function returns a reference to the last element of the queue.    V.back();
-push(g) and pop() –
- push() function adds the element ‘g’ at the end of the queue.
- pop() function deletes the first element of the queue.
-
-
-
-
-
-
-
 STACK:  (FIFO)
- 
-empty() – Returns whether the stack is empty.  s.empty ()
-size() – Returns the size of the stack .   			s.size();
-top() – Returns a reference to the top most element of the stack . s.top();
-push(g) – Adds the element ‘g’ at the top of the stack .   s.push();
-pop() – Deletes the top most element of the stack . s.pop();
-All Time Complexity : O(1)
+==============
+			empty() – Returns whether the stack is empty.  s.empty ()
+			size() – Returns the size of the stack .   			s.size();
+			top() – Returns a reference to the top most element of the stack . s.top();
+			push(g) – Adds the element ‘g’ at the top of the stack .   s.push();
+			pop() – Deletes the top most element of the stack . s.pop();
+			All Time Complexity : O(1)
 
+QUEUE: (LIFO)
+============= 
+		empty() – Returns whether the queue is empty.  V.empty();
+		size() – Returns the size of the queue.   V.size();
 
+		swap() : Exchange the contents of two queues but the queues must be of same type, although sizes may differ.
+			     queue1.swap(queue2)
+			    swap(queue1, queue2)
 
+		emplace() in C++ STL: Insert a new element in the end of the queue.
+		 queuename.emplace(value)
 
-
-
-
-
-
-
-
-
-
+		front() and back() – 
+		front() function returns a reference to the first element of the queue.    V.front();
+		 back() function returns a reference to the last element of the queue.    V.back();
+		push(g) and pop() –
+		 push() function adds the element ‘g’ at the end of the queue.
+		 pop() function deletes the first element of the queue.
 
 DEQUE:
 Double ended queues are sequence containers with the feature of expansion and contraction on both the ends.
