@@ -57,3 +57,19 @@ Checkout code :
             }
             return 0;
         }
+smaple input : 
+                8 8
+                1 2
+                1 3
+                2 3
+                4 5
+                4 6
+                5 7
+                6 7
+                8 8
+sample output : 
+                Total components : 3
+                And they are : 
+                1 2 3 
+                4 5 7 6 
+                8 
