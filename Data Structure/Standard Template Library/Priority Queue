@@ -10,8 +10,7 @@ queue has a priority {fixed order}).
 
                 using namespace std;
 
-                void showpq(priority_queue<int> gq)
-                {
+                void showpq(priority_queue<int> gq){
                     priority_queue<int> g = gq;
                     while (!g.empty()) {
                         cout << '\t' << g.top();
@@ -20,8 +19,7 @@ queue has a priority {fixed order}).
                     cout << '\n';
                 }
 
-                int main()
-                {
+                int main(){
                     priority_queue<int> gquiz;
                     gquiz.push(10);
                     gquiz.push(30);
@@ -60,10 +58,9 @@ gquiz.pop() :     20    10    5    1
                 using namespace std;
 
                 void showpq(
-                    priority_queue<int, vector<int>, greater<int> > gq)
-                {
-                    priority_queue<int, vector<int>, 
-                                                greater<int> > g = gq;
+                    priority_queue<int, vector<int>, greater<int> > gq){
+                    
+                    priority_queue<int, vector<int>, greater<int> > g = gq;
                     while (!g.empty()) {
                         cout << '\t' << g.top();
                         g.pop();
@@ -73,8 +70,7 @@ gquiz.pop() :     20    10    5    1
 
                 int main()
                 {
-                    priority_queue<int, vector<int>,  
-                                       greater<int> > gquiz;
+                    priority_queue<int, vector<int>, greater<int> > gquiz;
                     gquiz.push(10);
                     gquiz.push(30);
                     gquiz.push(20);
@@ -102,12 +98,15 @@ gquiz.pop() :     5    10    20    30
 Note : The above syntax may be difficult to remember, so in case of numeric values, we can multiply the values with -1 and use max heap to get the effect of min heap.
 Methods of priority queue are: 
 
-priority_queue::empty() in C++ STL– empty() function returns whether the queue is empty.
-priority_queue::size() in C++ STL– size() function returns the size of the queue.
-priority_queue::top() in C++ STL– Returns a reference to the top most element of the queue
-priority_queue::push() in C++ STL– push(g) function adds the element ‘g’ at the end of the queue.
-priority_queue::pop() in C++ STL– pop() function deletes the first element of the queue.
-priority_queue::swap() in C++ STL– This function is used to swap the contents of one priority queue with another priority queue of same type and size.
-priority_queue::emplace() in C++ STL – This function is used to insert a new element into the priority queue container, the new element is added to the top of the priority queue.
+      empty() in C++ STL– empty() function returns whether the queue is empty.
+      size() in C++ STL– size() function returns the size of the queue.
+      top() in C++ STL– Returns a reference to the top most element of the queue
+      push() in C++ STL– push(g) function adds the element ‘g’ at the end of the queue.
+      pop() in C++ STL– pop() function deletes the first element of the queue.
+      swap() in C++ STL– This function is used to swap the contents of one priority queue with another priority queue of same type and size.
+      emplace() in C++ STL – This function is used to insert a new element into the priority queue container, the new element is added to the top of the priority queue.
 priority_queue value_type in C++ STL– Represents the type of object stored as an element in a priority_queue. It acts as a synonym for the template parameter.
+
+
+
 
