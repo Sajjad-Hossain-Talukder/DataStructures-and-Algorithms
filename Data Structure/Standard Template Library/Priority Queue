@@ -1,5 +1,9 @@
 Priority Queue in C++ Standard Template Library (STL):
 ------------------------------------------------------
+// N.B :  priority Queue basically refers to the max priority queue . that means first element is always larger One .
+// To make a min priority queue use this line only in declaration :
+                                            
+                                            priority_queue< data_type , vector < data_type > , greater< data_type > > que_name ;
 
 Priority queues are a type of container adapters, specifically designed such that the first element of the queue is the 
 greatest of all elements in the queue and elements are in non increasing order (hence we can see that each element of the 
