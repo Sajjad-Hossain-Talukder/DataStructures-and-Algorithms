@@ -1,12 +1,16 @@
-Explanation taken : https://www.youtube.com/watch?v=NjJetq78wh4&t=53s      
+Explanation taken :   https://www.youtube.com/watch?v=7GoDDj3onfI  || https://www.youtube.com/watch?v=wQIb1NonMIM&t=922s
+
 ব্যাখ্যা : আমরা শর্টেস্ট পাথ খুঁজে পেতে চাই। যদি গ্রাফে কোনো Negative Edge এবং Negative Cycle না থাকে তাইলে 
 Dijkstra's Algorithms ব্যবহার করবো। এইখানে আমরা min Priority Queue ব্যবহার করবো।  min Priority Queue তে কোনো 
 ভ্যালু রাখলে সেটি Non - increasing Order এ সাজানো থাকে।  আমরা কোনো নোড থেকে এর adjacent node খুঁজবো তখন 
 ওই নোড থেকে সবচাইতে কম কস্টের নোড এ যাবো min Priority Queue ব্যবহার করে।  কোড টা ভালো করে দেখলে বুঝা যাবে আশা করি। 
 
  min Priority Queue    =          priority_queue < pair <int,int> , vector< pair < int, int >> , greater< pair <int,int>>  > pq ;
+ 
+//Best Simulation Explanation :  https://www.educative.io/edpresso/how-to-implement-dijkstras-algorithm-in-cpp
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                  
-                 #include<bits/stdc++.h>
+                   #include<bits/stdc++.h>
                    #define ll long long
                    #define pb push_back
                    using namespace std;
@@ -55,13 +59,14 @@ Dijkstra's Algorithms ব্যবহার করবো। এইখানে �
                            }
                        }
 
-                       for ( int i = 0 ; i< x-1 ; i++)
+                       for ( int i = 1 ; i<= node ; i++){
+                          cout<<i<<" dist :  "<<dist[i]<<endl;
                          
                    return 0;
                    }
 
 
-                  /*
+ /*
                   5 6
                   1 2 2
                   2 3 1
@@ -69,6 +74,4 @@ Dijkstra's Algorithms ব্যবহার করবো। এইখানে �
                   1 4 3
                   4 5 2
                   5 3 5
-
-
-                  |*/
+*/
