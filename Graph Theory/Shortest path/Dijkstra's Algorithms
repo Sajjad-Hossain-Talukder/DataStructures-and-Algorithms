@@ -7,63 +7,59 @@ Dijkstra's Algorithms ব্যবহার করবো। এইখানে �
  min Priority Queue    =          priority_queue < pair <int,int> , vector< pair < int, int >> , greater< pair <int,int>>  > pq ;
                  
                  #include<bits/stdc++.h>
-                  #define ll long long
-                  #define pb push_back
-                  using namespace std;
+                   #define ll long long
+                   #define pb push_back
+                   using namespace std;
 
-                  vector< pair<int,int> >graph[1000];
-                  int visited[1000] ,dist[1000];
+                   int main(){
+                       int node , edge , x , y , c , nd = 1 , cost ;
+                       cin >> node >> edge ;
 
+                       vector< pair <int, int > > graph[ node + 5 ];
+                       vector<int> ans ;
 
-                  int main(){
+                       for ( int  i = 1 ; i <= edge ; i++ ){
+                           cin >> x >> y >> c ;
+                           graph[x] . pb ( { y , c });
+                          // graph[y] . pb ( { x , c });
+                       }
 
-                      priority_queue < pair <int,int> , vector< pair < int, int >> , greater< pair <int,int>>  > pq ;
-                      pair <int,int>p;
+                       priority_queue < pair<int,int> , vector < pair<int,int> > , greater< pair<int,int> > > pq ;
+                       pq.push({0,1});
 
-                      int node,edge,x,y,w;
-                      cin>>node>>edge;
+                       vector< int > dist( node+5 , INT_MAX) ;
+                       int  parent[node+5];
+                       bool visited[node+5];
+                       memset(visited, 0 , sizeof( visited));
 
-                      for(int i = 1 ; i <= edge ; i+=1 ){
-                          cin>>x>>y>>w;
-                          graph[x] .pb({y,w});
-                      }
-                      int source , nd , cost ;
-                      cin>>source ;
+                       dist[1] = 0 ;
+                       parent[1] = -1 ;
 
-                      pq.push({0,source});
+                      while( ! pq.empty() ){
 
+                           auto tm = pq.top() ;
+                           pq.pop();
+                           cost = tm.first ;
+                           nd = tm.second ;
 
-                      while( !pq.empty() ){
-                          p = pq.top();
-                          pq.pop();
-                          cost = p.first;
-                          nd = p.second;
-                         // cout<<nd<<" cost : "<<cost<<endl;
-                          dist[ nd ] = cost ;
-                          visited[nd] = 1 ;
+                           if( visited[nd] ) continue ;
+                           else  visited[nd] = 1 ;
 
-                          for(auto a : graph[ nd ]){
-                                 // cout<<a.first<<" ";
-                              if(!visited[ a.first ]){
-                                  pq.push({a.second+cost , a.first});
-                              }
-                          }
-                         // cout<<endl;
-                      }
+                           for( auto a : graph[nd] ){
 
-                      for(int i = 1 ; i<= node ; i+=1)
-                          cout<<"node "<<i<<" dist : "<<dist[i]<<endl;
+                               if( dist[ a.first ] > cost+a.second && !visited[a.first] ){
+                                   parent[a.first] = nd ;
+                                   dist[ a.first ] = cost+a.second ;
+                                   pq.push( {   dist[ a.first ] , a.first }) ;
+                               }
+                           }
+                       }
 
+                       for ( int i = 0 ; i< x-1 ; i++)
+                         
+                   return 0;
+                   }
 
-                     for(int i = 1 ; i<=node ; i++ ){
-                      for(auto a : graph[i]){
-                          cout<<a.first<<" ";
-                      }
-                      cout<<endl;
-                     }
-
-                  return 0;
-                  }
 
                   /*
                   5 6
