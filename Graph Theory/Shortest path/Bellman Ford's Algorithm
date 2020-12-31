@@ -1,1 +1,81 @@
+বেলম্যান ফোর্ড এলগোরিদম 
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------//
+                                          #include<bits/stdc++.h>
+                                          #define ll long long
+                                          #define pb push_back
+                                          using namespace std;
+                                          int inf = INT_MAX;
+
+                                          void path_print(int parent[] , int n){
+                                              if( parent[n] == -1) return ;
+                                              path_print(parent,parent[n]);
+                                              cout<<parent[n]<<" ";
+                                          }
+
+                                          int main(){
+                                              int node , edge , x , y, c , nd , cst ;
+                                              cin>>node>>edge;
+
+                                              vector< pair<int,int> > graph[node+5];
+
+                                              for( int i = 1 ; i <= edge ;i++ ){
+                                                  cin >> x >> y >> c ;
+                                                  graph[x]. pb({y,c});
+                                                  graph[y]. pb({x,c});
+                                              }
+
+                                              int dist[node+5];
+                                              fill(dist,dist+node,inf);
+                                              int parent[node+5];
+                                              parent[1] = -1 ;
+
+                                              for( int i = 1 ; i < node ; i++ ){
+
+                                                  set<pair<int,int>>s ;
+                                                  s.insert({0,1});
+
+                                                  bool visited[node+5] ;
+                                                  fill( visited , visited+node+5 , 0 );
+
+                                                  while( !s.empty() ){
+                                                      auto a  = s.begin();
+                                                      cst = a->first;
+                                                      nd = a->second;
+                                                      s.erase(a);
+                                                      if( visited[nd] ) continue;
+                                                      visited[nd] = 1 ;
+                                                      dist[nd] = cst ;
+
+                                                      for( auto p : graph[nd] ){
+                                                              x = p.first;
+                                                              y = p.second;
+                                                          if( !visited[x] && dist[x] > dist[nd]+p.second ){
+
+                                                              parent[x] = nd ;
+                                                              dist[x] = dist[nd]+p.second ;
+                                                              s.insert({ dist[x] , x }) ;
+
+                                                          }
+                                                      }
+                                                  }
+                                              }
+
+                                              for( int i = 1 ; i <= node ; i++ ){
+                                                  cout<<i<<" dist : "<<dist[i]<<endl;
+                                              }
+
+                                              cout<<"Path Print : ";
+
+                                              path_print ( parent , node ) ;
+                                              cout<<node<<endl;
+
+
+
+                                          return 0;
+                                          }
 
