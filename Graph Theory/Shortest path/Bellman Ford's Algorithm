@@ -11,73 +11,74 @@
                                           #define ll long long
                                           #define pb push_back
                                           using namespace std;
-                                          int inf = INT_MAX;
 
-                                          void path_print(int parent[] , int n){
-                                              if( parent[n] == -1) return ;
-                                              path_print(parent,parent[n]);
+                                          int i , f ;
+
+                                          void path_print ( int parent[] , int n ){
+                                              if( n == i ) return ;
+                                              path_print(parent, parent[n]);
                                               cout<<parent[n]<<" ";
+
                                           }
 
                                           int main(){
-                                              int node , edge , x , y, c , nd , cst ;
-                                              cin>>node>>edge;
+                                              int node , edge , x , y , c ;
+                                              cin >> node >> edge ;
 
-                                              vector< pair<int,int> > graph[node+5];
+                                              vector< pair <int,int> > adj[node+5] ;
 
-                                              for( int i = 1 ; i <= edge ;i++ ){
+                                              for ( int i = 1  ; i <= edge ; i++ ){
                                                   cin >> x >> y >> c ;
-                                                  graph[x]. pb({y,c});
-                                                  graph[y]. pb({x,c});
+                                                  adj[x] .pb ( { y , c }) ;
                                               }
 
-                                              int dist[node+5];
-                                              fill(dist,dist+node,inf);
+                                              ll dist[node+5] ;
                                               int parent[node+5];
+
+                                              fill(dist,dist+node+5,INT_MAX);
+                                              dist[1]  =  0 ;
                                               parent[1] = -1 ;
 
-                                              for( int i = 1 ; i < node ; i++ ){
+                                              for ( int i = 1 ; i < node ; i++ ){
 
-                                                  set<pair<int,int>>s ;
-                                                  s.insert({0,1});
-
-                                                  bool visited[node+5] ;
-                                                  fill( visited , visited+node+5 , 0 );
-
-                                                  while( !s.empty() ){
-                                                      auto a  = s.begin();
-                                                      cst = a->first;
-                                                      nd = a->second;
-                                                      s.erase(a);
-                                                      if( visited[nd] ) continue;
-                                                      visited[nd] = 1 ;
-                                                      dist[nd] = cst ;
-
-                                                      for( auto p : graph[nd] ){
-                                                              x = p.first;
-                                                              y = p.second;
-                                                          if( !visited[x] && dist[x] > dist[nd]+p.second ){
-
-                                                              parent[x] = nd ;
-                                                              dist[x] = dist[nd]+p.second ;
-                                                              s.insert({ dist[x] , x }) ;
-
+                                                  for( int j = 1 ; j <= node ; j++ ){
+                                                      for ( auto a : adj[j] ){
+                                                              cout<<a.first<<" ";
+                                                          if( dist[a.first] > dist[j]+a.second){
+                                                              dist[a.first] = dist[j]+a.second;
+                                                              parent[a.first] =  j ;
                                                           }
                                                       }
                                                   }
+                                                /*  cout<<endl;
+                                                  cout<<"relex : "<<i<<"      --- : \n";
+                                                   for ( int j = 1 ; j <= node ; j++ ){
+                                                  cout<<j<<" dist : "<<dist[j]<<endl;
+                                                  }
+                                                  */
                                               }
-
-                                              for( int i = 1 ; i <= node ; i++ ){
+                                              // cout<<"---------------------------------------------\n";
+                                              // Shortest distance print
+                                              for ( int i = 1 ; i <= node ; i++ ){
                                                   cout<<i<<" dist : "<<dist[i]<<endl;
                                               }
 
-                                              cout<<"Path Print : ";
+                                              // Path print || input initial node to final node
+                                              // Here source is Node 1 . We did code for getting shortest path from node 1 .
+                                              // So here we use a destination node f . If there is a shortest path available from node 1 , then 
+                                              // following function will print it .If there is no path , it will also print No path message .
 
-                                              path_print ( parent , node ) ;
-                                              cout<<node<<endl;
+                                              cin >> f ;
 
-
+                                              if(  dist[f] == INT_MAX ) {
+                                                  cout << "There is no Path\n";
+                                              }
+                                              else {
+                                                      path_print ( parent , f) ;
+                                                      cout<<f<<endl;
+                                              }
 
                                           return 0;
                                           }
+
 
