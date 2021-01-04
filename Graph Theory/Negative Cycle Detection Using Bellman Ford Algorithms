@@ -1,77 +1,65 @@
-          #include<bits/stdc++.h>
-          #define ll long long
-          #define pb push_back
-          using namespace std;
+                                                  #include<bits/stdc++.h>
+                                                  #define ll long long
+                                                  #define pb push_back
+                                                  using namespace std;
+                                                  int source ;
 
-          int main(){
-              int node , edge , x , y , c ;
-              cin >> node >> edge ;
+                                                  struct gp{
+                                                      int p ;
+                                                      int q ;
+                                                      int c ;
+                                                  };
 
-              vector< pair <int,int> > adj[node+5] ;
 
-              for ( int i = 1  ; i <= edge ; i++ ){
-                  cin >> x >> y >> c ;
-                  adj[x] .pb ( { y , c }) ;
-              }
 
-              ll dist[node+5] , temp_dist[node+5] ;
-              int parent[node+5];
+                                                  int main(){
+                                                      int node, edge , x , y , c;
+                                                      cin >> node >> edge ;
+                                                      vector< gp > adj;
 
-              fill(dist,dist+node+5,INT_MAX);
-              dist[1]  =  0 ;
-              parent[1] = -1 ;
+                                                      for( int i = 1 ; i <= edge ; i++ ){
+                                                          cin >> x >> y >> c;
+                                                          adj.pb({x,y,c});
+                                                      }
 
-              for ( int i = 1 ; i <= node ; i++ ){
-                  for( int j = 1 ; j <= node ; j++ ){
-                      for ( auto a : adj[j] ){
+                                                      cin >> source ;
 
-                          if( dist[a.first] > dist[j]+a.second){
-                              dist[a.first] = dist[j]+a.second;
-                              parent[a.first] =  j ;
-                          }
+                                                      ll dist[node+5] , temp_dist[node+5] ;
+                                                      fill(dist , dist+node+5 , INT_MAX) ;
 
-                      }
-                  }
+                                                      dist[source] = 0 ;
 
-              if( i == node-1 ){
-                  for ( int j = 1 ; j <= node ; j++ )
-                      temp_dist[ j ] =  dist[j] ;
-                  }
-             
-                //cout<<i<<" relex :\n";
-                //for ( int j = 1 ; j <= node ; j++ )
-                //cout<<j<<" dist : " <<dist[j]<<endl;
+                                                      for ( int i = 1 ; i <= node ; i++ ){
 
-              }
+                                                          for ( gp a : adj ){
+                                                              if( dist[a.q] > dist[a.p]+a.c ){
+                                                                  dist[a.q] = dist[a.p]+a.c ;
+                                                                  parent[a.q] = a.p ;
+                                                              }
+                                                          }
 
-              for ( int i = 1 ; i <= node ; i++ ){
-                 if(temp_dist[i] != dist[i] ){
-                      cout<<"Negative Cycle Detected \n";
-                      return 0 ;
-                 }
-              }
+                                                          if ( i == node-1 ){
+                                                              for ( int  j = 1 ; j <= node ; j++ )
+                                                                  temp_dist[j] = dist[j] ;
+                                                          }
 
-              cout<<"There is no Negative cycle.\n";
+                                                      }
 
-          return 0;
-          }
-          /*
-5 6
-1 2 2
-2 4 1 
-4 1 5
-3 4 3
-2 5 -6
-5 1 5
-In this Example , there is a Negative cycle .If we represent avobe data on  a graph it will be visible very easily .
-But this algoritms cannot detect this one .
-5 6
-1 2 2
-2 4 1 
-4 1 5
-3 4 3
-2 5 -8
-5 1 5
-But this input is detectable .Checkout after run this program.
-          
-*/
+                                                      bool fg = true ;
+                                                      for ( int i = 1 ; i <= node ; i++ ){
+                                                          if ( temp_dist[i] != dist[i] ){
+                                                              fg = false ;
+                                                              }
+                                                      }
+
+                                                      if ( fg ) {
+                                                          cout<<"No Negative cycle\n";
+                                                      }
+                                                      else cout<<"Cycle Detected\n";
+
+
+
+
+                                                  return 0;
+                                                  }
+
