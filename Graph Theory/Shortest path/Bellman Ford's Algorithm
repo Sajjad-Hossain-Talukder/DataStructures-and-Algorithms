@@ -7,78 +7,51 @@
 নেগেটিভ সাইকেল ডিটেক্ট করার কোড বাইরে আছে।  এইখানে বেসিক বেলম্যান এবং পাথ প্রিন্ট করা হইসে। 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------//
-                                          #include<bits/stdc++.h>
-                                          #define ll long long
-                                          #define pb push_back
-                                          using namespace std;
+                                              #include<bits/stdc++.h>
+                                              #define ll long long
+                                              #define pb push_back
+                                              using namespace std;
 
-                                          int i , f ;
+                                              struct gp{
+                                                  int p ;
+                                                  int q ;
+                                                  int c ;
+                                              };
 
-                                          void path_print ( int parent[] , int n ){
-                                              if( n == i ) return ;
-                                              path_print(parent, parent[n]);
-                                              cout<<parent[n]<<" ";
 
-                                          }
+                                              int main(){
+                                                  int node, edge , x , y , c;
+                                                  cin >> node >> edge ;
+                                                  
+                                                  vector< gp > adj;
 
-                                          int main(){
-                                              int node , edge , x , y , c ;
-                                              cin >> node >> edge ;
+                                                  for( int i = 1 ; i <= edge ; i++ ){
+                                                      cin >> x >> y >> c;
+                                                      adj.pb({x,y,c});
+                                                  }
+                                                  
+                                                  int source ;
+                                                  cin >> source ;
 
-                                              vector< pair <int,int> > adj[node+5] ;
+                                                  ll dist[node+5] , temp_dist[node+5] ;
+                                                  fill(dist , dist+node+5 , INT_MAX) ;
 
-                                              for ( int i = 1  ; i <= edge ; i++ ){
-                                                  cin >> x >> y >> c ;
-                                                  adj[x] .pb ( { y , c }) ;
-                                              }
+                                                  dist[source] = 0 ;
 
-                                              ll dist[node+5] ;
-                                              int parent[node+5];
+                                                  int parent[node+5];
+                                                  parent[source] = -1 ;
 
-                                              fill(dist,dist+node+5,INT_MAX);
-                                              dist[1]  =  0 ;
-                                              parent[1] = -1 ;
+                                                  for ( int i = 1 ; i < node ; i++ ){
 
-                                              for ( int i = 1 ; i < node ; i++ ){
-
-                                                  for( int j = 1 ; j <= node ; j++ ){
-                                                      for ( auto a : adj[j] ){
-                                                              cout<<a.first<<" ";
-                                                          if( dist[a.first] > dist[j]+a.second){
-                                                              dist[a.first] = dist[j]+a.second;
-                                                              parent[a.first] =  j ;
+                                                      for ( gp a : adj ){
+                                                          if( dist[a.q] > dist[a.p]+a.c ){
+                                                              dist[a.q] = dist[a.p]+a.c ;
+                                                              parent[a.q] = a.p ; 
                                                           }
                                                       }
+
                                                   }
-                                                /*  cout<<endl;
-                                                  cout<<"relex : "<<i<<"      --- : \n";
-                                                   for ( int j = 1 ; j <= node ; j++ ){
-                                                  cout<<j<<" dist : "<<dist[j]<<endl;
-                                                  }
-                                                  */
+
+                                              return 0;
                                               }
-                                              // cout<<"---------------------------------------------\n";
-                                              // Shortest distance print
-                                              for ( int i = 1 ; i <= node ; i++ ){
-                                                  cout<<i<<" dist : "<<dist[i]<<endl;
-                                              }
-
-                                              // Path print || input initial node to final node
-                                              // Here source is Node 1 . We did code for getting shortest path from node 1 .
-                                              // So here we use a destination node f . If there is a shortest path available from node 1 , then 
-                                              // following function will print it .If there is no path , it will also print No path message .
-
-                                              cin >> f ;
-
-                                              if(  dist[f] == INT_MAX ) {
-                                                  cout << "There is no Path\n";
-                                              }
-                                              else {
-                                                      path_print ( parent , f) ;
-                                                      cout<<f<<endl;
-                                              }
-
-                                          return 0;
-                                          }
-
 
