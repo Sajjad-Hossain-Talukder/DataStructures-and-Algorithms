@@ -11,12 +11,20 @@
                                               #define ll long long
                                               #define pb push_back
                                               using namespace std;
-
+                                               
+                                              int source ; 
+                                              
                                               struct gp{
                                                   int p ;
                                                   int q ;
                                                   int c ;
                                               };
+                                             
+                                             void path_print( int parent[] , int des ){
+                                                if( des == source ) return ;
+                                                path_print( parent , parent[des] );
+                                                cout<<parent[des]<<" ";
+                                              }
 
 
                                               int main(){
@@ -30,7 +38,7 @@
                                                       adj.pb({x,y,c});
                                                   }
                                                   
-                                                  int source ;
+                                                 
                                                   cin >> source ;
 
                                                   ll dist[node+5] , temp_dist[node+5] ;
@@ -51,6 +59,16 @@
                                                       }
 
                                                   }
+                                                  
+                                                  //Path Printing 
+                                                   int des ;
+                                                  
+                                                   cin>>des;
+                                                   if( dist[des] == INT_MAX ) cout<<"NO Path \n";
+                                                   else {
+                                                        path_print( parent , des );
+                                                        cout<<des<<endl;
+                                                   }
 
                                               return 0;
                                               }
