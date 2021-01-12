@@ -1,0 +1,3 @@
+Greedy Algorithm can help us to solve most of problems but in some case it Fails . 0 - 1 Knapsack is one of them , in which case 
+it fails . Apparently it will assume that we can solve it using greedy approach , But there is some trivial case which can not be solved using greedy .
+In this case , solving approach will be Dynamic programming . Let's have a look on following example down below : 
