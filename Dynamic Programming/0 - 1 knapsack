@@ -19,3 +19,50 @@ find the same dp state again . Check out 0 - 1 knapsack Image which will help in
 
 Code : 
 -------
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+using namespace std;
+const int sz = 1e5+5;
+
+ll obj , max_weight ;
+ll dp[105][sz] , price[105] , weight[105] ;
+
+ll solve ( ll current_obj  , ll current_weight ){
+
+        if( current_obj > obj ) return 0 ;
+
+        if( dp[ current_obj ][current_weight] != -1 ) return dp[ current_obj ][current_weight] ;
+
+        ll taken_obj  = 0 , not_taken_obj = 0 ;
+
+        if( current_weight + weight [ current_obj ] <= max_weight ){
+
+                    taken_obj = price[ current_obj ] + solve ( current_obj + 1 ,  current_weight + weight [ current_obj ] ) ;
+        }
+
+        not_taken_obj = solve ( current_obj + 1 ,  current_weight ) ;
+
+        dp[ current_obj ][current_weight ] = max ( taken_obj , not_taken_obj );
+
+        return dp[current_obj][current_weight];
+
+}
+
+int main(){
+
+    memset(dp,-1,sizeof(dp));
+
+    cin >> obj >> max_weight ;
+
+    for ( int i = 1 ; i <= obj ; i++ ){
+        cin >> weight[i] >> price[i] ;
+    }
+
+    ll ans = solve ( 1 , 0 )  ;
+
+    cout << ans << endl ;
+
+return 0;
+}
+
