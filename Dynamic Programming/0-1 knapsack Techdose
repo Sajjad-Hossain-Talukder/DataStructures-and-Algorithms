@@ -1,4 +1,6 @@
 Theory : https://www.youtube.com/watch?v=mGfK-j9gAQA&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=4
+Time Complexity : O ( 2^n ) 
+
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
