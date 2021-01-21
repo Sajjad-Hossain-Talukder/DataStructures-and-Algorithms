@@ -1,0 +1,40 @@
+Input: nums = [10,9,2,5,3,7,101,18]
+Output: 4
+Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+// Source : Tutorial : https://www.youtube.com/watch?v=9mTWhRA2IWQ 
+//--------------------------------------------------------------------------------------------------------
+
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+using namespace std;
+
+int main(){
+    int  n ;
+    cin >> n ;
+    int dp[n] , ar[n] ;
+
+    for( int i = 0 ; i < n ; i++ ){
+        cin >> ar[i] ;
+        dp[i] = 1 ;
+    }
+
+    for ( int i = 0 ; i <= n ; i++ ){
+
+        for( int j = i+1 ; j <= n ; j++ ){
+
+            if( ar[j] > ar[i] ) dp[j] = max ( dp[i]+1 , dp[j] ) ;
+
+        }
+
+    }
+
+    for(int i = 0; i < n ; i++ )
+        cout << dp[i] << " "; cout << endl;
+
+        cout << *max_element(dp,dp+n);
+
+
+return 0;
+}
+
