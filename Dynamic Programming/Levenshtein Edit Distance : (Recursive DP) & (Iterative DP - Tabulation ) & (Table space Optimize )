@@ -66,6 +66,7 @@ int main(){
     cout <<"Edit Distance using Recursive Dp : " << ans << endl;
 
     // Iterative Tabulation Method
+    //Space Complexity :  O ( m*n );   || Time Complexity : O ( m*n ) 
 
     int  m = s.size() , n = p.size();
     int dpExtra[m+1][n+1];
@@ -87,7 +88,7 @@ int main(){
         }
     }
 
-    //DP Table - Tabulation Method
+    //DP Table - Tabulation Method 
 
     for(int i = 0 ; i <= m ; i++ ){
         for(int j = 0 ; j <= n ; j++ ){
@@ -103,7 +104,7 @@ int main(){
 
     cout <<"Edit Distance : " <<  dpExtra[m][n] << endl;
 
-    cout << "Reducing Space  : \n";
+    // Reducing Space  : Space Complexity :  O ( m+n );   || Time Complexity : O ( m*n ) 
 
     int dpReduce[2][n+1] ;
 
