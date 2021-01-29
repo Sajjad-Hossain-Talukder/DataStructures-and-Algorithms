@@ -1,0 +1,152 @@
+Source : https://www.youtube.com/watch?v=AuYujVj646Q 
+
+Given two strings str1 and str2 and below operations that can performed on str1. Find minimum number
+of edits (operations) required to convert ‘str1’ into ‘str2’.  
+Insert
+Remove
+Replace
+What are the subproblems in this case? 
+
+If last characters of two strings are same, nothing much to do. Ignore last characters and get count for remaining strings. 
+So we recur for lengths m-1 and n-1.
+
+Else (If last characters are not same), we consider all operations on ‘str1’, consider all three operations on last character 
+of first string, recursively compute minimum cost for all three operations and take minimum of three values.
+
+Insert: Recur for m and n-1
+Remove: Recur for m-1 and n
+Replace: Recur for m-1 and n-1
+
+Base Case  : If one string is empty , then rest of another string's length must be Deleted . So if str1 length  = 0 , then it returns str2's length.
+    if ( m == 0 ) return n ; 
+    if ( n == 0 ) return m ; 
+
+
+
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+#define pi acos(-1)
+#define FOR(i,a,b) for (ll i = (a); i < (b); ++i)
+#define F0R(i,a) FOR(i,0,a)
+#define io  ios_base::sync_with_stdio(false); cin.tie(0);
+using namespace std;
+const int mx = 1e3+5;
+string s , p ;
+
+int dp[ mx ][ mx ];
+
+int mindist ( int i , int  j ) {
+
+    if(i == -1 ) return j+1 ;
+    if(j == -1 ) return i+1 ;
+
+    if(dp[i][j] != -1 ) return dp[i][j] ;
+
+    if( s[i] == p[j] )
+        return dp[i][j] = mindist(i-1,j-1) + 0 ;
+    else
+        return dp[i][j] = min ( min ( mindist(i,j-1)+1 , mindist(i-1,j)+1 ), mindist(i-1,j-1)+1 ) ;
+
+}
+
+
+int main(){
+
+    cin >> s >>  p ;
+
+    // Recursive DP :
+
+    int d1 = s.size() - 1  , d2 = p.size() - 1  ;
+
+    memset( dp , -1 , sizeof( dp ) ) ;
+
+    int ans = mindist ( d1 , d2) ;
+
+    cout <<"Edit Distance using Recursive Dp : " << ans << endl;
+
+    // Iterative Tabulation Method
+
+    int  m = s.size() , n = p.size();
+    int dpExtra[m+1][n+1];
+
+    for( int i = 0 ; i <= m ; i++ ) dpExtra[i][0] = i ;
+    for( int i = 0 ; i <= n ; i++ ) dpExtra[0][i] = i ;
+
+    for(int i = 1 ; i <= m ; i++ ){
+
+        for(int j = 1 ; j <= n ; j++ ){
+
+            if( s[ i-1 ] == p[ j-1 ] ){
+                dpExtra[i][j] = dpExtra[i-1][j-1] ;
+            }
+            else {
+                dpExtra[i][j] = min ( dpExtra[i-1][j-1] , min ( dpExtra[i-1][j] , dpExtra[i][j-1])) + 1 ;
+            }
+
+        }
+    }
+
+    //DP Table - Tabulation Method
+
+    for(int i = 0 ; i <= m ; i++ ){
+        for(int j = 0 ; j <= n ; j++ ){
+            cout << dpExtra[i][j] << " ";
+
+        }
+        cout << endl;
+    }
+
+
+    // Result :
+
+
+    cout <<"Edit Distance : " <<  dpExtra[m][n] << endl;
+
+    cout << "Reducing Space  : \n";
+
+    int dpReduce[2][n+1] ;
+
+    for(int i = 0 ; i <= n ; i++ ) dpReduce[0][i] = i ;
+
+
+    for(int i = 1 ; i <= m ; i++ ){
+
+            int tmp = i%2 ? 0 : 1 ;
+            dpReduce[i%2][0] = i ;
+
+        for(int j = 1 ; j <= n ; j++ ){
+
+            if( s[ i-1 ] == p[ j-1 ] )
+                dpReduce[i%2][j] = dpReduce[tmp][j-1] ;
+
+            else
+                dpReduce[i%2][j] = min ( dpReduce[tmp][j-1] , min ( dpReduce[tmp][j] , dpReduce[i%2][j-1])) + 1 ;
+
+
+        }
+
+    }
+
+    // Resulting last Array :
+    for( int j = 0 ; j <= n ; j++ )
+            cout << dpReduce[m%2][j] << " "; cout << endl;
+
+    // result after Memory Optimization :
+
+    cout << "Edit Distance : " << dpReduce[m%2][n] << endl;
+
+
+
+
+
+return 0;
+}
+
+/*
+intention
+execution
+sunday
+saturday
+sunday
+*/
