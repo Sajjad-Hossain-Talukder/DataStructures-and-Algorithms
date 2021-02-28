@@ -15,7 +15,6 @@ info* root = NULL ;
 void insert_begin ( int n ){
 
     info *node = new info ;
-
     node->data = n ;
     node->next = NULL;
 
@@ -25,13 +24,11 @@ void insert_begin ( int n ){
        node->next = root ;
        root = node ;
     }
-
 }
 
 void insert_end ( int n ){
 
     info *node = new info ;
-
     node->data = n ;
     node->next = NULL;
 
@@ -44,8 +41,8 @@ void insert_end ( int n ){
             temp = temp->next ;
         temp->next = node ;
     }
-
 }
+
 void insert_position ( int n , int pos ) {
 
     info* node = new info ;
