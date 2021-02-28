@@ -48,8 +48,6 @@ void insert_position ( int n , int pos ) {
     info* node = new info ;
     info* temp = root ;
 
-   //cout << temp->data << endl;
-
     node->data = n ;
 
     if( pos == 1 ){
