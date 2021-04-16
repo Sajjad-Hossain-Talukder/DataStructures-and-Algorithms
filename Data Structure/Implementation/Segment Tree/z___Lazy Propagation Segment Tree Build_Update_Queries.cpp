@@ -43,7 +43,7 @@ void update ( node segTree[] , int n , int i , int f , int a , int b , int val  
     update ( segTree , l , i , m  ,a , b ,val ) ;
     update ( segTree , r , m+1 , f,a , b ,val ) ;
 
-    segTree[n].sum =  segTree[l].sum  + segTree[r].sum ;
+    segTree[n].sum =  segTree[l].sum  + segTree[r].sum  + segTree[n].prop*( f-i+1) ;
 
 
 }
