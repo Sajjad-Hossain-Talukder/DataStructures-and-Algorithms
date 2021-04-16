@@ -24,7 +24,7 @@ void buildTree ( int *ar , int* segTree , int n , int i , int f  ){
 
 int query ( int segTree[] ,int n ,  int i , int f , int a , int b ){
 
-    if ( a > f || b < i ) return 0 ;
+    if ( a > f || b < i ) return INT_MIN ;
     if ( i >= a && f <= b ) return segTree[n];
 
     int l , r , m , res1 , res2  ;
