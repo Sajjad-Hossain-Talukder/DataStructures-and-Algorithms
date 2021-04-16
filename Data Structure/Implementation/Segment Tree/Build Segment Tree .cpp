@@ -1,4 +1,4 @@
-//Complexity : O ( nlogn )
+//Complexity : O ( n )
 
 #include<bits/stdc++.h>
 #define ll long long
