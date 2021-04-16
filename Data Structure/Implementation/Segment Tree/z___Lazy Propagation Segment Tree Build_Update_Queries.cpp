@@ -32,7 +32,7 @@ void update ( node segTree[] , int n , int i , int f , int a , int b , int val  
     if ( a >  f || b < i )  return ;
     if ( i >= a && f <= b  ) {
         segTree[n].sum += ( ( f-i+1) *val ) ;
-        segTree[n].prop = val ;
+        segTree[n].prop += val ;
         return ;
     }
     int l , r , m ;
