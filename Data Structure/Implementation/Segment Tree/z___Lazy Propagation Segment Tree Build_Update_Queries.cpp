@@ -17,8 +17,8 @@ void build( node segTree[] , int ar[] , int n ,  int i , int f ){
     }
 
     int l , r , m ;
-    l = n*2+1 ;
-    r = n*2+2 ;
+    l = n*2+1 ;  // l = n*2 , when indexing is 1 based
+    r = n*2+2 ;  // r = n*2+1 , when indexing is 1 based
     m = ( i+f) / 2 ;
 
     build ( segTree , ar , l , i , m ) ;
@@ -36,8 +36,8 @@ void update ( node segTree[] , int n , int i , int f , int a , int b , int val  
         return ;
     }
     int l , r , m ;
-    l = n*2+1 ;
-    r = n*2+2 ;
+    l = n*2+1 ;  // l = n*2 , when indexing is 1 based
+    r = n*2+2 ;  // r = n*2+1 , when indexing is 1 based
     m = ( i+f) / 2 ;
 
     update ( segTree , l , i , m  ,a , b ,val ) ;
@@ -54,8 +54,8 @@ int query (node segTree[] ,  int n ,int i , int f ,  int a , int b , int carry  
             return segTree[n].sum + ( carry * (f-i+1) ) ;
         }
         int l , r , m , d ;
-            l = n*2+1 ;
-            r = n*2+2 ;
+            l = n*2+1 ;  // l = n*2 , when indexing is 1 based
+            r = n*2+2 ;  // r = n*2+1 , when indexing is 1 based
             m = ( i+f) / 2 ;
             d = carry+segTree[n].prop ;
 
