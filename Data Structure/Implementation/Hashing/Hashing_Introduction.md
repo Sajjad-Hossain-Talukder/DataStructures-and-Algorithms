@@ -1,3 +1,6 @@
+> Source : https://www.geeksforgeeks.org/hashing-data-structure/
+Youtube : Abdul bari : https://www.youtube.com/watch?v=mFY0J5W8Udk
+
 # Hashing | Set 1 
 
 ##### Suppose we want to design a system for storing employee records keyed using phone numbers. And we want following queries to be performed efficiently:
