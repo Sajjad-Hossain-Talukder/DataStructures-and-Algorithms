@@ -3,6 +3,9 @@
 
 # Hashing | Set 1 
 
+![Hashing](https://user-images.githubusercontent.com/63524824/117562063-e0b1fa80-b0bd-11eb-8745-c981a3b0ddf6.png)
+
+
 ##### Suppose we want to design a system for storing employee records keyed using phone numbers. And we want following queries to be performed efficiently:
 
 - Insert a phone number and corresponding information.
