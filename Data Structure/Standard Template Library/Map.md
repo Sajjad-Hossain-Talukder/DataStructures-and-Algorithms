@@ -25,9 +25,9 @@ Basic operation :
                   
 #### List of all functions of Map: 
  - insert() : 
-                                       ` iterator map_name.insert({key, element})`
-                                       ` iterator map_name.insert(iterator position, {key, element})`
-                                        `iterator map_name.insert(iterator position1, iterator position2)`
+                                       `  map_name.insert({key, element})`
+                                       `  map_name.insert(iterator position, {key, element})`
+                                       ` map_name.insert(iterator position1, iterator position2)`
                                         
 -   count() : is a built-in function in C++ STL which returns 1 if the element with key K is present in the map container. 
                                               It returns 0 if the element with key K is not present in the container.
@@ -54,22 +54,18 @@ Basic operation :
        return 0; 
   } 
  ```
+ ```
     Output:
         The lower bound is 3:0
         The upper bound is 3:0
-        
+ ```  
 -   erase ()  : 
-                                                      `map_name.erase(key)`
-                                                     ` map_name.erase(iterator position)`
-                                                      `map_name.erase(iterator position1, iterator position2)`
+                  map_name.erase(key)
+                  map_name.erase(iterator position)
+                  map_name.erase(iterator position1, iterator position2)
                                                       
                                                       
-                                                      
-                                                      
-                                                      
-                                                      
-                                                      
-                                                      
+                                            
                                                       
                                                       
                                                       
