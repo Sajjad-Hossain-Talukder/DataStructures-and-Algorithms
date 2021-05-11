@@ -1,4 +1,4 @@
-####            Map 
+##            Map 
 -------------------------------------------------------------------------
 source : geekforgeeks & C++.com
 
@@ -47,7 +47,8 @@ Basic operation :
 
     // iterator of pairs 
      it = mp.equal_range(10); 
-       cout << "The lower bound is "  << it.first->first << ":"  << it.first->second; cout << "\nThe upper bound is "<< it.second->first  << ":" << it.second->second; 
+       cout << "The lower bound is "  << it.first->first << ":"  << it.first->second; 
+       cout << "\nThe upper bound is "<< it.second->first  << ":" << it.second->second; 
        return 0; 
   } 
  ```
