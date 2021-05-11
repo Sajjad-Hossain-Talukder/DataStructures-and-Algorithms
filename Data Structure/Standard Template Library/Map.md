@@ -34,8 +34,10 @@ Basic operation :
                                                        
 `  map_name.count(key k) `
  - equal_range() : is a built-in function in C++ STL which returns a pair of iterators. The pair refers to the bounds of a range that includes all the elements in the container which have a key equivalent to k. Since the map container only contains unique key, hence the first iterator in the pair returned thus points to the element and the second iterator in the pair points to the next key which comes after key K. If there are no matches with key K, the  range returned is of length 1 with both iterators pointing to the an element which has a key denoting the size  of map and elements as 0.
- ```                                                   
-    iterator map_name.equal_range(key)
+                                                 
+    `iterator map_name.equal_range(key)`
+   ```
+   
     map<int, int> mp; 
 
     mp.insert({ 4, 30 }); 
