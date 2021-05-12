@@ -18,8 +18,51 @@ Basic Operations :
     empty() – Returns whether the multimap is empty
     
     pair<int,int> insert(keyvalue,multimapvalue) – Adds a new element to the multimap
+    swap()  - mmap1.swap(mmap2) ; 
     
+    find()  - returns an iterator or a constant iterator which refers to the position where 
+    	      the key is present in the multimap. If the key is not present in the multimap 
+	      container, it returns an iterator or a constant iterator which refers to multimap.end().
+ 	      
+    upper_bound(k)  -   which returns an iterator pointing to the immediate next element which is just 
+    			greater than k. If the key passed in the parameter exceeds the maximum key in the container, 
+			then the iterator returned points to the size of Multimap and element = 0 .
     
+    lower_bound(k) - returns an iterator pointing to the key in the container which is equivalent 
+    		     to k passed in the parameter. In case k is not present in the multimap container, 
+		     the function returns an iterator pointing to the immediate next element which is 
+		     just greater than k. If the key passed in the parameter exceeds the maximum key in 
+		     the container, then the iterator returned points to the size of Multimap and element=0
+		     #include <bits/stdc++.h>
+		     using namespace std;
+
+		     int main(){
+			multimap<int, int> mp;
+  
+			mp.insert({ 1, 40 });
+			mp.insert({ 2, 60 });
+			mp.insert({ 2, 20 });
+			mp.insert({ 1, 50 });
+			mp.insert({ 4, 50 });
+
+	
+			auto it = mp.lower_bound(2);
+			cout << (*it).first << " "<< (*it).second << endl;
+			it = mp.upper_bound(2);
+			cout << (*it).first << " "<< (*it).second << endl;
+	
+			it = mp.lower_bound(3);
+			cout << (*it).first << " "<< (*it).second << endl;
+    			it = mp.upper_bound(3);
+			cout << (*it).first << " "<< (*it).second << endl;
+  
+			it = mp.lower_bound(5);
+			cout << (*it).first << " "<< (*it).second << endl;
+    			it = mp.upper_bound(5);
+			cout << (*it).first << " "<< (*it).second << endl;
+			return 0;
+			}
+
     
                   
                   
