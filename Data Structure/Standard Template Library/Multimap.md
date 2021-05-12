@@ -69,9 +69,9 @@ cout << "Upper Bound is : "<< (it.second)->first << " \t "<<(it.second)->second 
 
         
 -   erase ()  : 
-                                                      `map_name.erase(key)`
-                                                     ` map_name.erase(iterator position)`
-                                                      `map_name.erase(iterator position1, iterator position2)`
+                                                      `multimap_name.erase(key)`
+                                                     ` multimap_name.erase(iterator position)`
+                                                      `multimap_name.erase(iterator position1, iterator position2)`
                                                       
    ```
    #include <bits/stdc++.h>
