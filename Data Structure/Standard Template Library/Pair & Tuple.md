@@ -1,4 +1,4 @@
-### Pair :
+# Pair :
 
 ```
    - The pair container consisting of two data elements or objects.
@@ -36,8 +36,8 @@
                    Pair_name = make_pair( val_first , val_second )
    ```
 
-  Operators(=, ==, !=, >=, <=) :
-  ==============================
+ #### Operators(=, ==, !=, >=, <=) :
+  
   	equal(=) :            It assigns new object for a pair object.It also can assign a pair to another pair.Comapre both.
   	Comparison (==)  :    For given two pairs the comparison operator compares the first value and second value of those two pairs .
                             If both pair are equal ,then it returns True else False .
@@ -48,14 +48,14 @@
               (pa1 == pa2 ) ,(pa1 != pa2 ) ,(pa1 > pa2 )
               (pa1 < pa2 )  ,(pa1 >= pa2 ) ,(pa1 <= pa2 ) 
 
-  swap : 
-  ======          
+  #### swap : 
+           
             pair_1 =  ( 5,6 ); pair_2 = ( 8,9 ) 
               pair_1 .swap ( pair_2 )
             pair_1 =  ( 8,9 ); pair_2 =(  5,6 ) 
 
-  Function parameter passing :
-  ============================
+ #### Function parameter passing :
+ 
             void print( pair<int,string> &q);
 
             int main(){
@@ -64,20 +64,20 @@
             return 0;
             }
 
-Tuple :
-=======
+## Tuple :
 
-  In tuple we can pair more than two heterogeneous objects.
+
+In tuple we can pair more than two heterogeneous objects.
   
-  Syntax:
+#### Syntax:
               tuple<T1 ,T2 ,T3 ,T4. . . . . > tuple_name ;
-  Access:
+#### Access:
               get<0> (tuple_name );
               get<1> (tuple_name );
               get<2> (tuple_name );
               . . . . .
               . . . . . 
-  Initialize:
+#### Initialize:
               After declare a tuple , it initialized zero if all three are integers.
 
                   	tuple<T1 ,T2 ,T3 ,T4. . . . .   > t_name (val_1,val_2,val_3. .  )
@@ -87,14 +87,15 @@ Tuple :
 
                   	Use of make_tuple()
                   tuple_name = tuple_pair( val_1 , val_2 , val_3,. . .);
-  swap : 
+#### swap : 
                   tuple_1 =  ( 5,7,8 ); tuple_2 = ( 12,23,45 ) 
                             tuple_1 .swap ( tuple_2 )
                   tuple_1 = ( 12,23,45 ); tuple_2 = (  5,7,8 ) 
-  tie() :
+### tie() :
+
   The work of tie() is to unpack the tuple values into seperate variables. There are two variants of tie(), with and without “ignore” .
   “ignore” ignores a particular tuple element and stops it from getting unpacked.
-
+```
   int main(){
       tuple< int ,string ,float > tp ( 45,"sajjad",5.67 );
       tuple< int ,string ,float > p (100,"safat",10.111  );
@@ -108,15 +109,17 @@ Tuple :
 
   return 0;
   }
+```
+  tuple_cat() :  concatenates two or more than two tuples and returns a new tuple.
 
-   tuple_cat() :  concatenates two or more than two tuples and returns a new tuple.
-          tuple_name = tn
-          auto  p = tuple_cat(tn1 , tn2 ,tn3 ,…..);
+```
+   tuple_name = tn
+   auto  p = tuple_cat(tn1 , tn2 ,tn3 ,…..);
+```
 
   tuple_size<decltype()> : return the number of elements in a tuple .
 
-  tuple_size< decltype( tuple_name )>
+  `tuple_size< decltype( tuple_name )>`
   
-  Operators( == , != , > , < , <= , >= ) :
-  ========================================
-            lexicographically compares two tuple like pairs.
+ ### Operators( == , != , > , < , <= , >= ) :
+    lexicographically compares two tuple like pairs.
