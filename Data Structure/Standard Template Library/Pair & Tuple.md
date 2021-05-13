@@ -1,26 +1,40 @@
-Pair :
-======
-    #include<utility>
-    The pair container consisting of two data elements or objects.
-    •	The first element is referenced as ‘first’ and the second element as ‘second’ and the order is fixed (first, second).
-    •	Pair is used to combine together two values which may be different in type. Pair provides a way to store two heterogeneous 
-        objects as a single unit.
-    •	Pair can be assigned, copied and compared. The array of objects allocated in a map or hash_map are of type ‘pair’ by default 
-        in which all the ‘first’ elements are unique keys associated with their ‘second’ value objects.
-    •	To access the elements, we use variable name followed by dot operator followed by the keyword first or second.
+### Pair :
 
-  Syntax:
+```
+   - The pair container consisting of two data elements or objects.
+  	 The first element is referenced as ‘first’ and the second element as ‘second’ a
+     nd the order is fixed (first, second).
+    
+  -	Pair is used to combine together two values which may be different in type. Pair 
+     provides a way to store two heterogeneous objects as a single unit.
+    
+  -	Pair can be assigned, copied and compared. The array of objects allocated in a map 
+    or hash_map are of type ‘pair’ by default in which all the ‘first’ elements are unique 
+    keys associated with their ‘second’ value objects.
+    
+  -	To access the elements, we use variable name followed by dot operator followed by the
+    keyword first or second.
+
+```
+
+#### Syntax:
+  
               Pair< data_type 1  , data_type 2  > pair_name ;
-  Access:
-                pair_name . first ;
-                Pair_name . second;
-  Initialize:
-            After declare a pair , it initialized zero if both are integer .
-
+              
+ 
+ #### Access:
+              
+              pair_name . first ;
+              Pair_name . second;
+              
+#### Initialize:
+          After declare a pair , it initialized zero if both are integer .
+```
           	pair< dt_1 ,  dt_2  > p_name ( val_first , val_second )
           	pair< dt_1 , dt_2 > p_name ( previously inilialized pair)
           	Use of make_pair()
                    Pair_name = make_pair( val_first , val_second )
+   ```
 
   Operators(=, ==, !=, >=, <=) :
   ==============================
