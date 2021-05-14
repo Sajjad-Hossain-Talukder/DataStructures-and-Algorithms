@@ -170,4 +170,7 @@ int main()
 ### Array of Bitset :  `bitset<32>bt[n];` 
 - Access :  bt[ index ]
 - Initialize : bt[ index ] = value ; 
+### Special function : 
+- bitset_name.to_ulong() - convert bitset to decimal
+- bitset_name.to_string() - convert bitset to string 
  
