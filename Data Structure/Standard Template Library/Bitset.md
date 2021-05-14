@@ -167,4 +167,7 @@ int main()
 }
 
 ```
-
+### Array of Bitset :  `bitset<32>bt[n];` 
+- Access :  bt[ index ]
+- Initialize : bt[ index ] = value ; 
+ 
