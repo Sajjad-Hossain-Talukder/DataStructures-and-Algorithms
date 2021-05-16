@@ -69,22 +69,19 @@ Below is list of member functions :
 |2|	var_name.emplace_hint()  -  It is used to construct and insert element with hint.
 |3	|var_name.insert()  -  It is used to insert elements. `var_name.insert (Value) or unordered_set_name.insert (Iterator1, Iterator2)`
 |4	|var_name.erase()  -  It is used to erase elements. `var_name.erase(iterator1, iterator2),var_name.erase(iterator_position),var_name.erase(element)`
-|5|	var_name.clear()  -  It is used to clear content.
+|5|	var_name.clear()  -  It is used to clear content. `var_name.clear()`
 |6|	var_name1.swap(var_name2)  -  It is used to swap content.
 
-Buckets
-Sr.No.	Buckets & Description
-1	bucket_count
-It returns number of buckets.
+#### Buckets
+- ` var_name.bucket( element ) ` - It returns the `bucket number of a specific element`. That is, this function returns the bucket number where a specific element is stored in the unordered_set container.The `bucket` is a slot in `the unordered_set’s internal hash table` where elements are stored.
 
-2	max_bucket_count
-It returns maximum number of buckets.
+##### Note: Buckets in unordered_set are numbered from 0 to n-1, where n is the total number of buckets.
 
-3	bucket_size
-It returns bucket size.
+- ` var_name.bucket_count() ` - It returns the total number of buckets present in an unordered_set container.
 
-4	bucket
-It locates element's bucket.
+- ` var_name.max_bucket_count() ` - This is used to find the maximum number of buckets that unordered_set can have.This function returns the maximum number of buckets a system can have because of the constraints specified by the system and some limitations.
+- ` var_name.bucket_size() ` -It returns the total number of elements present in a specific bucket in an unordered_set container.
+
 
 Hash policy
 Sr.No.	Hash policy & Description
