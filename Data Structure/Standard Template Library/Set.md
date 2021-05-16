@@ -1,11 +1,11 @@
 
-Set :
+### Set :
 
-Sets are a type of associative containers in which each element has to be unique, because the value of the element 
-identifies it. The value of the element cannot be modified once it is added to the set, though it is possible to remove 
-and add the modified value of that element.
+Sets are a type of `associative containers` in which `each element has to be unique`, because the value of the element 
+identifies it. The value of the element `cannot be modified once it is added to the set`, though it is `possible to remove
+and add the modified value` of that element.
 
-Basic functions :
+#### Basic functions :
                   	begin() –  begin() function returns a bidirectional iterator to the first element of the container. 
                                                  set_name . begin();
                   	end() –                      set_name . end();
@@ -26,9 +26,10 @@ Basic functions :
                   	crbegin() , crend() – return a reverse constant iterator which can’t be modified.
                                                 set_name . crbegin();     set_name .crend() ;
                  
-------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+#### Other functions : 
 
-	find()  – which returns an iterator to the element which is searched in the set container. If the element 
+-	find()  – which returns an iterator to the element which is searched in the set container. If the element 
             is not found, then the iterator points to the position just after the last element in the set 
             that is set_name . end() .
             
@@ -39,49 +40,48 @@ Basic functions :
                                                      else  cout<<*it<<endl;
                                             *it shows same value which we are searching .
 -------------------------------------------------------------------------------------------------------------------
-	insert () :  used to insert element in set . In there ways ,we can use this built-in function as follow : 
+-	insert () :  used to insert element in set . In there ways ,we can use this built-in function as follow : 
 
                      1.set_name . insert( element / value ) ;
                      2.set_name . insert( iterator_position ,  value ) ;
                      3.set_name . insert( first_iterator , last_iterator ) ;
 
-                    Ex :   p.insert(s.find(50), s.find(900));
-                    p.insert(s.begin(), s.end());
+                    Ex :    p.insert(s.find(50), s.find(900));
+                            p.insert(s.begin(), s.end());
 
-            find() return iterator of a value . If not avilable in set then it return end()  .
+            *find() return iterator of a value . If not avilable in set then it return end()  .
 
-Time Complexity: 
-1.log(N) ,Where ‘N’ is the number of elements in the set
+ Time Complexity: log(N) ,Where ‘N’ is the number of elements in the set
 -------------------------------------------------------------------------------------------------------------------
 
-	erase() : erase() function is used to remove elements from a container from the specified position or range.
+- erase() : erase() function is used to remove elements from a container from the specified position or range.
 
                   1.set_name . erase ( iterator_position ) ;
                   2.set_name . erase ( first_iterator , last_iterator ) ;
+                  
                   Ex :
                   p.erase(p.begin() , p.end());
                   p.erase(p.find(value) , p.find(value));
 
                   Time Complexity:
-                  1.  – amortized constant
+                  1.  – amortized constant - 
                   2.  – O(n), n is number of elements between starting position and ending position.
 -------------------------------------------------------------------------------------------------------
 
-              	clear() :  function is used to remove all the elements of the set container, thus making its size 0.
-              set_name . clear() ;
+-	clear() :  function is used to remove all the elements of the set container, thus making its size 0.
+          
+                  set_name . clear() ;
+                  Time complexity  :   Linear i.e. O(n)
 
-              Time complexity  :   Linear i.e. O(n)
 --------------------------------------------------------------------------------------------------------------------
-
-
-
-
-      	count() :  is a built-in function in C++ STL which returns the number of times an element occurs in the set. It can only 
-                    return 1 or 0 as the set container contains unique elements only.
-                                            set_name  .  count ( element ) ;
-                                            Ex: 
-                                            bool d = s.count(101);
-                                            d is either 0 or 1 .
+- count() :  returns the number of times an element occurs in the set. It can only return 1 or 0 as the set 
+             container contains unique elements only.
+               
+                set_name  .  count ( element ) ;
+                Ex: 
+                bool d = s.count(101);
+                d is either 0 or 1 .
+                
 ------------------------------------------------------------------------------------------------------------------------------------
 	upper_bound( k ) :  which returns an iterator pointing to the immediate next element which is just greater than k. 
                       If the key passed in the parameter exceeds the maximum key in the container, then the iterator 
