@@ -30,7 +30,7 @@ Below is list of member functions :
 
 
 
-#### Capacity
+#### Capacity :
 
 |Sr.No.|	Capacity & Description|
 |--|--|
@@ -38,7 +38,7 @@ Below is list of member functions :
 |2|	var_name.size() - It returns container size.|
 |3|	var_name.max_size() - It returns maximum size.|
 
-#### Iterators
+#### Iterators :
 
 |Sr.No.|	Iterators & Description|
 |--|--|
@@ -47,7 +47,7 @@ Below is list of member functions :
 |3|	var_name.cbegin()  -  It returns const_iterator to beginning.|
 |4|	var_name.cend()  -  It return const_iterator to end.|
 
-#### Element lookup
+#### Element lookup :
 |Sr.No.|	Element lookup & Description|
 |--|--|
 |1|	var_name.find( k ) -  It returns an iterator to the element, if the specified value is found, or end() if it is not found in the container..|
@@ -62,7 +62,7 @@ Below is list of member functions :
 			cout << *range1.second << " YO1\n" << endl;
 	}
 
-#### Modifiers
+#### Modifiers :
 |Sr.No.|	Modifiers & Description|
 |--|--|
 |1|	var_name.emplace()  -  It is used to construct and insert element.
@@ -72,56 +72,108 @@ Below is list of member functions :
 |5|	var_name.clear()  -  It is used to clear content. `var_name.clear()`
 |6|	var_name1.swap(var_name2)  -  It is used to swap content.
 
-#### Buckets
-- ` var_name.bucket( element ) ` - It returns the `bucket number of a specific element`. That is, this function returns the bucket number where a specific element is stored in the unordered_set container.The `bucket` is a slot in `the unordered_set’s internal hash table` where elements are stored.
+#### Buckets :
+##### The `bucket` is a slot in `the unordered_set’s internal hash table` where elements are stored.Buckets in unordered_set are numbered from 0 to n-1, where n is the total number of buckets.
 
-##### Note: Buckets in unordered_set are numbered from 0 to n-1, where n is the total number of buckets.
+- ` var_name.bucket( element ) ` - It returns the `bucket number of a specific element`. That is, this function returns the bucket number where a specific element is stored in the unordered_set container.
 
 - ` var_name.bucket_count() ` - It returns the total number of buckets present in an unordered_set container.
 
 - ` var_name.max_bucket_count() ` - This is used to find the maximum number of buckets that unordered_set can have.This function returns the maximum number of buckets a system can have because of the constraints specified by the system and some limitations.
+
 - ` var_name.bucket_size() ` -It returns the total number of elements present in a specific bucket in an unordered_set container.
 
 
-Hash policy
-Sr.No.	Hash policy & Description
-1	load_factor
-It returns load factor.
+#### Hash policy :
 
-2	max_load_factor
-It is used to get or set maximum load factor.
+- `var_name.load_factor()`  : It returns the current load factor in the unordered_set container. The load factor is `the ratio between the number of elements in the container (its size) and the number of buckets (bucket_count)`.
+```
+load_factor = size / bucket_count
+```
 
-3	rehash
-It is used to set number of buckets.
+The load factor `influences the probability of collision in the hash table` (i.e., the probability of two elements being located in the same bucket). The container `automatically increases the number of buckets to keep the load factor below a specific threshold (its max_load_factor)`, by causing a `rehash`each time when an expansion is needed.
+```
 
-4	reserve
-It gives a request to capacity chage of backets
+#include <iostream>
+#include <unordered_set>
+using namespace std;
 
-Observers
-Sr.No.	Observers & Description
-1	hash_function
-It is used to get hash function.
+int main(){
+	unordered_set<int> sample = { 1,11,111,13,12};
 
-2	key_eq
-It is used to get key equivalence predicate.
+	cout << "The size is: " << sample.size();
+	
+	cout << "\nThe bucket_count is: "<< sample.bucket_count();
 
-3	get_allocator
-It is used to get allocator.
+	cout << "\nThe load_factor is: "<< sample.load_factor();
 
-Sr.No.	Non-member function overloads & Description
-1	operators (unordered_set)
-It is used to get hash function.
+	return 0;
+}
 
-2	swap (unordered_set)
-It exchanges contents of two unordered_set containers.
+```
 
-Predefined iterators
-Sr.No.	Non-member function overloads & Description
-1	operators (unordered_set)
-It is used to get hash function.
+- `var_name.max_load_factor()` : It returns(Or sets) the current maximum load factor of the unordered set container. By default the maximum load factor of an unordered set container is set to 1.0 .
 
-2	swap (unordered_set)
-It exchanges contents of two unordered_set containers.;['p
+- ` var_name.max_load_factor( float x ) `: It used to set a max_load_factor.
+```
+#include <iostream>
+#include <unordered_set>
+using namespace std;
+  
+int main(){
+    unordered_set<int> uset = { 1, 5, 4, 7 };
+  
+    uset.max_load_factor(0.5); // Now set the max_load_factor as  0.5
+  
+    cout<<"New Maximum load factor of uset:"<<uset.max_load_factor()<<endl; //Now get the new max_load_factor of uset
+  
+    cout<< "Current load factor of uset1: "<< uset.load_factor()<< endl;
+}
+
+Output:
+New Maximum load factor of uset: 0.5
+Current load factor of uset1: 0.363636
+```
+
+
+- `var_name.rehash( int n )` - It is used to sets the number of buckets in the container to n or more. If size is greater than the current size of the container, then rehash is called. If it is lower than the current size, then the function has no effect on bucket count of hash.
 
 
 
+- `var_name.reserve( int n )` - Used to request capacity change of unordered_set. It sets the number of buckets in the container to contain at least n elements. If n is greater than the current bucket_count multiplied by the max_load_factor, the container’s bucket_count is increased and a rehash is forced. If n is lower than the bucket_count, then the function has no effect on it.
+
+
+
+#### Observers : 
+
+- `var_name.hash_function()`  : Used to get hash function. This hash function is a unary function which takes asingle argument only and returns a unique value of type size_t based on it.
+```
+
+#include <iostream>
+#include <string>
+#include <unordered_set>
+
+using namespace std;
+
+int main(){
+
+	unordered_set<string> sampleSet;
+
+	// use of hash_function
+	unordered_set<string>::hasher fn = sampleSet.hash_function();
+
+	cout << fn("sa") << endl;
+
+	return 0;
+}
+Output:
+5146686323530302118
+
+```
+
+- operator!=  :  The != is a relational operator in C++ STL which compares the equality and inequality between unordered_set containers. The Comparison is done in the following procedure:
+
+		First, the sizes are compared.
+		Then, each element in one of the containers is looked for in the other.
+		
+- operator ==   :  The ‘==’ is an operator in C++ STL performs equality comparison operation between two unordered sets and unordered_set::operator== is the corresponding operator function for the same. 
