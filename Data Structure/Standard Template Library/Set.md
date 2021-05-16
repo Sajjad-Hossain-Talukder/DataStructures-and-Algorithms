@@ -66,7 +66,7 @@ and add the modified value` of that element.
                   Time Complexity:
                   1.  – amortized constant - 
                   2.  – O(n), n is number of elements between starting position and ending position.
--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 
 -	clear() :  function is used to remove all the elements of the set container, thus making its size 0.
           
@@ -78,14 +78,14 @@ and add the modified value` of that element.
              container contains unique elements only.
                
                 set_name  .  count ( element ) ;
-                Ex: 
-                bool d = s.count(101);
+                
+                Ex:  bool d = s.count(101);
                 d is either 0 or 1 .
                 
-------------------------------------------------------------------------------------------------------------------------------------
-	upper_bound( k ) :  which returns an iterator pointing to the immediate next element which is just greater than k. 
+---------------------------------------------------------------------------------------------------------------------
+-	upper_bound( k ) :  which returns an iterator pointing to the immediate next element which is just greater than k. 
                       If the key passed in the parameter exceeds the maximum key in the container, then the iterator 
-                      returned points to next of last element (which can be identified using set . end() function) in 
+                      returned points to next of last element (which can be identified using ` set.end() ` function) in 
                       the set container.
 
                                                   set_name . upper_bound ( element / key ) ;
@@ -95,33 +95,34 @@ and add the modified value` of that element.
                                                                   cout<<"NOT Found"<<endl;
                                                          else
                                                                   cout<<*r<<endl;
+                                                                  
 -----------------------------------------------------------------------------------------------------------------------------------------
-	lower_bound( k ) : which returns an iterator pointing to the element in the container which is equal to k passed in the parameter. 
+-	lower_bound( k ) :  which returns an iterator pointing to the element in the container which is equal to k passed in the parameter. 
                       In case k is not present in the set container, the function returns an iterator pointing to the immediate next 
-                      element which is just greater than k. 
-                      
-                      If the key passed in the parameter exceeds the maximum key in the container, then the iterator returned points 
-                      to next of last element (which can be identified using set . end() function) in the set container.
+                      element which is just greater than K. If the key passed in the parameter exceeds the maximum key in the container, 
+                      then the iterator returned points to next of last element ( `set . end()`) in the set container.
 
-                      If the key passed in the parameter exceeds the maximum value in the container, then the iterator returned prints 
+If the key passed in the parameter exceeds the maximum value in the container, then the iterator returned 
                       the number of elements in the container.(total element ) :: same for upper_bound
                       
-                                    set_name . lower_bound ( element ) 
+                                   
+                                   set_name . lower_bound ( element ) 
                                     Ex :        auto r = s.  lower_bound( 100 );
                                                 if(r==s.end())
                                                        cout<<" NOT Found "<<endl;
                                                 else
                                                        cout<<*r<<endl;
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	equal_range() :   which returns an iterator of pairs. The pair refers to the range that includes all the elements in the container which have a key equivalent to k. 
+	equal_range() :   which `returns an iterator of pair`. The pair refers to the range that includes all the elements in the container which have a key equivalent to k. 
                     Since set contains unique elements, the lower bound will be the element itself and the upper bound will point to the next element after key k. 
                     If there are no elements matching key K, the range returned is of length 0 with both iterators pointing to the first element which is greater than 
                     k according to the container’s internal comparison object (key_comp).
                     
-                    If the key exceeds the maximum element in the set container, it returns an iterator pointing to the last element in the set container.
+If the key exceeds the maximum element in the set container, it returns an iterator pointing to the last element in the set container.
 
-                                    Special case  : If  Key is equal to the largest one , then second iterator return set.end() and first one  as discussed  .  
-                                    Ex:
+> Special case  : If  Key is equal to the largest one , then second iterator return set.end() and first one  as discussed  .  
+                                    
+                                   
                                     auto it = s.equal_range ( 10 );
 
                                     if(it.first!=s.end()) 
@@ -133,17 +134,26 @@ and add the modified value` of that element.
                                          cout<<*it.second<<endl;
                                     else 
                                          cout<<"NOT found"<<endl;
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	swap() : swap two same type set to each other .
-set_1 . swap ( set_2 ) 
------------------------------------------------------------
-	Operator “ = ” :  use to assign a set to another one . 
-                    Set_1  = Set_2 
------------------------------------------------------------
-	emplace() & emplace_hint() : emplace() works be like 1.insert() and emplace_hint() works be like 2 .insert() . Time Complexity and use process  is same .
-	
-emplace() vs insert :
-When we use insert, we create an object and then insert it into the multiset. With emplace(), the object is constructed in-place.
+                                         
+                                         
+--------------------------------------------------------------------------------------------------------------------------------------
+-	swap() : swap two same type set to each other .
+        
+        set_1 . swap ( set_2 )
+        
+--------------------------------------------------------------------------------------------------------------------------------------
+-	Operator “ = ” :  use to assign a set to another one . 
+                    
+        Set_1  = Set_2 
+        
+--------------------------------------------------------------------------------------------------------------------------------------
+
+-	emplace() & emplace_hint() : emplace() works be like 1.insert() and emplace_hint() works be like 2 .insert() . 
+	                              Time Complexity and use process  is same .
+
+
+#### emplace() vs insert :
+When we use insert, we create an object and then insert it into the set. With emplace(), the object is constructed in-place.
 
 
 
