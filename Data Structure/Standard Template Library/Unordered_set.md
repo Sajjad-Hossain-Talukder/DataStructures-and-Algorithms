@@ -171,9 +171,9 @@ Output:
 
 ```
 
-- operator!=  :  The != is a relational operator in C++ STL which compares the equality and inequality between unordered_set containers. The Comparison is done in the following procedure:
+- `operator!=  `:  The != is a relational operator in C++ STL which compares the equality and inequality between unordered_set containers. The Comparison is done in the following procedure:
 
 		First, the sizes are compared.
 		Then, each element in one of the containers is looked for in the other.
 		
-- operator ==   :  The ‘==’ is an operator in C++ STL performs equality comparison operation between two unordered sets and unordered_set::operator== is the corresponding operator function for the same. 
+- `operator ==  ` :  The ‘==’ is an operator in C++ STL performs equality comparison operation between two unordered sets and unordered_set::operator== is the corresponding operator function for the same. 
