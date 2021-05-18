@@ -22,10 +22,10 @@ Internally unordered_map is `implemented using Hash Table`, the key provided to 
 |implemented using Balanced Tree Structure|implemented using Hashing|
 |Time complexity - O(Log n)|Time complexity - O(1)|
 
-#### Iterators
-- umap.begin() - Returns an iterator pointing to `the first element in the unordered_map container (1)` or `in one of its buckets (2).`
+#### Iterators  : 
+- `umap.begin()` - Returns an iterator pointing to `the first element in the unordered_map container (1)` or `in one of its buckets (2).`
 
-- umap.end() - Returns an iterator pointing to the `past-the-end element` in the unordered_map `container (1)` or in `one of its buckets (2).`The iterator returned by end does not point to any element, but to the position that follows the last element in the unordered_map container (its past-the-end position). Thus, the value returned shall not be dereferenced - it is generally used to describe the open-end of a range, such as `[begin,end)`.
+- `umap.end()` - Returns an iterator pointing to the `past-the-end element` in the unordered_map `container (1)` or in `one of its buckets (2).`The iterator returned by end does not point to any element, but to the position that follows the last element in the unordered_map container (its past-the-end position). Thus, the value returned shall not be dereferenced - it is generally used to describe the open-end of a range, such as `[begin,end)`.
 
 ```
 #include <iostream>
@@ -53,3 +53,44 @@ int main (){
   return 0;
 }
 ```
+
+- `umap.cbegin() & umap.end()` - Return `const-iterator` container (1) or in one of its buckets (2) and element can not be modified.
+
+#### Element access  : 
+
+-`operator[]`  : If k matches the key of an element in the container, the function returns a reference to its mapped value.If k does not match the key of any element in the container, the function inserts a new element with that key and returns a reference to its mapped value. Notice that this always increases the container size by one, even if no mapped value is assigned to the element (the element is constructed using its default constructor).
+```
+#include <bits/stdc++.h>
+using namespace std ;
+
+int main (){
+  unordered_map<string,string> mymap;
+
+  mymap["Bakery"]="Barbara";  
+  mymap["Seafood"]="Lisa";   
+  mymap["Produce"]="John";   
+
+  std::string name = mymap["Bakery"];  
+  mymap["Seafood"] = name;             
+
+  mymap["Bakery"] = mymap["Produce"];   
+  name = mymap["Deli"];      
+
+  mymap["Produce"] = mymap["Gifts"];   
+  for (auto& x: mymap) {
+    std::cout << x.first << ": " << x.second << std::endl;
+  }
+
+  return 0;
+}
+```
+
+- `umap.at(key)` - Returns a reference to the mapped value of the element with key  in the unordered_map.If key does not match the key of any element in the container, the function throws an out_of_range exception.
+
+#### Element lookup :
+- umap.find( key ) - An iterator to the element, if the specified key value is found, or umap.end() if the specified key is not found in the container.
+
+- umap.count( key ) - Returns 1 if an element with a key equivalent to k is found, or zero otherwise.
+
+equal_range
+Get range of elements with specific key (public member function)
