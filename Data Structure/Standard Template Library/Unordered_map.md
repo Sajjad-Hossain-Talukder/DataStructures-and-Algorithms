@@ -88,9 +88,71 @@ int main (){
 - `umap.at(key)` - Returns a reference to the mapped value of the element with key  in the unordered_map.If key does not match the key of any element in the container, the function throws an out_of_range exception.
 
 #### Element lookup :
-- umap.find( key ) - An iterator to the element, if the specified key value is found, or umap.end() if the specified key is not found in the container.
+- `umap.find( key )` - An iterator to the element, if the specified key value is found, or umap.end() if the specified key is not found in the container.
 
-- umap.count( key ) - Returns 1 if an element with a key equivalent to k is found, or zero otherwise.
+- `umap.count( key )` - Returns 1 if an element with a key equivalent to k is found, or zero otherwise.
 
-equal_range
-Get range of elements with specific key (public member function)
+- `umap.equal_range( key )` -  returns a `pair`, where its member `pair::first is an iterator to the lower bound of the range`, and `pair::second is an iterator to its upper bound`. The elements in the range are those between these two iterators, including pair::first, but not pair::second.
+```
+#include <iostream>
+#include <unordered_map>
+using namespace std;
+
+int main(){
+	unordered_map <int, int> m = { { 1, 3 },{ 1, 2 },{ 3, 1 },{ 2, 3 } };
+	
+		auto e_r = m.equal_range(2);
+		if( e_r.first != m.end() ){
+          auto it = e_r.first ; 
+          cout << it->first <<" "<< it->second<<endl;
+    }
+  
+  	if( e_r.second != m.end() ){
+          auto it = e_r.second ; 
+          cout << it->first <<" "<< it->second<<endl;
+    }
+}
+
+```
+
+#### Modifiers : 
+- `umap.insert()` - Inserts new elements in the unordered_map.Each element is inserted only if its key is not equivalent to the key of any other element already in the container. 
+```
+#include <iostream>
+#include <string>
+#include <unordered_map>
+using namespace std ;
+
+int main (){
+  unordered_map< string  , double > myrecipe, mypantry = {{"milk",2.0},{"flour",1.5}};
+
+  pair< string,double> myshopping ("baking powder",0.3);
+
+  myrecipe.insert (myshopping);                        // copy insertion
+  myrecipe.insert (make_pair<string,double>("eggs",6.0)); // move insertion
+  myrecipe.insert (mypantry.begin(), mypantry.end());  // range insertion
+  myrecipe.insert ( {{"sugar",0.8},{"salt",0.1}} );    // initializer list insertion
+
+  cout << "myrecipe contains:" << endl;
+  for (auto& x: myrecipe)
+    cout << x.first << ": " << x.second <<endl;
+
+  cout << endl;
+  return 0;
+}
+```
+- `umap.erase ()` - Used to erase element . 
+```
+      umap.erase(element) ; 
+      umap.erase( iterator_postion ) ; 
+      umap.erase ( first iterator , last iterator ) ;
+    
+```
+- `umap.clear()` - used to clear whole map
+- `first_umap.swap( second_umap )` - Exchanges the content of the container by the content of ump, which is another unordered_map object containing elements of the same type. Sizes may differ.
+#### Buckets : A bucket is a slot in the container's internal hash table to which elements are assigned based on the hash value of their key.
+- `umap.bucket( key ) ` -  Returns the bucket number where the element with key k is located.
+- `umap.bucket_count()` -  The current amount of buckets.
+- `umap.max_bucket_count()` - Returns the maximum number of buckets that the unordered_map container can have.This is the maximum potential number of buckets the container can have due to system constraints or limitations on its library implementation.
+- `umap.bucket_size (  n )` - Returns the number of elements in bucket n.`n = Bucket number.This shall be lower than bucket_count.`
+
