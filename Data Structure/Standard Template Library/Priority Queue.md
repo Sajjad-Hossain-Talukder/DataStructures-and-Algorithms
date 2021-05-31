@@ -105,16 +105,22 @@ gquiz.pop() :     20    10    5    1
       
 Output: 
 
-
+```
 The priority queue gquiz is :     1    5    10    20    30
 
 gquiz.size() : 5
 gquiz.top() : 1
 gquiz.pop() :     5    10    20    30
-Note : The above syntax may be difficult to remember, so in case of numeric values, we can multiply the values with -1 and use max heap to get the effect of min heap.
-Methods of priority queue are: 
 
-      empty() in C++ STL– empty() function returns whether the queue is empty.
+```
+
+Note : The above syntax may be difficult to remember, so in case of numeric values, we can multiply the values with -1 and use max heap to get the effect of min heap.
+
+### Methods of priority queue are: 
+
+      
+`empty()`  - returns whether the queue is empty.
+      
       size() in C++ STL– size() function returns the size of the queue.
       top() in C++ STL– Returns a reference to the top most element of the queue
       push() in C++ STL– push(g) function adds the element ‘g’ at the end of the queue.
