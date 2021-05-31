@@ -1,14 +1,16 @@
-Priority Queue in C++ Standard Template Library (STL):
+Priority Queue 
 ------------------------------------------------------
-// N.B :  priority Queue basically refers to the max priority queue . that means first element is always larger One .
+// N.B :  priority Queue basically refers to the `max priority queue` . that means first element is always larger One .
 // To make a min priority queue use this line only in declaration :
-                                            
-                                            priority_queue< data_type , vector < data_type > , greater< data_type > > que_name ;
+ 
+ ``` 
+ priority_queue< data_type , vector < data_type > , greater< data_type > > que_name ;
+ ```
 
-Priority queues are a type of container adapters, specifically designed such that the first element of the queue is the 
-greatest of all elements in the queue and elements are in non increasing order (hence we can see that each element of the 
+Priority queues are a type of container adapters, specifically designed such that `the first element of the queue is the 
+greatest of all elements` in the queue and elements are in `non increasing order` (hence we can see that each element of the 
 queue has a priority {fixed order}).
-
+```
                 #include <iostream>
                 #include <queue>
 
@@ -43,18 +45,24 @@ queue has a priority {fixed order}).
 
                     return 0;
                 }
-Output: 
+                
+```
 
+Output: 
+```
 The priority queue gquiz is :     30    20    10    5    1
 
 gquiz.size() : 5
 gquiz.top() : 30
 gquiz.pop() :     20    10    5    1
-                                    How to create a min heap for priority queue? 
-                                    C++ provides below syntax for the same.  
+```
 
-                                    // Syntax to create a min heap for priority queue 
-                                    priority_queue <int, vector<int>, greater<int>> g = gq;  
+### How to create a min heap for priority queue? 
+
+                                
+// Syntax to create a min heap for priority queue 
+           `priority_queue <int, vector<int>, greater<int>> g = gq;  `
+           
 
                 #include <iostream>
                 #include <queue>
@@ -92,8 +100,12 @@ gquiz.pop() :     20    10    5    1
                     showpq(gquiz);
 
                     return 0;
-                }
+
+      }
+      
 Output: 
+
+
 The priority queue gquiz is :     1    5    10    20    30
 
 gquiz.size() : 5
