@@ -119,8 +119,10 @@ Note : The above syntax may be difficult to remember, so in case of numeric valu
 ### Methods of priority queue are: 
 
       
-`empty()`  - returns whether the queue is empty.
-      
+`pq.empty()`  - returns whether the queue is empty.
+
+  
+    
       size() in C++ STL– size() function returns the size of the queue.
       top() in C++ STL– Returns a reference to the top most element of the queue
       push() in C++ STL– push(g) function adds the element ‘g’ at the end of the queue.
