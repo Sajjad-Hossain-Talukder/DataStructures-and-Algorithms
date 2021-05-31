@@ -121,15 +121,20 @@ Note : The above syntax may be difficult to remember, so in case of numeric valu
       
 `pq.empty()`  - returns whether the queue is empty.
 
-  
-    
-      size() in C++ STL– size() function returns the size of the queue.
-      top() in C++ STL– Returns a reference to the top most element of the queue
-      push() in C++ STL– push(g) function adds the element ‘g’ at the end of the queue.
-      pop() in C++ STL– pop() function deletes the first element of the queue.
-      swap() in C++ STL– This function is used to swap the contents of one priority queue with another priority queue of same type and size.
-      emplace() in C++ STL – This function is used to insert a new element into the priority queue container, the new element is added to the top of the priority queue.
-priority_queue value_type in C++ STL– Represents the type of object stored as an element in a priority_queue. It acts as a synonym for the template parameter.
+`pq.size()` - returns the size of the queue.
+
+`pq.top() `- Returns a reference to the top most element of the queue
+
+`pq.push( g ) `- adds the element ‘g’ at the end of the queue.
+
+`pq.pop()` – pop() function deletes the first element of the queue.
+
+`pq1.swap(pq2)` L– This function is used to swap the contents of one pq with another pq of same type and size.
+
+`pq.emplace(g)` – used to insert a new element , the new element is added to the top of the priority queue.
+
+
+`priority_queue:: value_type` – Represents the type of object stored as an element in a priority_queue. It acts as a synonym for the template parameter.https://www.geeksforgeeks.org/priority_queue-value_type-in-c-stl/
 
 
 
