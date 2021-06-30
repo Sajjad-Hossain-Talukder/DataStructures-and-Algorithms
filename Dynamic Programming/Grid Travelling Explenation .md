@@ -131,50 +131,5 @@ int main()
     return 0;
 }
 ```
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-#include <stdio.h>
-#include <string.h>
-long long dp[21][21];
-long long solve(long long m,long long n)
-{
-    if(m==0 || n==0) return 1;
-    if(dp[m][n]!=-1) return dp[m][n]; // agei jodi calculate kore thaki,tahole notun kore ar calculate korbona. Return kore dibo.
- 
-    else
-    {
-        dp[m][n] = solve(m-1,n)+ solve(m,n-1);
-        return dp[m][n];
-    }
-}
-int main()
-{
-    memset(dp,-1,sizeof(dp)); // puro dp array ta ke -1 diye initialize kore dilam.
-    long long m,n;
-    scanf("%lld%lld",&m,&n);
-    printf("%lld\n",solve(m,n));
- 
-    return 0;
-}
+
 এতটুকে বুঝতে কোনো সমস্যা থাকলে আমাকে জানাতে ভুল করো না! কমেন্ট বক্স সবসময় খোলা। এতটুকে যদি বুঝতে কোনো সমস্যা না থাকে,তাহলে ঠিক পরের পর্বেই আলোচনা করবো শর্ত যদি আরেকটু কঠিন হয়,ডিপজল চলে আসে এবং ডানে-উপরের পাশাপাশি কর্ণ বরাবর যদি নড়াচড়া করা যায়,তাহলে ব্যাপারটা কেমন ঘটবে! সাথে থাকবে চমৎকার কিছু প্র্যাকটিস প্রবলেম! আশা করি সাথেই থাকবে!
