@@ -33,3 +33,8 @@ int main()
 	}
 	
 }
+
+
+
+```
+Possible application : Comparing strings can be generally used in dictionary, where we need to place words in lexicographical order. Example of this can be to find the word which occurs 1st in dictionary among given set of words.
