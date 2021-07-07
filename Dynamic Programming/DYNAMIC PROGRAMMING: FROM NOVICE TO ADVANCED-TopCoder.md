@@ -1,11 +1,14 @@
-DYNAMIC PROGRAMMING: FROM NOVICE TO ADVANCED
-Discuss this article in the forums
+## DYNAMIC PROGRAMMING: FROM NOVICE TO ADVANCED
+
 
 An important part of given problems can be solved with the help of dynamic programming (DP for short). Being able to tackle problems of this type would greatly increase your skill. I will try to help you in understanding how to solve problems using DP. The article is based on examples, because a raw theory is very hard to understand.
 
+
 Note: If you’re bored reading one section and you already know what’s being discussed in it – skip it and go to the next one.
 
-INTRODUCTION (BEGINNER)
+
+#### INTRODUCTION (BEGINNER) :
+
 What is a dynamic programming, how can it be described? A DP is an algorithmic technique which is usually based on a recurrent formula and one (or some) starting states. A sub-solution of the problem is constructed from previously found ones. DP solutions have a polynomial complexity which assures a much faster running time than other techniques like backtracking, brute-force etc.
 
 Now let’s see the base of DP with the help of an example:
