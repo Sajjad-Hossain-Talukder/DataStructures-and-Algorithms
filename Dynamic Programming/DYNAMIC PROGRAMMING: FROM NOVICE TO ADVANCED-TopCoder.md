@@ -259,3 +259,49 @@ StripePainter – SRM 150 Div 1
 QuickSums – SRM 197 Div 2
 
 ShortPalindromes – SRM 165 Div 2
+
+### ADVANCED : 
+
+The following problems will need some good observations in order to reduce them to a dynamic solution.
+
+Problem StarAdventure – SRM 208 Div 1:
+
+Given a matrix with M rows and N columns (N x M). In each cell there’s a number of apples.
+You start from the upper-left corner of the matrix. You can go down or right one cell. You need to arrive to the bottom-right corner. Then you need to go back to the upper-left cell by going each step one cell left or up. Having arrived at this upper-left cell, you need to go again back to the bottom-right cell.
+Find the maximum number of apples you can collect.
+When you pass through a cell – you collect all the apples left there.
+
+Restrictions: 1 < N, M <= 50 ; each cell contains between 0 and 1000 apples inclusive.
+First of all we observe that this problem resembles to the classical one (described in Section 3 of this article), in which you need to go only once from the top-left cell to the bottom-right one, collecting the maximum possible number of apples. It would be better to try to reduce the problem to this one. Take a good look into the statement of the problem – what can be reduced or modified in a certain way to make it possible to solve using DP? First observation is that we can consider the second path (going from bottom-right cell to the top-left cell) as a path which goes from top-left to bottom-right cell. It makes no difference, because a path passed from bottom to top, may be passed from top to bottom just in reverse order. In this way we get three paths going from top to bottom. This somehow decreases the difficulty of the problem. We can consider these 3 paths as left, middle and right. When 2 paths intersect (like in the figure below)
+
+
+
+
+we may consider them as in the following picture, without affecting the result:
+
+
+
+
+This way we’ll get 3 paths, which we may consider as being one left, one middle and the other – right. More than that, we may see that for getting an optimal results they must not intersect (except in the leftmost upper corner and rightmost bottom corner). So for each row y (except first and last), the x coordinates of the lines (x1[y] , x2[y] and respectively x3[y] ) will be : x1[y] < x2[y] < x3[y] . Having done that – the DP solution now becomes much clearer. Let’s consider the row y. Now suppose that for any configuration of x1[y-1] , x2[y-1] and x3[y-1] we have already found the paths which collect the maximum number of apples. From them we can find the optimal solution for row y. We now have to find only the way for passing from one row to the next one. Let Max[i][j][k] represent the maximum number of apples collected till row y-1 inclusive, with three paths finishing at column i, j, and respectively k. For the next row y, add to each Max[i][j][k] (obtained previously) the number of apples situated in cells (y,i) , (y,j) and (y,k). Thus we move down at each step. After we made such a move, we must consider that the paths may move in a row to the right. For keeping the paths out of an intersection, we must first consider the move to the right of the left path, after this of the middle path, and then of the right path. For a better understanding think about the move to the right of the left path – take every possible pair of, k (where j<k), and for each i (1 i<j) consider the move from position (i-1,j,k) to position (i,j,k). Having done this for the left path, start processing the middle one, which is done similarly; and then process the right path.
+
+TC problems for practicing:
+
+MiniPaint – SRM 178 Div 1
+
+Additional Note:
+
+When have read the description of a problem and started to solve it, first look at its restrictions. If a polynomial-time algorithm should be developed, then it’s possible that the solution may be of DP type. In this case try to see if there exist such states (sub-solutions) with the help of which the next states (sub-solutions) may be found. Having found that – think about how to pass from one state to another. If it seems to be a DP problem, but you can’t define such states, then try to reduce the problem to another one (like in the example above, from Section 5).
+
+Mentioned in this writeup:
+
+TCCC ’03 Semifinals 3 Div I Easy – ZigZag
+TCCC ’04 Round 4 Div I Easy – BadNeighbors
+TCCC ’04 Round 1 Div I Med – FlowerGarden
+TCO ’03 Semifinals 4 Div I Easy – AvoidRoads
+TCCC ’03 Round 4 Div I Easy – ChessMetric
+TCO ’03 Round 4 Div I Med – Jewelry
+SRM 150 Div I Med – StripePainter
+SRM 197 Div II Hard – QuickSums
+SRM 165 Div II Hard – ShortPalindromes
+SRM 208 Div I Hard – StarAdventure
+SRM 178 Div I Hard – MiniPaint
