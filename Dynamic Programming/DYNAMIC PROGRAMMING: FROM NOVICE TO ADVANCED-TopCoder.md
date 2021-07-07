@@ -7,6 +7,8 @@ An important part of given problems can be solved with the help of dynamic progr
 Note: If you’re bored reading one section and you already know what’s being discussed in it – skip it and go to the next one.
 
 
+
+
 #### INTRODUCTION (BEGINNER) :
 
 What is a dynamic programming, how can it be described? A DP is an algorithmic technique which is usually based on a recurrent formula and one (or some) starting states. A sub-solution of the problem is constructed from previously found ones. DP solutions have a polynomial complexity which assures a much faster running time than other techniques like backtracking, brute-force etc.
