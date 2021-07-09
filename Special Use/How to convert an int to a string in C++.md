@@ -58,10 +58,11 @@ int main() {
 ```
 
 
-3. Using boost::lexical_cast
-boost::lexical_cast provides a cast operator which converts a numeric value to a string value. See the example below:
+#### 3. Using boost::lexical_cast
 
-12345678910111213141516
+```boost::lexical_cast``` provides a cast operator which converts a numeric value to a string value. See the example below:
+
+```
 #include <iostream>
 #include <boost/lexical_cast.hpp>
 using namespace std;
@@ -71,6 +72,12 @@ int main() {
   int num = 100;
   // a variable of str data type
   string str; 
+  // using boost::lexical_cast<string> to convert an int into a string
+  str = boost::lexical_cast<string>(num);
 
+  cout << "The integer value is " << num << endl;  
+  cout << "The string representation of the integer is " << str << endl;  
+}
 
+```
 The libboost-dev package is required in order to use this cast.
