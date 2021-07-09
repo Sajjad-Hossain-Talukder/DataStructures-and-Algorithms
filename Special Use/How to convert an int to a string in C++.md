@@ -34,10 +34,11 @@ int main() {
 ```
 
 
-2. Using the to_string() method
-The to_string() method accepts a value of any basic data type and converts it into a string. Take a look at the example below:
+#### 2. Using the to_string() method
 
-123456789101112131415
+The `to_string() method accepts a value of any basic data type and converts it into a string. Take a look at the example below:
+
+```
 #include <iostream>
 #include<string>  
 using namespace std;
@@ -48,9 +49,14 @@ int main() {
   string str; // a variable of str data type
 
   // using to_string to convert an int into a string
+  str = to_string(num);
 
+  cout << "The integer value is " << num << endl;  
+  cout << "The string representation of the integer is " << str << endl;  
+}
 
-Run
+```
+
 
 3. Using boost::lexical_cast
 boost::lexical_cast provides a cast operator which converts a numeric value to a string value. See the example below:
