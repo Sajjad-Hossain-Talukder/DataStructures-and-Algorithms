@@ -36,7 +36,7 @@ int main() {
 
 #### 2. Using the to_string() method
 
-The `to_string() method accepts a value of any basic data type and converts it into a string. Take a look at the example below:
+The ```to_string()``` method accepts a value of any basic data type and converts it into a string. Take a look at the example below:
 
 ```
 #include <iostream>
