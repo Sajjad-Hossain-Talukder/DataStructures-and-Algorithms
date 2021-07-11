@@ -6,6 +6,7 @@ Source : http://www.shafaetsplanet.com/?p=1072
 
 */
 
+```
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
@@ -52,6 +53,7 @@ int main(){
 
 return 0;
 }
+```
 /*
 5 7
 0 1 2
