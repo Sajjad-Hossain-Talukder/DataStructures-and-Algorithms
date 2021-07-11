@@ -1,8 +1,11 @@
 /*
+
 If a graph has a Cycle no matter is it positive or negative , this program do not work actually . It will Work iff 
+
 the cycle is A Directed Acyclic Graph ( DAG ) 
 
 Source : http://www.shafaetsplanet.com/?p=1072
+
 
 */
 
@@ -54,13 +57,23 @@ int main(){
 return 0;
 }
 ```
-/*
+```
+
 5 7
+
 0 1 2
+
 0 3 1
+
 0 2 4
+
 2 4 3
+
 1 4 9
+
 3 1 3
+
 1 2 1
-*/
+
+```
+
