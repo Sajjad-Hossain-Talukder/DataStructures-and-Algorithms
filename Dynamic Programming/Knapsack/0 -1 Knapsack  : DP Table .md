@@ -1,4 +1,9 @@
-Source : https://www.youtube.com/watch?v=WNkqbqyvR_0&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=6
+**Iterative Approach**
+
+Space & Time Complexity : O ( item*weight) 
+
+*Source : https://www.youtube.com/watch?v=WNkqbqyvR_0&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=6
+    
 ```
 #include<bits/stdc++.h>
 #define ll long long
