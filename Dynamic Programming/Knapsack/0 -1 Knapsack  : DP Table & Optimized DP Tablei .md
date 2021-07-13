@@ -52,3 +52,59 @@ return 0;
 
 }
 ```
+
+### Optimized DP Table 
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+#define pi acos(-1)
+#define FOR(i,a,b) for (ll i = (a); i < (b); ++i)
+#define F0R(i,a) FOR(i,0,a)
+#define io  ios_base::sync_with_stdio(false); cin.tie(0);
+using namespace std;
+
+int main(){
+
+    int item , weight  ;
+    cin >> item >> weight ;
+
+    int dp[2][weight+1] , wt[ item+1 ] , profit [ item+1 ] ;
+
+    for( int i = 1 ; i <= item ; i++ ) cin >> wt[i] >> profit[i] ;
+
+    memset( dp , 0 , sizeof ( dp ))  ;
+
+    for( int i = 1 ; i <= item ; i++ ){
+
+        int tmp = i%2 ? 0 : 1 ;
+
+        for( int j = 1 ; j <= weight ; j++ ){
+
+            if( wt[ i ] <= j ){
+                dp[i%2][j] = max( dp[tmp][j] , profit[i] + dp[ tmp ][j - wt[i]] ) ;
+            }
+            else {
+                dp[i%2][j] = dp[tmp][j] ;
+            }
+
+        }
+
+    }
+
+
+        for(int j =  0 ; j <= weight ; j++ ){
+            cout << dp[item%2][j] << " ";
+        } cout << endl;
+
+
+    cout << "Maximum Profit : " << dp[item%2][weight] << endl;
+
+
+
+
+
+
+
+
+return 0;
+}
