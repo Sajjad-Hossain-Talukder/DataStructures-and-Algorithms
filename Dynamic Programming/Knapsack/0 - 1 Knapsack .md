@@ -23,6 +23,9 @@ That's why this is known as 0 - 1 knapsack . There is no chance of taking a frac
 we check all possibility by not taking a object and we check again by taking this object . If we preserve our previous result , then it will help us if we
 find the same dp state again . Check out 0 - 1 knapsack Image which will help in details .
 
+** Time Complexity : O ( 2^n ) without dp **
+** using dp : O ( n . w ) **
+
 #### Code : 
 
 ```
