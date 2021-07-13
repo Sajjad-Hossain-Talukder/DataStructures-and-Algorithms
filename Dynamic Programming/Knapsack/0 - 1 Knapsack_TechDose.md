@@ -1,7 +1,7 @@
 #### Theory : https://www.youtube.com/watch?v=mGfK-j9gAQA&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=4
 
-Time Complexity : O ( 2^n ) without dp
-using dp : O ( n . w )
+### Time Complexity : O ( 2^n ) without dp
+### using dp : O ( n . w )
 
 ```
 #include<bits/stdc++.h>
@@ -24,7 +24,7 @@ ll knapsack ( int w[] , int p[] , int  left_w , int current_i  ){
 
     if ( w[current_i] >  left_w ) return knapsack (w , p ,  left_w , current_i-1 );
     else
-        ret = max ( knapsack( w , p , left_w , current_i-1 ) , p[current_i] + knapsack( w , p ,  left_w - w[current_i] , current_i-1) );
+        ret = max ( knapsack(w,p,left_w,current_i-1 ) , p[current_i] + knapsack(w,p,left_w - w[current_i] ,current_i-1) );
     
     dp[current_i][left_w] = ret ;
     return ret ;
