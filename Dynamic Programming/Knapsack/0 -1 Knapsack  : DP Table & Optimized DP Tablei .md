@@ -1,4 +1,6 @@
-**Iterative Approach**
+### Iterative Approach
+
+**Build DP Table**
 
 Space & Time Complexity : O ( item*weight) 
 
@@ -53,7 +55,8 @@ return 0;
 }
 ```
 
-### Optimized DP Table 
+**Optimized DP Table**
+```
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
@@ -98,13 +101,6 @@ int main(){
 
 
     cout << "Maximum Profit : " << dp[item%2][weight] << endl;
-
-
-
-
-
-
-
 
 return 0;
 }
