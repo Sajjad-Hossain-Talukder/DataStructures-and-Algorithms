@@ -55,7 +55,10 @@ return 0;
 }
 ```
 
-**Optimized DP Table**
+**Space Optimized DP Table**
+
+Time Complexity : O(item * weight) | Space Complexity : O(2 * weight) = O(2 * weight)
+
 ```
 #include<bits/stdc++.h>
 #define ll long long
@@ -86,15 +89,13 @@ int main(){
             if( wt[ i ] <= j ){
                 dp[i%2][j] = max( dp[tmp][j] , profit[i] + dp[ tmp ][j - wt[i]] ) ;
             }
-            else {
+            else 
                 dp[i%2][j] = dp[tmp][j] ;
-            }
-
         }
 
     }
 
-
+        // Last Row
         for(int j =  0 ; j <= weight ; j++ ){
             cout << dp[item%2][j] << " ";
         } cout << endl;
