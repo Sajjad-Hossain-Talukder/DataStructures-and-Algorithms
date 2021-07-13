@@ -1,0 +1,49 @@
+Source : https://www.youtube.com/watch?v=WNkqbqyvR_0&list=PLEJXowNB4kPxBwaXtRO1qFLpCzF75DYrS&index=6
+```
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+#define pi acos(-1)
+#define FOR(i,a,b) for (ll i = (a); i < (b); ++i)
+#define F0R(i,a) FOR(i,0,a)
+#define io  ios_base::sync_with_stdio(false); cin.tie(0);
+using namespace std;
+
+int main(){
+
+    int item , weight  ;
+    cin >> item >> weight ;
+
+    int dp[ item+1 ][ weight+1 ] , wt[ item+1 ] , profit [ item+1 ] ;
+
+    for( int i = 1 ; i <= item ; i++ ) cin >> wt[i] >> profit[i] ;
+
+    memset( dp , 0 , sizeof ( dp ))  ;
+
+    for( int i = 1 ; i <= item ; i++ ){
+
+        for( int j = 1 ; j <= weight ; j++ ){
+
+            if( wt[ i ] <= j )
+                    dp[i][j] = max( dp[i-1][j] , profit[i] + dp[ i - 1 ][j - wt[i]] ) ;
+            else
+                dp[i][j] = dp[i-1][j] ;
+
+        }
+
+    }
+   
+    //DP Table : Space Complexity ( O(item * weight) ) 
+    for(int i = 0 ; i <= item ; i++ ){
+        for(int j =  0 ; j <= weight ; j++ ){
+            cout << dp[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    cout << "Maximum Profit : " << dp[item][weight] << endl;
+    
+return 0;
+
+}
+```
