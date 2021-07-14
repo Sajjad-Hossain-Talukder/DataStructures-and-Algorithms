@@ -5,7 +5,7 @@ the cycle is A Directed Acyclic Graph ( DAG )
 Source : http://www.shafaetsplanet.com/?p=1072
 
 */
-
+```
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
@@ -62,3 +62,4 @@ return 0;
 3 1 3
 1 2 1
 */
+```
