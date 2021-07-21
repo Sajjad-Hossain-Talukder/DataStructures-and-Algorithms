@@ -1,3 +1,14 @@
+দুইটি স্ট্রিং এর মধ্যে Longest Common Sequence টি আমাদের প্রিন্ট করতে হবে। এক্ষেত্রে আমরা প্রথমে আমরা ইটারেটিভ DP ব্যবহার করে DP টেবিল তৈরি করতে হবে। 
+
+![image](https://user-images.githubusercontent.com/63524824/126562491-56082bd3-8a82-44ee-99ef-8bde5300af87.png
+
+উপরোক্ত টেবিলে আমরা সর্বশেষ সেল থেকে ইটারেশন করে একদম শুরুর সেলে আসবো এবং আসার সময় LCS এর লেটারগুলো Ans স্ট্রিংয়ে স্টোর করে রাখতে হবে। এক্ষেত্রে আমরা কিছু Conditions Apply করবো।
+
+![image](https://user-images.githubusercontent.com/63524824/126563874-c7b3f563-946c-438a-b92b-f3de0cace41b.png)
+
+-
+
+
 
 
 ```
@@ -65,8 +76,5 @@ int main(){
 
 return 0 ;
 }
-
-
-
 
 ```
