@@ -5,8 +5,6 @@ Print the any of the "Longest Increasing Sequence" from all existing LCS .
 
 ### Code : 
 
-```
-### Code : Return LCS length and LCS itself 
 
 ```
 #include<bits/stdc++.h>
@@ -63,4 +61,3 @@ return 0 ;
 
 
 
-```
