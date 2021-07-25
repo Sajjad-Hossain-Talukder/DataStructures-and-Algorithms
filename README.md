@@ -3,7 +3,7 @@
 
 ```
 
-Stuff for Competitive Programming
+Stuffs for Competitive Programming
 
 ```
 
