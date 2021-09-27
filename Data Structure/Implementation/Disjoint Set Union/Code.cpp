@@ -57,6 +57,33 @@ int main(){
 
     for(int i = 1 ; i <= n ; i++ )
         cout << parent[i] <<" " ; cout << endl;
+  
+  /*
+
+    Collapsing Find :  Making all the node with same parent here .
+    For given Graph Below :
+
+       parent[] = { -8 1 1 3 1 5 1 7 }
+
+       Here , Node_8's parent is 7 and Node_7's parent is 1 . We can make
+       the parent of Node_8 is 1 , which may help us to find a cycle IN Case Of
+       MST.
+       This is known as Collapsing Find.
+
+    */
+
+    for(int i = 1 ; i <= n ; i++ ){
+        x = i ;
+        if( parent[i] > 0 ){
+            while( parent[x] > 0 ) x = parent[x];
+            parent[i] = x;
+
+        }
+    }
+
+    for(int i = 1 ; i <= n ; i++ )
+        cout << parent[i] <<" " ; cout << endl;
+
 
 
     
