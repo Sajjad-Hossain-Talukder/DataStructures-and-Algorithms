@@ -78,16 +78,7 @@ int main(){
        This is known as Collapsing Find. It's also known as Path Compression .
 
 
-
-
-    for(int i = 1 ; i <= n ; i++ ){
-        x = i ;
-        if( parent[i] > 0 ){
-            while( parent[x] > 0 ) x = parent[x];
-            parent[i] = x;
-
-        }
-    }*/
+    */
 
     
 
