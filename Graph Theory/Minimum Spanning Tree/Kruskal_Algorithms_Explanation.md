@@ -27,8 +27,9 @@
 7 8 4
 
 ```
-![image](https://user-images.githubusercontent.com/63524824/135059015-5247b421-bd4b-4d4e-bc14-cb9cfac0f578.png)
-![image](https://user-images.githubusercontent.com/63524824/135058959-e404dc87-e6e8-400d-981b-eaa2223ef126.png)
+![image](https://user-images.githubusercontent.com/63524824/135059449-3c9203ef-63de-4482-a403-39625e10dd29.png)
+![image](https://user-images.githubusercontent.com/63524824/135059493-c682f8a7-d131-4b47-bc5f-55b94c4740d3.png)
+
 ![image](https://user-images.githubusercontent.com/63524824/135059292-5250db45-1ecd-4ebc-87b0-e3cdb165b17d.png)
 
 
