@@ -14,9 +14,23 @@
 5 6 8 
 5 7 9 
 6 7 11 
+
+8 9
+1 2 1
+1 3 7
+2 4 5
+2 5 6
+3 4 2
+5 6 3
+5 7 9
+6 8 8
+7 8 4
+
 ```
-http://www.shafaetsplanet.com/uploads/krus/krus1.png
-http://www.shafaetsplanet.com/uploads/krus/krus7.png
+![image](https://user-images.githubusercontent.com/63524824/135059015-5247b421-bd4b-4d4e-bc14-cb9cfac0f578.png)
+![image](https://user-images.githubusercontent.com/63524824/135058959-e404dc87-e6e8-400d-981b-eaa2223ef126.png)
+![image](https://user-images.githubusercontent.com/63524824/135059292-5250db45-1ecd-4ebc-87b0-e3cdb165b17d.png)
+
 
 
 
