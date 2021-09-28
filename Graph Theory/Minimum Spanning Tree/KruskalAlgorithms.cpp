@@ -24,11 +24,8 @@ void Kruskal (ll parent[] , vector<pair<ll,pair<ll,ll>>>graph ){
             if( parent[y] > 0 ) y = parent[y];
         }
 
-         cout << x << " |  "<< y << endl;
         if( x != y ) {
             result.pb({i,j});
-             //cout << x << " - "<< y << endl;
-             //cout << parent[x] <<" S " << parent[y] << endl;
             if( parent[x] <= parent[y]){
                 parent[x]+=parent[y] ;
                 parent[y] = x ;
@@ -38,11 +35,9 @@ void Kruskal (ll parent[] , vector<pair<ll,pair<ll,ll>>>graph ){
                 parent[x] = y ;
             }
             pathCompression(parent,i);
-            pathCompression(parent,j);
-          //  cout << parent[x] <<" E " << parent[y] << endl;
+            pathCompression(parent,j); 
         }
     }
-
 }
 
 int main(){
@@ -56,40 +51,26 @@ int main(){
     cin >> n >> e ;
 
     vector < pair<ll ,pair<ll,ll>>  > graph  ;
+    ll parent[n+1];
+    memset(parent,-1,sizeof(parent));
     
 
     fr(i,0,e){
         cin >> x >> y >> cost ;
         graph.pb({cost,{x,y}});
     }
-
     sort(graph.begin(),graph.end());
-
-    for(auto a : graph ){
-        cout << a.second.first << " " << a.second.second << " " << a.first << endl; 
-    }
-
-    ll parent[n+1];
-    memset(parent,-1,sizeof(parent));
-
     Kruskal(parent,graph);
-
-
-    for(int i = 1 ; i <= n ; i++ )
-        cout << parent[i] <<" " ; cout << endl;
-
+ 
     for(auto a : result)
         cout << a.first <<" "<< a.second << endl;
 
-
- 
 return 0 ;
 }
 
 
-
 /*
-
+Graph For testing : 
 8 9
 1 2 1
 1 3 7
