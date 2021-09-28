@@ -50,5 +50,26 @@ return 0 ;
 }
 /*
 
+input : 
+
+8 8
+1 2
+1 3
+2 3
+4 5
+4 6
+5 7
+6 7
+8 8
+
+Output : 
+
+Total Components Set  : 3
+1 1 1 2 2 2 2 3 
+
+If Connected Components is Needed , then Get them from vis Array .
+
+*/
+
 
 
