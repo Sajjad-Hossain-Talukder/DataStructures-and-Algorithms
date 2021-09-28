@@ -1,3 +1,25 @@
+
+### Input : 
+
+```
+7 11
+1 2 7
+1 4 5 
+2 4 9
+2 3 8
+2 5 7 
+3 5 5 
+4 5 15
+4 6 6  
+5 6 8 
+5 7 9 
+6 7 11 
+```
+http://www.shafaetsplanet.com/uploads/krus/krus1.png
+http://www.shafaetsplanet.com/uploads/krus/krus7.png
+
+
+
 ### Source : 
 ```
 Vlog : 
