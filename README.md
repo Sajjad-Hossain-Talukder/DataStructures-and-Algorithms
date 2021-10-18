@@ -6,5 +6,5 @@
 Stuffs for Competitive Programming
 
 ```
+<img src="images/cover.jpg">
 
-![Banner-Blog-1A-1](https://user-images.githubusercontent.com/63524824/118373459-b8a02b00-b5d8-11eb-9768-e8600e5641eb.jpg)
