@@ -27,11 +27,11 @@
 7 8 4
 
 ```
-![image](https://user-images.githubusercontent.com/63524824/135059449-3c9203ef-63de-4482-a403-39625e10dd29.png)
-![image](https://user-images.githubusercontent.com/63524824/135059493-c682f8a7-d131-4b47-bc5f-55b94c4740d3.png)
+<img src="../../images/krus1.png">
 
-![image](https://user-images.githubusercontent.com/63524824/135059292-5250db45-1ecd-4ebc-87b0-e3cdb165b17d.png)
+<img src="../../images/krus2.png">
 
+<img src="../../images/krus3.png">
 
 
 
@@ -47,13 +47,13 @@ Blog :
 ```
 
 ### Snapshot : 
-![image](https://user-images.githubusercontent.com/63524824/135057806-a3027fa7-2b16-49b5-a770-ee9d19214f06.png)
+<img src="../../images/krus4.png">
 
-![image](https://user-images.githubusercontent.com/63524824/135057706-741aa81f-4bcd-4148-827e-5b57861a424f.png)
+<img src="../../images/krus5.png">
 
-![image](https://user-images.githubusercontent.com/63524824/135057874-078c6f04-84d1-47cf-9a06-1c79e848189d.png)
+<img src="../../images/krus6.png">
 
-![গ্রাফ ](https://user-images.githubusercontent.com/63524824/135058320-da190986-a417-4fd9-9ee0-b8a8bfcc3f1a.png)
+<img src="../../images/krus7.png">
 
 
 
