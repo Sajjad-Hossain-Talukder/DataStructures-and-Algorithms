@@ -2,7 +2,7 @@ Source : http://www.shafaetsplanet.com/?p=692
 
 ### Given Graph : 
 
-![](http://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2011/08/mst.png)
+<img src="../../images/prims1.png">
 
 ### input : 
 ```
@@ -23,7 +23,7 @@ Source : http://www.shafaetsplanet.com/?p=692
 
 ### Resulting Graph : 
 
-![resulting_graph](http://www.shafaetsplanet.com/planetcoding/wp-content/uploads/2011/08/mst9.png)
+<img src="../../images/prims2.png">
 
 ### Output : 
 
