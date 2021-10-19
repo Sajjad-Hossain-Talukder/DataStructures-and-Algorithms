@@ -124,12 +124,12 @@ void dfs (ll i , vector<ll>*graph , ll *vis ){
 
         for( auto a : graph[i] ){
             if( vis[a] == 0 ){
-                tre.pb({i,a});
+                tre.pb( {i,a} );
                 dfs(a,graph,vis);
             }
-            else if( vis[a] == 1 )  bck.pb({i,a});
+            else if( vis[a] == 1 )  bck.pb( {i,a} );
             else {
-                if (dis[i]>dis[a])  cross.pb({i,a});
+                if ( dis[i] > dis[a] )  cross.pb( {i,a} );
                 else    forwrd.pb({i,a});
             }
         }
