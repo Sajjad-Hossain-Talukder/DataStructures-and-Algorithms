@@ -10,6 +10,7 @@
   
 ###   Tree Edge :
 It is an edge which is present in the tree **obtained after applying DFS on the graph**. All th edges below are tree edges. 
+Tree edge Form **DFS TREE**.
 
 <img src="../../images/treeedge.png">
 
