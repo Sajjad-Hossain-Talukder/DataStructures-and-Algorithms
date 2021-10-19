@@ -1,3 +1,8 @@
+### Explain :
+
+<a href="https://github.com/Sajjad-Hossain-Talukder/DataStructures-and-Algorithms/blob/main/Graph%20Theory/Topological%20Sorting/Topological%20Sort%20Explanation.md">Basic</a>
+
+<img src="../../images/toposort3.png">
 
 ### Code : 
 
