@@ -61,7 +61,7 @@ return 0 ;
 ```
 ### Given Graph : 
 
-<img src="../images/toposort2.png">
+<img src="../../images/toposort2.png">
 
 ### Input :
 ```
