@@ -3,7 +3,7 @@
 ### Given Graph : 
   Using DFS , we've assigned discover time & finish time.
   
-  <img src="../images/graphedge.png">
+  <img src="../../images/graphedge.png">
   
   <br> 
   <br>
@@ -11,7 +11,8 @@
 ###   Tree Edge :
 It is an edge which is present in the tree **obtained after applying DFS on the graph**. All th edges below are tree edges. 
 
-<img src="../images/treeedge.png">
+<img src="../../images/treeedge.png">
+
 <br> 
 <br>
 
@@ -24,7 +25,8 @@ u = ancestor
 v = descendant
 <br>
  
-<img src="../images/forwardedge.png">
+<img src="../../images/forwardedge.png">
+
 <br> 
 <br>
 
@@ -38,7 +40,8 @@ v = ancestor
 <br>
  
 
-<img src="../images/back.png">
+<img src="../../images/back.png">
+
 <br> 
 <br>
 
@@ -46,7 +49,8 @@ v = ancestor
 It is a edge which connects two node such that they **do not have any ancestor and a descendant relationship** between them. 
 
 
-<img src="../images/crossedge.png">
+<img src="../../images/crossedge.png">
+
 <br> 
 <br>
 
