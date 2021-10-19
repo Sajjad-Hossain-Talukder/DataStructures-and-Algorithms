@@ -1,4 +1,4 @@
-### Depth First Search : Source - <a href="https://cp-algorithms.com/graph/depth-first-search.html">CP _Agorithms</a>
+### Depth First Search : Source - <a href="https://cp-algorithms.com/graph/depth-first-search.html">CP _Agorithms</a>  | <a href="http://www.shafaetsplanet.com/planetcoding/?p=973">শাফায়েতের ব্লগ</a>
 <br>
 <br>
 
@@ -55,7 +55,17 @@ input :
 
 **Discover time** indicate a value which actually represent **the touching time** and after end of travelling , we also can keep a marker of **Finishing** by using **Finish time**.
 
+
+
+
+<br>
+
+<br>
+
+
+**From Safaet's Blog :** 
   
+<img src="../../images/dfsHowWorks.png">
 
 
 
