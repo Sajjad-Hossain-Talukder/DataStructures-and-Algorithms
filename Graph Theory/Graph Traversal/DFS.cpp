@@ -40,7 +40,10 @@ int main(){
         graph[y].pb(x) ;
     }
 
-    dfs(1,graph,vis);
+    fr(i,1,n+1){
+        if(!vis[i])
+            dfs(i,graph,vis);
+    }
     
 /*
     cout << endl;
