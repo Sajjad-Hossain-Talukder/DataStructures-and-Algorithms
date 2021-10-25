@@ -2,7 +2,13 @@
 
 <a href="https://github.com/Sajjad-Hossain-Talukder/DataStructures-and-Algorithms/blob/main/Graph%20Theory/Topological%20Sorting/Topological%20Sort%20Explanation.md">Basic</a>
 
+#### Solution 1 :
+
 <img src="../../images/toposort3.png">
+
+#### Solution 2 :
+
+গ্রাফের **ইনডিগ্রি** হিসাবের মাধ্যমেও সল্যুশন করা যাই।  সেই **কমপ্লেক্সিটি O(n^2)**  । শুরুতে যাদের ইনডিগ্রি সবচাইতে কম তাদেরকে নিবো এবং এদের সাথে যাদের আউট এজ আছে তাদের ইনডিগ্রি কমিয়ে দিবো ১ করে। এইভাবে কন্টিনিউ হবে। 
 
 ### Code : 
 
