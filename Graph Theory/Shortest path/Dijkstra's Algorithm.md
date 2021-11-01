@@ -29,7 +29,7 @@ with the new distance to the priority queue.</li>
 
 ```
 
-  #include<bits/stdc++.h>
+#include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
 #define fr(i,s,e) for(ll i=s;i<e;i++)
@@ -123,45 +123,7 @@ Source index = 1 ;
 
 
 
-    vector<pair<ll,ll>> graph[n+1];
-
-    fr(i,0,e){
-        cin >> x >> y >> cst  ;
-        graph[x].pb({y,cst});
-        graph[y].pb({x,cst});
-    }
-
-
-
-    pq.push({0,1});
-    vector < ll >dist(n+1 , INT_MAX) ,vis(n+1,0);
-    dist[1] = 0 ;
-
-    while(!pq.empty()){
-
-        pair < ll , ll > p = pq.top();
-        pq.pop();
-        ll nd = p.second , cost = p.first ;
-
-        if ( vis[nd] ) continue ;
-        else vis[nd] = 1;
-
-        for(auto a : graph[nd] ){
-            if ( dist[a.first] > cost+a.second && !vis[a.first] ){
-                 dist[a.first] = cost+a.second ;
-                 pq.push({dist[a.first],a.first});
-            }
-        }
-
-    }
-
-    cout << "Source 1 to : \n";
-    for( int i = 1 ; i<= n ; i++ )
-        cout << i <<" "<< dist[i] << endl;
-
-
-return 0 ;
-}
+    
 
 Source index = 1 ; 
 5 6
