@@ -121,9 +121,26 @@ Source index = 1 ;
 5 3
 */
 
-
+```
 
 </details>
-
-
+ 
+<details>
+<summary> Output : </summary>
+  
+```
+1 to 1 : 1
+1 to 2 : 1 2
+1 to 3 : 1 3
+1 to 4 : 1 4
+1 to 5 : 1 4 5
+1 0
+2 2
+3 1
+4 3
+5 5
+  
+```
+  
+</details>
 
