@@ -1,6 +1,16 @@
 
 ### Dijkstra's Algorithm :
 
+
+<details>
+<summary>Explanation : </summary>
+  <br>
+  source : http://www.shafaetsplanet.com/?p=1500
+  <br>
+  <br>
+ <img src="../../images/dijkastra.png">
+</details>
+  
 <details>
 <summary>Algorithm Steps:</summary>
 <ul>
