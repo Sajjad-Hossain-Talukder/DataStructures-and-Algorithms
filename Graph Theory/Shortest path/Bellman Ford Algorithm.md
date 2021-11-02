@@ -108,3 +108,9 @@ int main(){
   <br><br>
   <b>Complexity : O(V*E) , Where V = Number of nodes & E = Number of Edges</b>
 </details>
+  
+
+  <details>
+    <summary>Graph : </summary>
+    <img src="../../images/graphBell.png">
+   </details>
