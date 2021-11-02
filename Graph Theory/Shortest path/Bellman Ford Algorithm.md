@@ -5,17 +5,11 @@
   <br><b> So why shortest path shouldn't have a cycle ? </b>
   > There is no need to pass a vertex again, because the shortest path to all other vertices could be found without the need for a second visit for any vertices.
   
-  
-  <h4>Application :</h4>
-  <ol>
-  <li>Check if there is a negative cycle in the graph.</li>
-  </ol>
-  <br>
 </details>
   
 <details>
-  <summary>Algorithm Step : </summary>
-  <ol>
+  <summary>Algorithm Steps : </summary>
+  <br><ol>
     <li>The outer loop traverses N-1 Times.</li>
     <li>Every time check if the <b>next_node_distance > current_node_distance + edge_weight</b> , in this case update the <b>next_node_distance= current_node_distance + edge_weight</b>. </li>
   </ol>
