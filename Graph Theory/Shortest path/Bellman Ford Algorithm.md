@@ -1,13 +1,22 @@
 <details>
   <summary>Explanation : </summary>
+  <b>Core Concept : </b> Shortest path contains at most n-1 edges, because the shortest path couldn't have a cycle.
+  
+  <br><b> So why shortest path shouldn't have a cycle ? </b>
+  > There is no need to pass a vertex again, because the shortest path to all other vertices could be found without the need for a second visit for any vertices.
   
 </details>
   
 <details>
-  <summary>Complexity : </summary>
-  <br>Bellman-Ford is also simpler than Dijkstra and suites well for distributed systems. But time complexity of Bellman-Ford is O(VE), which is more than Dijkstra.
-  <br><br>
-  <b>Complexity : O(V*E) , Where V = Number of nodes & E = Number of Edges</b>
+  <summary>Algorithm Step : </summary>
+  <ol>
+    <li>The outer loop traverses N-1 Times.</li>
+    <li>Every time check if the <b>next_node_distance > current_node_distance + edge_weight</b> , in this case update the <b>next_node_distance= current_node_distance + edge_weight</b>. </li>
+  </ol>
+  
+  <h3> Negative Cycle Detection : </h3>
+  <br>Traverse  one more time and Check distance . <b>if distance get changed in compare with previously obtained distance</b> , then Given graph must have a Negative Edge Weighted Cycle.<br>
+  
 </details>
 
 <details>
@@ -90,9 +99,12 @@ int main(){
 
 
 
-
-
-
   ```
   
+</details>
+<details>
+  <summary>Complexity : </summary>
+  <br>Bellman-Ford is also simpler than Dijkstra and suites well for distributed systems. But time complexity of Bellman-Ford is O(VE), which is more than Dijkstra.
+  <br><br>
+  <b>Complexity : O(V*E) , Where V = Number of nodes & E = Number of Edges</b>
 </details>
