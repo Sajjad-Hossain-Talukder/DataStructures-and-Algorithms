@@ -1,5 +1,6 @@
 <details>
 <summary> Explanation : </summary>
+    Floyd Warshall's Algorithm is used to find the shortest paths between between all pairs of vertices in a graph, where each edge in the graph has a weight which is positive or negative.
 </details>
 
 <details>
@@ -13,7 +14,7 @@
     <li>Initialize the shortest paths between any  vertices with Infinity.</li>
 <li>Find all pair shortest paths that use  intermediate vertices, then find the shortest paths that use  intermediate vertex and so on.. until using all  vertices as intermediate nodes.</li>
 <li>Minimize the shortest paths between any  pairs in the previous operation.</li>
-<li>For any  vertices  , one should actually minimize the distances between this pair using the first  nodes, so the shortest path will be: </li>
+<li>For any  vertices  , one should actually minimize the distances between this pair using the first  nodes, so the shortest path will be:  adj[i][j] = min( adj[i][j] , adj[i][k] + adj[k][j] </li>
   </ol>  
 </details>
 
