@@ -13,7 +13,8 @@
   
 <details>
 <summary>Algorithm Steps:</summary>
-<ul>
+  <br>
+<ol>
 <li> Set  vertices distances = infinity | set the source distance = zero.</li> 
 <li> Push the source vertex in a min-priority queue in the form (distance , vertex), /li>
 <li> Pop the vertex with the minimum distance from the priority queue (at first the popped vertex = source).</li>
@@ -22,7 +23,8 @@ with the new distance to the priority queue.</li>
 <li> If the popped vertex is visited before, just continue without using it.</li>
 <li> Apply the same algorithm again until the priority queue is empty.</li>
   
-</ul>
+</ol>
+  <br>
 </details>
 <details>
 <summary>Code : Using Min Priority Queue </summary>
