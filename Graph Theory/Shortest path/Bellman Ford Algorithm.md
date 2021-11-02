@@ -1,10 +1,16 @@
 <details>
   <summary>Explanation : </summary>
-  <b>Core Concept : </b> Shortest path contains at most n-1 edges, because the shortest path couldn't have a cycle.
+  <br><b>Core Concept : </b> Shortest path contains at most n-1 edges, because the shortest path couldn't have a cycle.
   
   <br><b> So why shortest path shouldn't have a cycle ? </b>
   > There is no need to pass a vertex again, because the shortest path to all other vertices could be found without the need for a second visit for any vertices.
   
+  
+  <h4>Application :</h4>
+  <ol>
+  <li>Check if there is a negative cycle in the graph.</li>
+  </ol>
+  <br>
 </details>
   
 <details>
