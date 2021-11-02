@@ -14,11 +14,19 @@ https://cp-algorithms.com/graph/search-for-connected-components.html#toc-tgt-2
 
 
 <details>
+  <summary>Steps : </summary>
+  <br>
+  <b>To check Whether a graph's all node is connected or not , just do DFS single time. After completing DFS check visited[] , if there is "zero" , then this node is not visited because of no connectivity .</b>
+  <br>
+  
+</details>
+<details>
 
   
 <summary> Code : </summary>
   
 ``` 
+  
   
 #include<bits/stdc++.h>
 #define ll long long
