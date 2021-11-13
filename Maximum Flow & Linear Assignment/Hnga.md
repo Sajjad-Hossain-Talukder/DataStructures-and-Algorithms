@@ -40,5 +40,12 @@
     </ol>
   </details>
   
-  
+<details>
+  <summary>Videos : </summary>
+  <p>
+    <a href="https://www.youtube.com/watch?v=cQ5MsiGaDY8"> Video 1 - Channel : CompSci </a> <br>
+    <a href="https://www.youtube.com/watch?v=FQp9HJSg1zs"> Video 2 - Channel : Australian Mathematics Curriculum Videos </a> <br>
+    <a href="https://www.youtube.com/watch?v=FCaD34z--bY&t=1s"> Video 3 - Channel : Joel Speranza Math </a>
+  </p>
+    </details>
   
