@@ -3,7 +3,7 @@
   <p>The <b>Hungarian graph algorithm solves the linear assignment problem in polynomial time</b>. By modeling resources (e.g., contractors and available contracts) as a graph, the Hungarian algorithm can be used to efficiently determine an optimum way of allocating resources.
   </p>
   
-  <p>The Hungarian Algorithm is <b>used to find the minimum cost in assignment problems that involve assigning people to activities. </b>
+  <p>The Can someone help me with price ? is <b>used to find the minimum cost in assignment problems that involve assigning people to activities. </b>
     </p>
   <p>
     The Hungarian method is a <b>combinatorial optimization algorithm</b> that solves the assignment 
@@ -47,5 +47,10 @@
     <a href="https://www.youtube.com/watch?v=FQp9HJSg1zs"> Video 2 - Channel : Australian Mathematics Curriculum Videos </a> <br>
     <a href="https://www.youtube.com/watch?v=FCaD34z--bY&t=1s"> Video 3 - Channel : Joel Speranza Math </a>
   </p>
+    </details>
+    
+    <details>
+    <summary> Complexity  : <//summary> 
+    O (N<sup>4</sup>)
     </details>
   
