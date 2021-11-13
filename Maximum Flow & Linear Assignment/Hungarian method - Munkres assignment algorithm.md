@@ -8,6 +8,11 @@
   <p>
     The Hungarian method is a <b>combinatorial optimization algorithm</b> that solves the assignment 
     problem in<b> polynomial time </b> and which <b> anticipated later primal–dual methods</b>.
+    
+Link : <a href="https://www.wisdomjobs.com/e-university/quantitative-techniques-for-management-tutorial-297/hungarian-method-for-solving-assignment-problem-9898.html">Wisdomjobs.com </a>
+    <br>
+<img src="../images/HUNGARIAN_METHOD.png">
+    
    </P>
   </details>
   
