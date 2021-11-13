@@ -49,8 +49,9 @@
   </p>
     </details>
     
-    <details>
-    <summary> Complexity  : <//summary> 
-    O (N<sup>4</sup>)
-    </details>
+<details>
+    <summary> Complexity  : </summary> 
+  <br>
+  Algorithm Complexity :  <b> O(N<sup>4</sup>) </b>
+</details>
   
