@@ -1,5 +1,5 @@
 <details>
-  <summary>Description </summary>
+  <summary>Description  : </summary>
   <p>The <b>Hungarian graph algorithm solves the linear assignment problem in polynomial time</b>. By modeling resources (e.g., contractors and available contracts) as a graph, the Hungarian algorithm can be used to efficiently determine an optimum way of allocating resources.
   </p>
   
@@ -11,10 +11,9 @@
    </P>
   </details>
   
-  <br>
   
 <details>
-  <summary>History </summary>
+  <summary>History :  </summary>
   <p>
     It was developed and published in 1955 by Harold Kuhn, who gave the name "Hungarian method" because the algorithm was largely based on the 
     earlier works of two Hungarian mathematicians: Dénes Kőnig and Jenő Egerváry. </p>
