@@ -28,5 +28,17 @@
     </P>
   </details>
   
+<details> 
+  <summary> Algorithm Steps </summary>
+  <ol>
+    <li><b>Subtract row minima </b>(for each row, find the lowest element and subtract it from each element in that row)</li>
+    <li><b>Subtract column minima</b> (for each column, find the lowest element and subtract it from each element in that column)</li>
+    <li><b>Cover all zeroes with minimum number lines</b> (Cover all zeros in the resulting matrix using a minimum number of horizontal and vertical lines. If n lines are required, an optimal assignment exists among the zeros. The algorithm stops. If less than n lines are required, continue with Step 4.)</li>
+    <li>
+<b>Create additional zeros </b>(Find the smallest element (call it k) that is not covered by a line in Step 3. Subtract k from all uncovered elements, and add k to all elements that are covered twice.)
+      </li>
+    </ol>
+  </details>
+  
   
   
