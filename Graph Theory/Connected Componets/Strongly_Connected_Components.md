@@ -1,5 +1,5 @@
-#### Strongly Connected Component : 
-<hr>
+## Strongly Connected Component : 
+
 A strongly connected component is <b>the portion of a directed graph</b> in which <b>there is a path from each vertex to another vertex</b>. <b>It is applicable only on a directed graph.</b>
 
 <hr>
@@ -8,7 +8,7 @@ There are two algorithms to handle SCC . They are  : <br>
   <li>Kosaraju's Algorithms</li>
   <li>Tarjan's Algorithms</li>
   </ul>
-Kosaraju's Algorithm is based on the depth-first search algorithm implemented twice.
+
 
 <hr>
 
@@ -24,6 +24,10 @@ Kosaraju's Algorithm is based on the depth-first search algorithm implemented tw
 #### Kosaraju's Algorithm Steps :
 <details> 
   <summary>Check : </summary> 
+  
+  <br>
+  
+  Kosaraju's Algorithm is based on <b>the depth-first search algorithm implemented twice.</b> <br>
   All Steps Listed Below one after another.Then a problem is Solved based on the given Steps.
   
   <ol>
@@ -39,6 +43,23 @@ Kosaraju's Algorithm is based on the depth-first search algorithm implemented tw
   
   <h3>Example : </h3>
   <img src="../../images/scc_11.png">
+  
+  <br>
+  
+  <h5>1 ] First Step </h5>
+  <img src="../../images/scc_12.png">
+  <img src="../../images/scc_13.png">
+  <img src="../../images/scc_14.png">
+  <h5>2 ] Second Step </h5>
+  <img src="../../images/scc_15.png">
+  <h5>3 ] Third Step </h5>
+  <img src="../../images/scc_16.png">
+  <img src="../../images/scc_17.png">
+  <img src="../../images/scc_19.png">
+   <h5> Final Result:  </h5>
+  <img src="../../images/scc_20.png">
+  
+    
     
   </details>
   
