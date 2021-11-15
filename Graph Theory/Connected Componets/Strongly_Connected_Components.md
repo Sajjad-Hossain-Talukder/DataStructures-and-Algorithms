@@ -68,6 +68,107 @@ There are two algorithms to handle SCC . They are  : <br>
 <details> 
   <summary>Check : </summary> 
   
+```
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+#define fr(i,s,e) for(ll i=s;i<e;i++)
+#define rfr(i,e,s) for(ll i=e;i>=s;i--)
+#define nl  "\n"
+#define mod 1000000007
+#define fast ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
+using namespace std;
+
+const ll sz = 1e3+5;
+vector < ll > q ;
+vector <ll>graph[sz] , Tgraph[sz] , used[sz] , SCC[sz];
+ll vis[sz] , p ;
+
+
+void dfs ( int i){
+   vis[i] = 1 ;
+   for(auto a : graph[i] ){
+    if ( !vis[a] ){
+        dfs(a);
+    }
+   }
+   q.pb(i);
+}
+
+void Tdfs ( int i){
+   vis[i] = 1 ;
+   SCC[p].pb(i);
+   for(auto a : Tgraph[i] ){
+    if ( !vis[a] ){
+        Tdfs(a);
+    }
+   }
+}
+
+
+int main(){
+
+    ll n , e , x , y ;
+    cin >> n >> e ;
+
+    for( int i = 1 ; i <= e ; i++ ){
+        cin >> x >> y ;
+        graph[x].pb(y);
+        Tgraph[y].pb(x);
+    }
+
+    // First Step :
+
+    for( int i = 0 ; i < n ; i++ ){
+        if ( !vis[i] ) dfs(i);
+    }
+
+    // Topo_Sorted _ Sorted By Finish Time
+
+    reverse(q.begin(),q.end());
+
+
+    memset(vis,0,sizeof(vis));
+
+    // DFS again On Queue : 
+    for(auto a : q ){
+        cout << a << " "<< vis[a] << endl;
+        if ( !vis[a] ){
+            ++p;
+            cout <<"YES\n";
+            Tdfs(a);
+        }
+    }
+
+    // Result : 
+    for( int i = 0 ; i <= p ; i++ ){
+            cout << i <<" : " ;
+        for(auto a : SCC[i] )
+            cout << a <<" ";
+        cout << endl;
+    }
+
+
+return 0 ;
+}
+
+/*
+8 9
+0 1
+1 2
+2 3
+3 0
+2 4
+4 5
+5 6
+6 4
+6 7
+*/
+
+
+
+  ```
+  
 </details>
 
 #### Complexity :
