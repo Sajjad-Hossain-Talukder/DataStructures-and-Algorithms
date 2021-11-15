@@ -3,17 +3,25 @@
 A strongly connected component is <b>the portion of a directed graph</b> in which <b>there is a path from each vertex to another vertex</b>. <b>It is applicable only on a directed graph.</b>
 
 <hr>
+There are two algorithms to handle SCC . They are  : <br>
+<ul>
+  <li>Kosaraju's Algorithms</li>
+  <li>Tarjan's Algorithms</li>
+  </ul>
+Kosaraju's Algorithm is based on the depth-first search algorithm implemented twice.
 
-#### Explanation :
+<hr>
+
+#### Kosaraju's Algorithm Explanation :
 <details> 
   <summary>Check : </summary>
   Source : http://www.shafaetsplanet.com/?p=2531
   <br>
-  <img src="../images/SCC_1.png">
+  <img src="../../images/SCC_1.png">
   
   </details>
   
-#### Algorithm Steps :
+#### Kosaraju's Algorithm Steps :
 <details> 
   <summary>Check : </summary> 
   All Steps Listed Below one after another.Then a problem is Solved based on the given Steps.
@@ -28,11 +36,14 @@ A strongly connected component is <b>the portion of a directed graph</b> in whic
     <li>If not visited node is found , then start DFS again from that node.</b>
   <li>All the nodes visited in a single DFS on transpose graph form <b>Strongly Connected Components</b> </li>
   </ol>  
+  
+  <h3>Example : </h3>
+  <img src="../../images/scc_11.png">
     
   </details>
   
   
-#### Code :
+#### Kosaraju's Algorithm Code :
 <details> 
   <summary>Check : </summary> 
   
