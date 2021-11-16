@@ -42,3 +42,15 @@ It is the capacity of the edge after subtracting the flow from the maximum capac
 The slow O(mf × E)  : <b> Ford-Fulkerson method. </b>  <br>
 The O(V × E^2) : <b> Edmonds-Karp algorithm. </b>  <br>
 The O(V^2 × E) : <b> Dinic's algorithm. </b>
+
+<hr>
+
+### Maximum Flow Problem Example  :
+
+
+
+We represent <b>edges as water pipes</b>, the capacity of an edge is the maximal amount of water that can flow through the pipe per second, and the flow of an edge is the amount of water that currently flows through the pipe per second. This motivates the first flow condition. There cannot flow more water through a pipe than its capacity. <br>
+
+<img src="../images/Flow1.png">
+<br>
+The vertices act as junctions, where water comes out of some pipes, and distributes it in some way to other pipes. This also motivates the second flow condition. In each junction all the incoming water has to be distributed to the other pipes. It cannot magically disappear or appear. The source s is origin of all the water, and the water can only drain in the sink t.
