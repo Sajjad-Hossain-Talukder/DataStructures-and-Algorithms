@@ -10,3 +10,16 @@
   <img src="../images/ford_2.png">
   
   </details>
+  
+  
+  <details> 
+  <summary> Algorithm Steps : </summary>
+  
+  <ol>
+    <li> Initialize the flow in all the edges to 0. </li>
+     <li> Initialize the flow in all the edges to 0. </li>
+    
+    
+  </ol>
+  
+  </details>
