@@ -1,3 +1,5 @@
+Ford-Fulkerson algorithm is a <b>greedy approach.</b>
+
 <details > 
   <summary> How Ford-Fulkerson Works ?  </summary> 
   
