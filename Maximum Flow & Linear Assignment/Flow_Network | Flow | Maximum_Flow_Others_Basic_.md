@@ -37,6 +37,16 @@ It is the capacity of the edge after subtracting the flow from the maximum capac
 
 <hr> 
 
+### Bottle neck Capacity :
+
+Bottle neck Capacity of the augmented path is the Minimum Capacity of any edge on that particular path. 
+
+#### Explanation : 
+
+<img src="../images/bottleneck.png">
+
+<hr> 
+
 ### Algorithms to Get Maximum Flow : 
 
 The slow O(mf × E)  : <b> Ford-Fulkerson method. </b>  <br>
