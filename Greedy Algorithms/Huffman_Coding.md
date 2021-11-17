@@ -38,15 +38,19 @@ Here , P is a Prefix Code.
 
 > Building a Huffman Tree from the input characters.
 
-   <ol>
-  <li> Sort all characters in ascending order based on their Frequency.</li>
-  <li> Add two lowest from frequency list and make added value as root and replace two frequency with their root in frequncy list.
-  <li> Do the previous step untill their is a single element in F. list.</li>
-  
-   <li> After forming Huffman Tree , Assign left edge , 0 and right edge , 1 for every internal node.</li>
-     
-    
-   </ol>
+<ol>
+<li> Create a leaf node for each character of the text. Leaf node of a character contains the occurring frequency of that character.</li>
+<li> Arrange all the nodes in increasing order of their frequency value .</li>
+<li> Considering the first two nodes having minimum frequency, Create a new internal node. </li>
+<li>The frequency of this new node is the sum of frequency of those two nodes.</li>
+<li>Make the first node as a left child and the other node as a right child of the newly created node.</li>
+<li> Keep repeating ( Step-03 - Step-05 ) until all the nodes form a single tree.</li>
+<li>The tree finally obtained is the desired Huffman Tree.</li>
+
+</ol>
+
+<h4> Then , </h4> 
+assign all **Left Child 0** and **Right Child 1** in Huffman tree .
 
 > Assigning code to the characters by traversing the Huffman Tree.
 
