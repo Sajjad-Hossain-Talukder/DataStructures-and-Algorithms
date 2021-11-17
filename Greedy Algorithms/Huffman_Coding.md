@@ -58,6 +58,12 @@ assign all **Left Child 0** and **Right Child 1** in Huffman tree .
 
 
 
+### Example : 
+
+<br>
+<img src="../images/example-huffman.png">
+
+
 ### Time Complexity : 
 
 <br> 
