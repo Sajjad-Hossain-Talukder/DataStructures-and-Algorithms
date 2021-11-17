@@ -69,6 +69,11 @@ assign all **Left Child 0** and **Right Child 1** in Huffman tree .
 <br> 
 <img src="../images/huffman_time_C.png">
 
+### Decoding Encoded Message : 
+
+<br> 
+
+<img src="../images/decode_huffman.png">
 
 
   
