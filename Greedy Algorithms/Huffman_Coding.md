@@ -50,9 +50,19 @@ Here , P is a Prefix Code.
 </ol>
 
 <h4> Then , </h4> 
+
 assign all **Left Child 0** and **Right Child 1** in Huffman tree .
 
+
 > Assigning code to the characters by traversing the Huffman Tree.
+
+
+
+### Time Complexity : 
+
+<br> 
+<img src="../images/huffman_time_C.png">
+
 
 
   
