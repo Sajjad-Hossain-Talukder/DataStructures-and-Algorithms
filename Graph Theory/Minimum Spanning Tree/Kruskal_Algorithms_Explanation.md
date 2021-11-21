@@ -1,8 +1,12 @@
 <details> 
   <summary> Example  : </summary>
+  
   <br>
+  
   **Step 0 :  1 . Delete Loop and Parallel Edge.**
+  
   <br>
+  
   <img src="../../images/kruskal_example.png">
   </details>
  
