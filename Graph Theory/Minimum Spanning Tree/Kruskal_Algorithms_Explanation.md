@@ -1,6 +1,11 @@
-
-### Input : 
-
+<details> 
+  <summary> Example  : </summary>
+  <img src="../../images/kruskal_example.png">
+  </details>
+ 
+ <details> 
+  <summary> Input  : </summary>
+  
 ```
 7 11
 1 2 7
@@ -28,25 +33,22 @@
 
 ```
 <img src="../../images/krus1.png">
-
 <img src="../../images/krus2.png">
-
 <img src="../../images/krus3.png">
 
+  
+   </details>
 
 
-### Source : 
-```
+ <details> 
+  <summary> Source : </summary>
 Vlog : 
-Tech Dose : https://www.youtube.com/watch?v=_Iz-QLBGKpM
+Tech Dose : https://www.youtube.com/watch?v=_Iz-QLBGKpM <br>
 Abdul Bari : https://www.youtube.com/watch?v=4ZlRH0eK-qQ
 
 Blog : 
 শাফায়েতের ব্লগ : http://www.shafaetsplanet.com/?p=825
-
-```
-
-### Snapshot : 
+  
 <img src="../../images/krus4.png">
 
 <img src="../../images/krus5.png">
@@ -54,7 +56,8 @@ Blog :
 <img src="../../images/krus6.png">
 
 <img src="../../images/krus7.png">
-
+  
+  </details>
 
 
 
