@@ -39,7 +39,9 @@ Source : http://www.shafaetsplanet.com/?p=692
 
 <details>
   <summary>Code : </summary>
+  
 ```
+  
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
