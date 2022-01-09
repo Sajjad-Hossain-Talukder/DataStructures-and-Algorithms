@@ -8,4 +8,4 @@
 
 ![image](https://user-images.githubusercontent.com/63524824/148676873-52a78939-a848-4cc1-924a-c4587d9bdda6.png)
 
-<img src="../../../../images/heap.png" >
+<img src="../../../images/heap.png" >
