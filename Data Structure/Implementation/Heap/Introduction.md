@@ -12,6 +12,16 @@
 ### Heapify : 
 
 ```
+#include<bits/stdc++.h>
+#define ll long long
+#define pb push_back
+#define fr(i,s,e) for(ll i=s;i<e;i++)
+#define rfr(i,e,s) for(ll i=e;i>=s;i--)
+#define nl  "\n"
+#define mod 1000000007
+#define fast ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
+using namespace std;
+
 void heapify( vector<ll>&heap ){
     ll d = heap.size() - 1 , l , r , j ;
     
@@ -41,5 +51,16 @@ void heapify( vector<ll>&heap ){
         }
     }
 }
+
+
+int main(){
+    vector<ll> heap = {5,10,30,20,35,40 };
+    heapify(heap);
+    for(auto a : heap) cout << a <<" "; cout << endl;
+return 0 ;
+}
+
+
+
 
 ```
