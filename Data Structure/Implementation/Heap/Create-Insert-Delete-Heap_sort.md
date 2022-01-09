@@ -156,3 +156,42 @@ return 0;
    
   </details>
   
+<details >
+<summary> Heap Sort </summary>
+```
+void delete(vector<int> &heap , int pos){
+    pos-=1;
+    int  j,d = heap.size()-1;
+    j = pos*2+1;
+   swap(heap[pos],heap[d]);
+   while(j<d-1){
+        if(heap[j]<heap[j+1])
+                j+=1;
+        if(heap[pos] > heap[j]) 
+break;
+        if(heap[pos] < heap[j]) {
+            swap(heap[pos],heap[j]);
+            pos = j;
+            j = pos*2+1 ;
+         }
+      }
+   heap.pop_back();
+}
+......................................................................................................
+After this caling delete operation heap_sz times, if we check our whole vector , we found it sorted .  
+-------------------------------------------------------------------------------------------------------
+int main(){
+vector<int>heap=  {40,35,30,20,10,5,15};
+ int heap_sz = heap.size();
+ 
+ for(int i = 0;i<heap_sz;i++)
+             delt (heap,1);
+   
+   heap_sz = heap.size();
+   
+    for(int i = 0;i<heap_sz;i++) cout<<heap[i]<<" ";cout<<endl;  // 5 , 10 , 15 , 20 , 30 , 35 , 40 
+return 0;
+}
+              
+```
+</details>
