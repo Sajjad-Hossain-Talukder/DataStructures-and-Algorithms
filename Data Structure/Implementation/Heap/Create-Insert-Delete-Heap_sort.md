@@ -56,5 +56,45 @@ return 0 ;
 ``` 
 </details>
   
+<details>
+  <summary>Create Heap | Insert - Bottom to Up Approach </summary>
+
+  ```
   
+#include<bits/stdc++.h>
+using namespace std ;
+
+vector < int > vec ;
+
+void insert (){
+    int value;
+    cin>>value;
+    vec.push_back(value);
+    int new_position = vec.size()-1;
+    while( new_position >0 && value < vec[(new_position-1)/2]){
+        swap( vec[(new_position-1)/2] , vec[new_position]);
+        new_position =  (new_position-1)/2;
+    }
+    vec[new_position] = value ;
+}
+
+int main(){
+    int heap_size;
+    cin >> heap_size ;
+
+    for( int i= 1 ; i<= heap_size ; i++ ){
+          insert() ;
+    }
+
+    // heap traverse
+    for( int i = 0 ; i< heap_size ; i++ ){
+         cout<< vec[ i ] <<" ";
+     }
+
+return 0 ;
+}
+
+  ```
+  
+</details> 
   
