@@ -155,10 +155,14 @@ return 0;
 ```
    
   </details>
-  
+ 
+              
 <details >
-<summary> Heap Sort </summary>
+              
+<summary> Heap Sort - U N CHECKED </summary>
+              
 ```
+              
 void delete(vector<int> &heap , int pos){
     pos-=1;
     int  j,d = heap.size()-1;
