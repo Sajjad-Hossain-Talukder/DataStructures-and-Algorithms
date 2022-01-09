@@ -98,3 +98,61 @@ return 0 ;
   
 </details> 
   
+
+ <details> 
+   <summary> Delete - U N C H E C K E D </summary>
+
+```
+   
+   --------------------------------------------------
+               DELETE RooT
+--------------------------------------------------
+void delete ( vector<int> &heap ){
+        int size = heap.size( ) ;
+        int temp =  heap[0];
+        heap[0] = heap[size-1];
+        int i = 0 , j= 2*i+1;
+        while(j < size-1 ){
+
+            if(heap[j]<heap[j+1]) j+=1;
+            if(heap[i]>heap[j]) break;
+            if(heap[i]<heap[j]){
+                swap(heap[i],heap[j]);
+                i = j;
+                j = i*2 + 1 ;
+            }
+        }
+        heap.pop_back();
+}
+----------------------------------------------
+        DELETE any position .
+  IT's also can used for HEAP sort . 
+----------------------------------------------
+void delete ( vector<int> &heap , int pos){
+    pos-=1;
+    int j,d = heap.size()-1;
+    j = pos*2+1;
+   swap(heap[pos],heap[d]);
+   while(j<d-1){
+        if(heap[j]<heap[j+1])
+                j+=1;
+        if(heap[pos] > heap[j]) break;
+        if(heap[pos] < heap[j]) {
+            swap(heap[pos],heap[j]);
+            pos = j;
+            j = pos*2+1 ;
+        }
+   }
+   heap.pop_back();
+}
+int main(){
+    delete ( heap );
+    delete ( heap , 1 ) ;
+    delete ( heap , 3 ) ;
+return 0;
+}
+              
+```
+   
+  </details>
+  
