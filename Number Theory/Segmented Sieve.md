@@ -1,3 +1,16 @@
+
+<details > 
+    <summary> <b>Explanation : </b> </summary>
+    <img src="../images/seg_sieve.png">
+
+
+</details>
+
+<details > 
+    <summary> <b>Code :</b> </summary>
+    
+```
+
 #include<bits/stdc++.h>
 #define ll long long
 #define pb push_back
@@ -61,3 +74,7 @@ int main(){
 
 return 0;
 }
+
+```
+
+</details>
