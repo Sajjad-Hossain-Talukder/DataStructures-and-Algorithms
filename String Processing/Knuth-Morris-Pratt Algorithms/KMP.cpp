@@ -34,7 +34,7 @@ void KMP ( string t , string p , vector <ll>v , vector<ll>& pos  ){
                 --i;
             }
         }
-        if( j == d2 ) { j = 0 ; pos.pb(i-d2+1); }
+        if( j == d2 ) { j = v[j-1] ; pos.pb(i-d2+1); }
     }
 }
 
