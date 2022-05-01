@@ -6,7 +6,8 @@
 
 <details>
   <summary> Problem Link: </summary>
-   <b> Link : https://cses.fi/problemset/task/1668 </b>
+   <b> Link : https://cses.fi/problemset/task/1668 </b> <br>
+   <b> Link : https://codeforces.com/problemset/problem/862/B </b>
 </details>
 
 <details>
