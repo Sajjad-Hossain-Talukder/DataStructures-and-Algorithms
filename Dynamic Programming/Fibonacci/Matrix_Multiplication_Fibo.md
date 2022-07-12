@@ -9,9 +9,10 @@ Book : <a href="https://drive.google.com/file/d/1uUu07phBuL3UYSo8dUAbtJX5OXw7Yqh
 </details>
 
 <details> 
-<summary> Fibonacci Code : </summary>
+<summary> N'th Fibonacci Code : </summary>
 
 <br> 
+  
 ```
   
 #include<bits/stdc++.h>
@@ -66,3 +67,17 @@ return 0 ;
 
 ```
 </details>
+  
+<details>
+  <summary> Related Problem : </summary>
+  
+  Link : https://codeforces.com/contest/678/problem/D
+  <br>
+  Solution : https://codeforces.com/contest/678/submission/163947095
+  <br> 
+  Editorial : 
+  
+  
+</details>
+  
+  
