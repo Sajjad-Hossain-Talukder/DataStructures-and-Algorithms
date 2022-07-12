@@ -70,12 +70,13 @@ return 0 ;
   
 <details>
   <summary> Related Problem : </summary>
-  
+  <br>
   Link : https://codeforces.com/contest/678/problem/D
   <br>
   Solution : https://codeforces.com/contest/678/submission/163947095
   <br> 
   Editorial : 
+  <img src="../../images/exp.png">
   
   
 </details>
