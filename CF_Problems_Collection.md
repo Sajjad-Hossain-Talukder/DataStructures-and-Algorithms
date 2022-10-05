@@ -383,11 +383,11 @@ If there is any additional list you'd like to see, please let me know. For those
 |52|1512D|[Corrupted Array](https://codeforces.com/problemset/problem/1512/D)|1200|
 |53|523A|[Rotate, Flip and Zoom](https://codeforces.com/problemset/problem/523/A)|1200|
 |54|454B|[Little Pony and Sort by Shift](https://codeforces.com/problemset/problem/454/B)|1200|
-|55|765C|[Table Tennis Game 2](https://codeforces.com/problemset/problem/765/C)|1200|
-|56|892B|[Wrath](https://codeforces.com/problemset/problem/892/B)|1200|
-|57|554B|[Ohana Cleans Up](https://codeforces.com/problemset/problem/554/B)|1200|
-|58|1433D|[Districts Connection](https://codeforces.com/problemset/problem/1433/D)|1200|
-|59|977C|[Less or Equal](https://codeforces.com/problemset/problem/977/C)|1200|
+|55|765C|[<strike> Table Tennis Game 2 </strike> ](https://codeforces.com/problemset/problem/765/C)|1200|
+|56|892B|[ <strike> Wrath </strike> ](https://codeforces.com/problemset/problem/892/B)|1200|
+|57|554B|[ <strike> Ohana Cleans Up </strike> ](https://codeforces.com/problemset/problem/554/B)|1200|
+|58|1433D|[ <strike> Districts Connection </strike> ](https://codeforces.com/problemset/problem/1433/D)|1200|
+|59|977C|[ <strike> Less or Equal </strike>](https://codeforces.com/problemset/problem/977/C)|1200|
 </details>
 
 <details>
