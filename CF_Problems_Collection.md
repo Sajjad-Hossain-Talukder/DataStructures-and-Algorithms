@@ -380,9 +380,9 @@ If there is any additional list you'd like to see, please let me know. For those
 |49|1364A|[XXXXX](https://codeforces.com/problemset/problem/1364/A)|1200|
 |50|999C|[Alphabetic Removals](https://codeforces.com/problemset/problem/999/C)|1200|
 |51|842A|[Kirill And The Game](https://codeforces.com/problemset/problem/842/A)|1200|
-|52|1512D|[Corrupted Array](https://codeforces.com/problemset/problem/1512/D)|1200|
-|53|523A|[Rotate, Flip and Zoom](https://codeforces.com/problemset/problem/523/A)|1200|
-|54|454B|[Little Pony and Sort by Shift](https://codeforces.com/problemset/problem/454/B)|1200|
+|52|1512D|[ <strike>  Corrupted Array </strike>  ](https://codeforces.com/problemset/problem/1512/D)|1200|
+|53|523A|[ <strike> Rotate, Flip and Zoom </strike>  ](https://codeforces.com/problemset/problem/523/A)|1200|
+|54|454B|[ <strike> Little Pony and Sort by Shift </strike>  ](https://codeforces.com/problemset/problem/454/B)|1200|
 |55|765C|[<strike> Table Tennis Game 2 </strike> ](https://codeforces.com/problemset/problem/765/C)|1200|
 |56|892B|[ <strike> Wrath </strike> ](https://codeforces.com/problemset/problem/892/B)|1200|
 |57|554B|[ <strike> Ohana Cleans Up </strike> ](https://codeforces.com/problemset/problem/554/B)|1200|
