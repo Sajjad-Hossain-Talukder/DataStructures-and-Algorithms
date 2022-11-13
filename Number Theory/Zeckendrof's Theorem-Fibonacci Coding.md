@@ -16,8 +16,10 @@ and sum of them is 30.
 ```
 
 Using Greedy Method : Checkout Code
+### Fibonacci Coding : 
+![image](https://user-images.githubusercontent.com/63524824/201544116-93c3c463-9199-4cb0-bb0b-867e9871bd63.png)
 
-### Code : 
+### ZT_Code : 
 
 ```
 
