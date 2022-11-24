@@ -37,6 +37,7 @@
  <summary> Code : </summary>
   
 ```
+   <br> <b> Single Hash : </b> <br> 
   ll get_hash(string s ){
     ll d = s.size(), loc = 1 , hash_value = 0 ;
     fr(i,0,d){
@@ -48,6 +49,32 @@
     // base = 27  and mod = 1e9+7
     return hash_value ;
   }  
-````
+```
+    
+```
+    <br> <b> Double Hash : </b> <br> 
+    pair<ll,ll> double_hash( string s ){
+
+    ll d = s.size(), hash_value_1 = 0  , hash_value_2 = 0 ;
+    ll mod_1 = 1000000007 , mod_2 = 1000000011;
+    ll loc_1 = 1 , loc_2 = 1 ;
+    ll base_1 = 27 , base_2 = 28 ;
+
+    fr(i,0,d){
+
+        hash_value_1 =  ( (hash_value_1%mod_1) + ((s[i]-96)*loc_1%mod_1)%mod_1) % mod_1 ;
+        hash_value_2 =  ( (hash_value_2%mod_2) + ((s[i]-96)*loc_2%mod_2)%mod_2) % mod_2 ;
+
+        loc_1 = ((loc_1%mod_1)*base_1)%mod_1;
+        loc_2 = ((loc_2%mod_2)*base_2)%mod_2;
+
+    }
+
+    return {hash_value_1,hash_value_2} ;
+    }  
+    
+```
+    
+    
   
 </details>
