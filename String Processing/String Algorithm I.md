@@ -2,7 +2,9 @@
     
 <details> 
   <summary> Expanation : </summary>
-  
+    
+<br>
+    
   |   |   |  
   |---|---|
   | ![1](https://user-images.githubusercontent.com/63524824/203860954-bef214a5-00d0-4f2b-8652-21fe910336ea.png)  |   ![image](https://user-images.githubusercontent.com/63524824/203861179-526f8bc4-ba06-457b-bd2b-d54026dbb3dd.png)  |
@@ -35,9 +37,11 @@
 
 <details> 
  <summary> Code : </summary>
+    
+ <br> <b> Single Hash : </b> <br> 
   
 ```
-   <br> <b> Single Hash : </b> <br> 
+  
   ll get_hash(string s ){
     ll d = s.size(), loc = 1 , hash_value = 0 ;
     fr(i,0,d){
@@ -49,10 +53,14 @@
     // base = 27  and mod = 1e9+7
     return hash_value ;
   }  
-```
     
 ```
-    <br> <b> Double Hash : </b> <br> 
+    
+<br> <b> Double Hash : </b> <br> 
+    
+    
+```
+    
     pair<ll,ll> double_hash( string s ){
 
     ll d = s.size(), hash_value_1 = 0  , hash_value_2 = 0 ;
