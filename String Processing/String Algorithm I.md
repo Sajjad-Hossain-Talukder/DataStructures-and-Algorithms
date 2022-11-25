@@ -77,3 +77,10 @@
     
   
 </details>
+
+    
+    
+### Prefix Hash and Hash of any substring
+    
+    
+    
