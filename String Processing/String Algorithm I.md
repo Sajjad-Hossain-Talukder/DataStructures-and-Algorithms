@@ -83,13 +83,63 @@
 ### Prefix Hash and Hash of any substring
     
     
+
 <details> 
+ <summary> Explanation : </summary>
     
-    <summary> Explanation : </summary>
+   <br>
+    
+   ![3](https://user-images.githubusercontent.com/63524824/204009119-7a413192-f7ea-4dbe-aa8b-85f7ef44cb76.png)
+
+</details>
+    
+<details> 
+ <summary> Code : </summary>
     
     
-    ![image](https://user-images.githubusercontent.com/63524824/204008421-e7f5f2ba-a120-4ba3-857b-e95319da9474.png)
+```
     
+        ll a[10];
+        void power(){
+            a[0] = 1 ;
+            fr(i,1,10){
+                a[i] = a[i-1]*27;
+                a[i]%=mod ;
+            }
+        }
+
+        int main(){
+            string s ;
+            cin >> s ;
+
+            power();
+
+            ll d = s.size(), loc = 1 , hash_value = 0 ;
+            vector<ll>hs;
+
+            // prefix hash
+
+            fr(i,0,d){
+                hash_value = ((hash_value%mod)*27 + (s[i]-96))%mod ;
+                hs.pb(hash_value);
+            }
+
+            for(auto a : hs ) cout << a << " "; cout << endl;
+
+            // any substring 
+
+            fr(i,0,d){
+                fr(j,0,i){
+                    cout << j+1 <<" "<< i << " "<< i-j << " = "<< (hs[i] - hs[j]*(a[i-j])) << endl;
+                }
+            }
+
+
+        return 0 ;
+        }
+
+```
+   
 
 </details>
     
