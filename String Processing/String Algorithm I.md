@@ -143,4 +143,71 @@
 
 </details>
     
+### String Search 
+<details> 
+    <summary> Explanation : </summary>  
+    <br> 
+    <b> Problem Statement :  </b>
+    You are given an array of strings A[]. You have to answer a few queires. Each queries contains a string. You need to find if this string can be found in the array.
+    
+    ![4](https://user-images.githubusercontent.com/63524824/204013214-daa20699-4fc5-4041-b80c-49d7a1261b8d.png)
+
+    
+</details> 
+<details> 
+    <summary>  Code : </summary> 
+    
+```
+    ll get_hash(string s ){
+
+        ll d = s.size(), loc = 1 , hash_value = 0 ;
+        fr(i,0,d){
+            hash_value = ((hash_value%mod)*27 + (s[i]-96))%mod ;
+        }
+        return hash_value ;
+
+    }
+
+    int main(){
+        ll n , queries ;
+        cin >> n ;
+
+        string A[n];
+        vector<ll>hs ;
+
+        fr(i,0,n){
+            cin >> A[i] ;
+            hs.pb( get_hash( A[i] ) );
+        }
+
+        for(auto a : hs ) cout << a <<" "; cout << endl;
+        fr(i,0,hin) cout << A[i] <<" "; cout << endl;
+
+        sort(all(hs));
+
+        cin >> queries ;
+
+        while( queries-- ){
+            string s ;
+            cin >> s ;
+            ll hsh = get_hash(s);
+
+            if ( binary_search(all(hs),hsh)) cout << "Present\n" ;
+            else cout << "Not Present\n";
+
+        }
+
+    return 0 ;
+    }
+
+    
+```
+    
+    
+</details> 
+    
+    
+    
+    
+    
     
