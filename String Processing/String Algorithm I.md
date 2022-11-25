@@ -83,4 +83,14 @@
 ### Prefix Hash and Hash of any substring
     
     
+<details> 
+    
+    <summary> Explanation : </summary>
+    
+    
+    ![image](https://user-images.githubusercontent.com/63524824/204008421-e7f5f2ba-a120-4ba3-857b-e95319da9474.png)
+    
+
+</details>
+    
     
