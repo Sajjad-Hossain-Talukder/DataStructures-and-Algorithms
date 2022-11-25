@@ -147,13 +147,13 @@
 <details> 
     <summary> Explanation : </summary>  
     <br> 
-    <b> Problem Statement :  </b>
-    You are given an array of strings A[]. You have to answer a few queires. Each queries contains a string. You need to find if this string can be found in the array.
+    <b> Problem Statement :  </b> You are given an array of strings A[]. You have to answer a few queires. Each queries contains a string. You need to find if this string can be found in the array.
     
-    ![4](https://user-images.githubusercontent.com/63524824/204013214-daa20699-4fc5-4041-b80c-49d7a1261b8d.png)
+![4](https://user-images.githubusercontent.com/63524824/204013214-daa20699-4fc5-4041-b80c-49d7a1261b8d.png)
 
     
 </details> 
+    
 <details> 
     <summary>  Code : </summary> 
     
