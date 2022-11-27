@@ -2,8 +2,8 @@
 ### প্রশ্ন : ( ৬ <sup>-১</sup> )  % ৫ = কত ?
 
 ```
-আমরা Modular Arithmetic অনুযায়ী যোগ ,বিয়োগ ,এবং গুনের জন্য সূত্র পাই । কিন্তু ভাগের জন্য কোনো সূত্র নেই ।মূলত ভাগের ক্ষেত্রে কাজে আসে এই মডুলার ইনভার্স 
-প্রক্রিয়া। 
+আমরা Modular Arithmetic অনুযায়ী যোগ ,বিয়োগ ,এবং গুনের জন্য সূত্র পাই । কিন্তু ভাগের জন্য 
+কোনো সূত্র নেই ।মূলত ভাগের ক্ষেত্রে কাজে আসে এই মডুলার ইনভার্স প্রক্রিয়া। 
 
 ```
 
@@ -34,6 +34,8 @@ We have discussed three methods to find multiplicative inverse modulo m.
 3) Fermat’s Little theorem, O(Log m) [Works when ‘m’ is prime]
 
 Check out Following Code : 
+
+```
 
 
 #include<bits/stdc++.h>
@@ -81,4 +83,6 @@ int main(){
 return 0;
 }
 
+
+```
 
