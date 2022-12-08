@@ -109,3 +109,83 @@ return 0 ;
 
 </details>   
     
+<details> 
+    <summary> Longest Common Prefix : Code </summary> 
+
+```
+#include<bits/stdc++.h>
+#define ll             long long
+#define pb             push_back
+#define all(v)         v.begin(),v.end()
+#define fr(i,s,e)      for(ll i=s;i<e;i++)
+#define rfr(i,e,s)     for(ll i=e;i>=s;i--)
+#define endl           "\n"
+#define sz(a)          (ll)a.size()
+#define mem1(a)        memset(a,-1,sizeof(a))
+#define pii            pair<int,int>
+#define mod            1000000007
+#define fast           ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
+using namespace std;
+
+struct Trie {
+    Trie *child[26];
+    bool word = false ;
+    ll childCount = 0 ;
+    Trie(){
+        fr(i,0,26) child[i] = NULL ;
+    }
+} ;
+
+Trie* root = new Trie ;
+
+void insertString ( string s ){
+
+    ll d = s.size() ;
+    Trie* pnt = root ;
+
+    fr(i,0,d){
+        ll index = s[i]-97;
+        if(!pnt->child[index]){
+            pnt->child[index] = new Trie();
+        }
+        pnt = pnt->child[index];
+        pnt->childCount+=1;
+    }
+    pnt->word = true ;
+
+}
+
+int main(){
+    ll n , d = 0 ;
+    cin >> n ;
+    string s ;
+    for(ll i=0;i<n;i++){
+        cin >> s ;
+        insertString(s);
+    }
+    Trie* nd = root , tmp ;
+    while(1){
+         Trie* tmp = NULL ;
+         ll cnt = 0 ;
+         fr(i,0,26){
+            if(nd->child[i]!=NULL){
+                cnt+=1;
+                tmp = nd->child[i];
+            }
+         }
+         nd = tmp;
+         if(!tmp) break;
+         if(cnt>1) break;
+         d+=1;
+    }
+
+    fr(i,0,d) cout << s[i] ; cout << endl;
+
+return 0 ;
+}
+
+
+   
+```
+    
+</details> 
