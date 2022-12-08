@@ -82,6 +82,21 @@ ll searchPrefix( string s ){
     }
     return pnt->childCount;
 }
+
+void traverse(Trie* nd){
+
+    if(nd->child[0]==NULL && nd->child[1]==NULL ) {
+        cout << "---------------\n";
+        return ;
+    }
+    fr(i,0,26){
+        if(nd->child[i]==NULL) continue ;
+        cout << (char)(97+i) << endl;
+        traverse(nd->child[i]);
+    }
+}   
+    
+    
 int main(){
 
     for(ll i=0;i<5;i++){
