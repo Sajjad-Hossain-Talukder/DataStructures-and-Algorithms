@@ -7,6 +7,7 @@
    <ul>
        <li> https://www.youtube.com/watch?v=zbV0IRWBNvU  </li>
        <li> https://cppsecrets.com/users/9999109111117110105971171035048484864103109971051084699111109/C00-Trie-Datastructure.php </li>
+       <li> https://medium.com/techie-delight/trie-data-structure-overview-and-practice-problems-2db1bad4bf49 </li>
    </ul>
     
 </details>   
