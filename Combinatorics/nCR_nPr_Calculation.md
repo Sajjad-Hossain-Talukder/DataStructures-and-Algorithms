@@ -1,5 +1,10 @@
 ## nCR _ nPr 
 
+
+<br>
+
+Source : https://www.youtube.com/watch?v=4HvoYmYQOeQ&list=PLk_DdB3uhk2AQalRT2sFhEtatiwaik_YJ&index=8
+
 ```
 
 #include<bits/stdc++.h>
