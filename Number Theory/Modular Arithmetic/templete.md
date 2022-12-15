@@ -26,7 +26,7 @@ ll modmul(ll x , ll y ){
 
 ll modpow(ll a , ll b ){
     ll res = 1 ;
-    while(b>1){
+    while(b){
         if(b&1) res = modmul(res,a);
         a = modmul(a,a);
         b >>= 1 ;
