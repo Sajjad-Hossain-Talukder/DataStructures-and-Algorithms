@@ -3,19 +3,21 @@
 ```
 
 void modnor(ll &x){
-    x %= mod ;
-    if(x<0) x+=mod;
+    x = ((x%mod)+mod)%mod ;
 }
+
 ll modadd(ll x , ll y ){
-    x%=mod , y%=mod ; 
-    modnor(x);modnor(y); 
-    return (x+y)%mod ; 
+    x%=mod , y%=mod ;
+    modnor(x);modnor(y);
+    return (x+y)%mod ;
 }
 
 ll modsub(ll x , ll y ){
-    x%=mod , y%=mod ; 
-    modnor(x);modnor(y); 
-    return modnor(x-y) ;
+    x%=mod , y%=mod ;
+    modnor(x);modnor(y);
+    x-=y;
+    modnor(x);
+    return x ;
 }
 
 ll modmul(ll x , ll y ){
