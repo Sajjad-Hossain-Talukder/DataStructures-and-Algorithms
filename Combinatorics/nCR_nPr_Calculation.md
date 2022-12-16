@@ -35,7 +35,7 @@ ll modadd(ll x , ll y ){
 ll modsub(ll x , ll y ){
     x%=mod , y%=mod ;
     modnor(x);modnor(y);
-    return (x-y)%mod ;
+    return modnor(x-y) ;
 }
 
 ll modmul(ll x , ll y ){
