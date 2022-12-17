@@ -1,7 +1,7 @@
 
 <details > 
     <summary> <b>Explanation : </b> </summary>
-    <img src="../images/seg_sieve.png">
+    <img src="../../images/seg_sieve.png">
 
 
 </details>
