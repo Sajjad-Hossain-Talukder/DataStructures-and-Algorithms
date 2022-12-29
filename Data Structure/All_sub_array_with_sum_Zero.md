@@ -4,6 +4,9 @@
   
   Link : https://www.geeksforgeeks.org/print-all-subarrays-with-0-sum/
   
+  ![image](https://user-images.githubusercontent.com/63524824/209904935-a0a2a7e3-62d2-4260-83dc-ac465b6d8ac7.png)
+
+  
 </details>
 
 
