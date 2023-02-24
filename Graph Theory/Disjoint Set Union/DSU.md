@@ -53,3 +53,10 @@ return 0 ;
   </details> 
 
 
+
+<details> 
+  <summary> Problem List: </summary> 
+  
+  list :
+  1 ) https://codeforces.com/contest/1263/problem/D
+  </details> 
