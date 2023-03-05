@@ -1,8 +1,10 @@
 <details> 
   <summary>Explanation : </summary>
+  
+  
     Source : http://www.shafaetsplanet.com/?p=3416
   
-    <img src='sqExp.png'>
+    <img src="../sqExp.png">
     
 </details> 
 <details> 
