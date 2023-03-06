@@ -8,7 +8,13 @@
     
 </details> 
 <details> 
-  <summary>Code : </summary>
+  <summary>Query on a range for Sum-Max-Min  | Update indivuidual | Update Range  : </summary>
+  
+  ##### Building Segment : O ( N ) 
+  ##### Update Individual : O ( 1 ) 
+  ##### Update Range: O ( Sqrt(N) ) 
+  ##### Query :  O ( Sqrt(N) ) 
+  
   
 ```
   
