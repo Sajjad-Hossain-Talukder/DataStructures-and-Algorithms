@@ -58,5 +58,11 @@ return 0 ;
   <summary> Problem List: </summary> 
   
   list :
+  
+  
   1 ) https://codeforces.com/contest/1263/problem/D
+  
+  2 ) https://codeforces.com/problemset/problem/1559/D1
+  
+  
   </details> 
