@@ -23,7 +23,7 @@ void union_node( ll x , ll y ){
     ll par_x =findpar(x);
     ll par_y =findpar(y);
     if(par_x != par_y){
-        par[y] = par_x ;
+        par[par_y] = par_x ;
     }
 }
 
