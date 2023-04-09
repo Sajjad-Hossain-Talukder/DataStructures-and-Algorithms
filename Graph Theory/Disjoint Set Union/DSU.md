@@ -27,7 +27,7 @@ void union_node( ll x , ll y ){
     if(par_x != par_y){
         if( cnt[par_x] < cnt[par_y] ) swap( par_x , par_y ) ;                          
         par[par_y] = par_x ;
-        if( cnt[par_x] == cnt[par_y] ) cnt[par_x]+=1;                       
+        cnt[par_x]+=cnt[par_y];
     }
 }
 
