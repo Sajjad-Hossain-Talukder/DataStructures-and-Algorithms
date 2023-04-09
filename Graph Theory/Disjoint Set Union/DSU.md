@@ -11,7 +11,7 @@
   
 ```
 
-ll par[100];
+ll par[100] , cnt[100];
 
 ll findpar( ll i ){
     if ( par[i] == i ) return i ;
@@ -23,7 +23,9 @@ void union_node( ll x , ll y ){
     ll par_x =findpar(x);
     ll par_y =findpar(y);
     if(par_x != par_y){
+        if( cnt[par_x] < cnt[par_y] ) swap( par_x , par_y ) ;                          
         par[par_y] = par_x ;
+        if( cnt[par_x] == cnt[par_y] ) cnt[par_x]+=1;                       
     }
 }
 
@@ -32,7 +34,10 @@ int main() {
     ll n , m ;
     cin >> n >> m ;
 
-    fr(i,1,n+1) par[i] = i ;
+    fr(i,1,n+1) {
+        par[i] = i ;
+        cnt[i] = 0 ;
+    }
 
     fr(i,0,m){
         ll x , y ;
