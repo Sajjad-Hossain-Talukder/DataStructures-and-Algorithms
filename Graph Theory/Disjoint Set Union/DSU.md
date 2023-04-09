@@ -9,6 +9,8 @@
 <details> 
   <summary> Code :  </summary>
   
+Another Code link : https://github.com/Sajjad-Hossain-Talukder/DataStructures-and-Algorithms/blob/main/Data%20Structure/Implementation/Disjoint%20Set%20Union/Code.cpp
+  
 ```
 
 ll par[100] , cnt[100];
