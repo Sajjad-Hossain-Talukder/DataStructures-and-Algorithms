@@ -144,7 +144,12 @@ return 0;
 </details>
 
   
-  
+<details>
+  <summary>Lazy Propagation- Sum ( Explanation )</summary> <br>
+  <img src="z___Lazy Propagation Segment Tree Build_Update 1.png">
+</details>
+
+
   
   
 <details>
