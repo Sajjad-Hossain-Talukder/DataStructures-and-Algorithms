@@ -2,4 +2,4 @@
 
 ### Build Tree for Sum
 
-<img src="../SegmentTreeBuild 2.png">
+<img src="SegmentTreeBuild 2.png">
