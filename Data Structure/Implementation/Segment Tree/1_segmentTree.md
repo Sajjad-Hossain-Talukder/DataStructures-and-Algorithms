@@ -16,7 +16,15 @@
 
 
 <details>
-  <summary>Build Tree & Query - Sum ( Code ) </summary>
+  <summary>Update - Single Node - Sum ( Explanation )</summary> <br>
+  <img src="Update_a_node_by_val 1.png">
+  <br>
+  <img src="Update_a_node_by_val 2.png">
+</details>
+
+
+<details>
+  <summary>Build Tree & Query & Update- Sum ( Code ) </summary>
   
   ```
   
@@ -60,10 +68,29 @@ int query ( int segTree[] ,int n ,  int i , int f , int a , int b ){
     res2 = query( segTree,r,m+1,f,a,b);
 
     return res1+res2;
+}
 
+void update( int segTree[] , int n , int a , int b , int pos , int val ){
 
+    if ( pos < a || pos > b )  return ;
+    if ( pos == a && pos == b ){
+        segTree[n] += val;
+        return ;
+    }
+    int l , r , m ;
+    l = n*2+1 ;
+    r = n*2+2 ;
+
+    m = (a+b) / 2 ;
+
+    update( segTree , l , a , m , pos , val ) ;
+    update( segTree , r, m+1 , b , pos, val ) ;
+
+    segTree[n] = segTree[l] + segTree[r];
+    return ;
 
 }
+
 
 int main(){
     int n ;
@@ -82,6 +109,11 @@ int main(){
     for(int i = 0 ; i < n*3 ; i++ )
         cout << segTree[i] << " ";
     cout << endl;
+
+
+    int pos , val  ;
+    cin >> pos >> val ;
+    update(segTree , 0 , 0, n-1  , pos , val ) ;
 
     int q ;
     cin >> q ;
