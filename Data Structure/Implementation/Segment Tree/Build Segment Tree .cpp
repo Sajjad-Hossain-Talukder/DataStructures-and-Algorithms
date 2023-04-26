@@ -18,8 +18,8 @@ void buildTree ( int *ar , int* segTree , int n , int i , int f  ){
 
         m = ( i+f )/2 ;
 
-        init(ar,segTree,l,i,m);
-        init(ar,segTree,r,m+1,f);
+        buildTree(ar,segTree,l,i,m);
+        buildTree(ar,segTree,r,m+1,f);
 
         segTree[n] = segTree[l] + segTree[r] ;
 
