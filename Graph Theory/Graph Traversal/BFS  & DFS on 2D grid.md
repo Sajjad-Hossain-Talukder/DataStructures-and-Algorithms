@@ -19,20 +19,14 @@
 #define mod            1000000007
 #define fast           ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
 using namespace std;
-
-void show(vector<vector<bool>>vis){
-    for(auto a : vis ){
-        for(auto b : a ){
-            cout << b <<" ";
-        }
-        cout << endl;
-    }
-}
+ll x[] = {-1,1,0,0} ;
+ll y[] = {0,0,-1,1};
+ll vis[1001][1001] , n , m , a[1001][1001] , level[1001][1001];
+map<pii,pii>parent;
 
 int main(){
-    ll n , m ;
+
     cin >> n >> m ;
-    ll a[n][m] ;
 
     fr(i,0,n){
         fr(j,0,m){
@@ -41,31 +35,32 @@ int main(){
     }
 
     queue<pair<ll,ll>>q ;
-    vector<vector<bool>>vis(n,vector<bool>(m,false));
-
-    show(vis);
-
     q.push({0,0});
-    
+
+
+
     while(!q.empty()){
-        pair<ll,ll>p = q.front();
+        auto p = q.front();
+        ll i = p.first , j = p.second ;
         q.pop();
-        ll x = p.first , y = p.second ;
-        if(vis[x][y]) continue ;
-        vis[x][y] = 1 ;
-        if(x+1<n && !vis[x+1][y]) q.push({x+1,y});
-        if(x-1>=0 && !vis[x-1][y]) q.push({x-1,y});
-        if(y+1<m && !vis[x][y+1]) q.push({x,y+1});
-        if(y-1>=0 && !vis[x][y-1]) q.push({x,y-1});
+
+        fr(k,0,4){
+            ll nx = i+x[k] , ny = j+y[k] ;
+            if( nx >= 0 && nx < n && ny >= 0 && ny < m && !vis[nx][ny]){
+                vis[nx][ny] = 1 ;
+                q.push({nx,ny});
+                level[nx][ny] = level[i][j]+1;
+                parent[{nx,ny}] = {i,j};
+
+            }
+
+        }
     }
-
-
-    show(vis);
-
-
 
 return 0 ;
 }
+
+
 
 
 
