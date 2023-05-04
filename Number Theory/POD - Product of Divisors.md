@@ -6,7 +6,6 @@ if NOD is Even ,  POD(n) = n<sup>(NOD/2)</sup>
 if NOD is Odd, POD(n) = n<sup>(NOD/2)</sup>*sqrt(n)
 
 
-
 ```
 
 #include<bits/stdc++.h>
@@ -64,8 +63,6 @@ int main(){
         vec.pb(d%10);
         d/=10;
     }
-    // call for prime Factorization 
-    //--------------------------------
     
     primeFactor(n);
     d = occurence.size();
@@ -76,8 +73,7 @@ int main(){
 
        d=nod/2;
 
-// matrix multiplication calling
-//---------------------------------
+
     for(int i = 1 ; i< d ; i++)
         multi(n);
     
