@@ -1,18 +1,20 @@
-//Product of all divisors need total Number of Divisor ( NOD)
-//NOD can be obtained by prime factorization or normal process 
-//if NOD is Even [ POD(n) = n ^ (NOD/2) ]
-//if NOD is odd [ POD(n) =( n ^ (NOD/2) ) * sqrt(n) ]
------------------------------------------------------------
+## Product of all divisors(POD) 
 
+
+if NOD is Even ,  POD(n) = n<sup>(NOD/2)</sup>
+
+if NOD is Odd, POD(n) = n<sup>(NOD/2)</sup>*sqrt(n)
+
+
+
+```
 
 #include<bits/stdc++.h>
 #define pb push_back
 using namespace std;
 
 vector<int>occurence,vec;
-//-------------------------------------------------------------------------------
-//Here , we use primefactorization to get NOD from prime factors Occurence(পুনরাবৃত্তি)
-//------------------------------------------------------------------------------
+
 void primeFactor ( int n ){
     int cnt = 0 ;
     while( n%2 == 0){
@@ -31,9 +33,9 @@ void primeFactor ( int n ){
     if(n>1) occurence.pb( 1 );
 }
 
-//------------------------------------------------------
-//Here I use matrix multiplication Process
-//------------------------------------------------------
+
+//Array multiplication Process
+
 void multi ( int  m){
 
    int  d = vec.size() , carry = 0 ,prod ;
@@ -52,7 +54,8 @@ void multi ( int  m){
    }
 
 }
-//---------------------------------------------------
+
+
 int main(){
     int n,d,nod = 1 ;
     cin>>n;
@@ -80,7 +83,6 @@ int main(){
     
     if(nod&1) multi(sqrt(n));
 
-
    reverse(vec.begin(),vec.end());
 
 //Result
@@ -89,3 +91,6 @@ int main(){
 
 return 0;
 }
+
+```
+
