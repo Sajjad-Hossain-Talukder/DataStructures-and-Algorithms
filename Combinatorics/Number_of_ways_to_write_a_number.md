@@ -21,7 +21,7 @@
 ```
 
 Do you want to output the counts of different ways to write a number? If so, then given a number n which has to be divided into k parts, 
-the count is exactly given by  <b> <sup>(n-1)</sup> C <sub>(n-1)</sub> </b>
+the count is exactly given by  <b> <sup>(n-1)</sup> C <sub>(k-1)</sub> </b>
 
 
 If you plug in, n = 7, k =3, you would get 15, which is what we found above.
