@@ -1,5 +1,6 @@
 ### Code  : 
 
+
 <details>
 <summary> LCS : Length & lCS itself -  O(N^2)  </summary>
     
@@ -120,4 +121,14 @@ return 0 ;
 ```
     
 </details>
+    
+<details>
+    <summary> PROBLEM LINK :  </summary>
+    
+    <ul> 
+        <li>https://cses.fi/problemset/task/1145/</li>
+        <li>https://atcoder.jp/contests/arc149/tasks/arc149_b?lang=en</li>
+    </ul>
+    
+    </details>
 
