@@ -1,4 +1,5 @@
 ### Code  : 
+
 <details>
 <summary> LCS : Length & lCS itself -  O(N^2)  </summary>
     
@@ -52,10 +53,12 @@ return 0 ;
 }
 
 ```
-    </details>
+</details>
 
 <details>
+    
 <summary> LCS : Length -  O(Nlog(N))  </summary>
+    
     
 ```
     
@@ -108,12 +111,13 @@ int main() {
 
         //for(auto x : v ) cout << x << " - "; cout << endl;
     }
-    cout << v.size() << endl;
+    cout <<"Length : "<< v.size() << endl;
 
 return 0 ;
 }
 
 
 ```
-    </details>
+    
+</details>
 
