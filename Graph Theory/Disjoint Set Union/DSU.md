@@ -38,7 +38,7 @@ int main() {
 
     fr(i,1,n+1) {
         par[i] = i ;
-        cnt[i] = 0 ;
+        cnt[i] = 1 ;
     }
 
     fr(i,0,m){
