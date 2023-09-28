@@ -47,7 +47,7 @@ int main() {
         union_node(x,y);
     }
 
-    fr(i,1,n+1) cout <<par[i] <<" " ;
+    fr(i,1,n+1) cout <<findpar(i) <<" " ;
 
 return 0 ;
 }
