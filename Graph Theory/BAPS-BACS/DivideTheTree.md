@@ -1,13 +1,13 @@
 ## Problem Statement:
 Removing an edge divides a tree into two components. You have to remove k edges so that maximum size of any components is minimized.
 <ul>
-  <li>Task-1 : k = 1         #return the sizes and edge </li>
-  <li>Task-2 : any value     #return the sizes and edges </li>
+  <li>Task 1 : k = 1         #return the sizes and edge </li>
+  <li>Task 2 : any value     #return the sizes and edges </li>
 </ul>
 
 
 <details>
-  <summary> Task 01: </summary>
+  <summary> Task 1: </summary>
 
   ```
     vector<ll>tree[100];
@@ -80,7 +80,10 @@ Removing an edge divides a tree into two components. You have to remove k edges 
 12 15
 15 16
 16 17
+
 ```
 
-![Uploading image.png…]()
+![graph](https://github.com/Sajjad-Hossain-Talukder/DataStructures-and-Algorithms/assets/63524824/9f2cee3c-7a75-4942-943b-eae9566c2c65)
+
+
 
