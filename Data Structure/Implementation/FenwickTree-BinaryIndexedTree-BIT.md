@@ -15,28 +15,13 @@ const int sz = 1001;
 int a[sz], tree[sz], n ;
 
 void build_update(int i, int val){
-    while(i<=n){
-        //cout << i << " " << val << endl;
-        if(i>n) return;
-        tree[i] += val ;
-        i+=(i&(i*(-1)));
-    }
+  for( ; i<=sz; i+=(i&(i*(-1))) ) tree[i] += val ;
 }
 
 ll query(ll n){
-    int x = 1 ;
     ll res = 0 ;
-    while(n>=x){
-        cout << n <<" "<< x <<  endl;
-        if(n&x){
-            res+=tree[n];
-            n = n&(~x);
-        }
-        x<<=1;
-    }
-    cout << res << endl;
+    for ( ; n > 0; n -= n & -n) res+=tree[n];
     return res ;
-
 }
 
 int main() {
