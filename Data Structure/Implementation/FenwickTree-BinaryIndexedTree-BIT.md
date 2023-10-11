@@ -1,6 +1,7 @@
 <details>
   <summary>Explanation: </summary>
 <br>
+  
   <ul> 
     <li> <a href="https://youtu.be/aAALKHLeexw?si=wDbOfdP-h4NTlU1z"> Youtube </a> </li>
     <li> <a href="https://cp-algorithms.com/data_structures/fenwick.html#one-based-indexing-approach"> CP Algo </a> </li>
