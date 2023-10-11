@@ -18,8 +18,8 @@
 const int sz = 1001;
 int a[sz], tree[sz], n ;
 
-void build_update(int i, int val){
-  for( ; i<=sz; i+= i & -i ) tree[i] += val ;
+void build_update(int n, int val){
+  for( ; n<=sz; n+= n & -n ) tree[n] += val ;
 }
 
 ll query(ll n){
