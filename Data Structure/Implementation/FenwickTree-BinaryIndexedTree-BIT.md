@@ -99,3 +99,49 @@ return 0 ;
 ```
 
 </details>
+
+
+<details>
+
+<summary> Two Dimensional Grid : BIT </summary>
+
+```
+const int sz = 1001 ;
+int t , q , ty , a[sz][sz];
+int xl, yl, xf, yf;
+bool vis[sz][sz];
+
+
+void update(int x , int y){
+    if(vis[x][y]) return;
+    vis[x][y] = 1 ;
+    for(int i = x ; i<sz; i = i|(i+1) ){
+        for(int j = y ; j<sz; j = j|(j+1) ){
+            a[i][j]+=1;
+        }
+    }
+}
+
+ll query(int x , int y ){
+    ll res = 0;
+    for (int i = x; i >= 0; i = (i & (i + 1)) - 1){
+        for (int j = y; j >= 0; j = (j & (j + 1)) - 1){
+            res += a[i][j];
+        }
+    }
+    return res;
+}
+
+
+
+```
+
+</details>
+
+<details> 
+  <summary> Problem to Solve: </summary>
+
+  <ul>
+    <li> https://lightoj.com/problem/points-in-rectangle </li>
+  </ul>
+</details>
