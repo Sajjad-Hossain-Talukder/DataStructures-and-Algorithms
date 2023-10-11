@@ -11,7 +11,7 @@
 </details>
 
 <details>
-  <summary> Code: One based Indexing  </summary>
+  <summary> Code: one-based Indexing (sum)  </summary>
 
 
 ```
@@ -46,5 +46,56 @@ return 0 ;
 
 ```
 
+
+</details>
+
+<details>
+  <summary> Code : Zero Based Indexing (sum) </summary>
+
+  
+  
+
+
+
+```
+
+const int sz = 1001;
+int a[sz], tree[sz], n ;
+
+int query_z(int r) {
+    int res = 0;
+    for (; r >= 0; r = (r & (r + 1)) - 1) res += tree[r];
+    return res;
+}
+
+int range(int l, int r) {
+    return query_z(r) - query_z(l - 1);
+}
+
+void build_update_z(int x, int val) {
+    for (; x < n; x = x | (x + 1)) tree[x] += val;
+}
+
+
+
+int main() {
+
+    cin >> n ;
+
+    memset(tree,0,sizeof(tree));
+    fr(i,0,n) {
+        cin >> a[i];
+        build_update_z(i,a[i]);
+
+    }
+
+    //build_update(5,5);
+    cout <<range(2,4) << endl;
+
+return 0 ;
+}
+
+
+```
 
 </details>
