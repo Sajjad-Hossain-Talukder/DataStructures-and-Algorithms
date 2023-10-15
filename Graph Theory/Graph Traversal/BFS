@@ -28,14 +28,14 @@ Time Complexity : O ( n + e ) , n = node , e = edge
 		while(! q.empty()){
 			d = q.front();
 			q.pop();
-			visited[d] = 1 ;
+
 			for(auto a : graph[d]){
 				if( !visited[a] ){
 					
 					parent[a] = d;
 					q.push(a);
 					level[a] = level[d]+1;
-					visited[a] = 1;
+					visited[a] = 1; // keep vis inside always , no way to keep it outside 
 				}
 			}		
 			
