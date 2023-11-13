@@ -71,72 +71,65 @@ Blog :
   <summary> Code : </summary>
   
   ```
-  #include<bits/stdc++.h>
-#define ll long long
-#define pb push_back
-#define fr(i,s,e) for(ll i=s;i<e;i++)
-#define rfr(i,e,s) for(ll i=e;i>=s;i--)
-#define nl  "\n"
-#define mod 1000000007
+
+#include<bits/stdc++.h>
+#define ll             int
+#define pb             push_back
+#define ff             first
+#define ss             second
 using namespace std;
-vector < pair <ll,ll> > result ; 
 
-ll pathCompression ( ll parent[] , ll n ){
-    if( parent[n] < 0 ) return n ;
-    parent[n] = pathCompression(parent,parent[n]);
+int findpar(int par[],int i ){
+    if(i==par[i]) return i ;
+    par[i] = findpar(par,par[i]);
+    return par[i];
 }
 
-void Kruskal (ll parent[] , vector<pair<ll,pair<ll,ll>>>graph ){
-  
-    for(auto a : graph ){
-        ll i = a.second.first , x = a.second.first ;
-        ll j = a.second.second , y = a.second.second ;
+int main() {
 
-        while( parent[x] > 0 || parent[y] > 0 ){
-            if( parent[x] > 0 ) x = parent[x];
-            if( parent[y] > 0 ) y = parent[y];
-        }
-
-        if( x != y ) {
-            result.pb({i,j});
-            if( parent[x] <= parent[y]){
-                parent[x]+=parent[y] ;
-                parent[y] = x ;
-            }
-            else {
-                parent[y]+=parent[x] ;
-                parent[x] = y ;
-            }
-            pathCompression(parent,i);
-            pathCompression(parent,j); 
-        }
-    }
-}
-
-int main(){
-
-    #ifndef CP
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
-
-    ll n , e , x , y , cost ;
+    int n, e, x, y, cst;
     cin >> n >> e ;
 
-    vector < pair<ll ,pair<ll,ll>>  > graph  ;
-    ll parent[n+1];
-    memset(parent,-1,sizeof(parent));
-    
+    vector< pair<ll,pair<ll,ll>> >  grp ;
+    vector< pair<int,int> > resultant_edge  ;
 
-    fr(i,0,e){
-        cin >> x >> y >> cost ;
-        graph.pb({cost,{x,y}});
+    int par[n+1] , cnt[n+1];
+    for( int i = 0 ; i<=n ; i+=1 ) par[i] = i , cnt[i] = 1 ;
+
+
+    for(int i = 0 ; i < e ; i+=1 ){
+        cin >> x >> y >> cst ;
+        grp.pb({cst,{x,y}});
     }
-    sort(graph.begin(),graph.end());
-    Kruskal(parent,graph);
- 
-    for(auto a : result)
-        cout << a.first <<" "<< a.second << endl;
+
+    sort(grp.begin(),grp.end());
+
+
+    for(auto p : grp ){
+        cst = p.first , x = p.second.first , y =  p.second.second ;
+
+        int par_x = findpar(par,x);
+        int par_y = findpar(par,y);
+
+        if( par_x != par_y ){
+            resultant_edge.pb({x,y});
+            if(cnt[par_x]>=cnt[par_x]){
+                par[par_y] = par_x;
+                cnt[par_x]+=cnt[par_y];
+                cnt[par_y] = 0 ;
+                par[y] = findpar(par,y);
+            }
+            else {
+                par[par_x] = par_y ;
+                cnt[par_y]+=cnt[par_x];
+                cnt[par_x] = 0 ;
+                par[x] = findpar(par,x);
+
+            }
+        }
+    }
+
+    for(auto x : resultant_edge ) cout << x.ff  << " " << x.ss << endl;
 
 return 0 ;
 }
