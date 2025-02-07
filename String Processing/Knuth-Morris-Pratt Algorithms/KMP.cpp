@@ -7,21 +7,19 @@
 #define mod 1000000007
 using namespace std;
 
-vector<int> createPatternArray(string pattern)
-{
-    int n = pattern.size(), i = 1, j = 0;
+
+
+vector<int> createPatternArray(string pattern) {
+    int i = 1, j = 0, n = pattern.size();
     vector<int> lps(n, 0);
-    while (i < n){
-        if (pattern[i] == pattern[j]){
-            j++;
-            lps[i] = j;
+    while (i < n) {
+        if (pattern[i] == pattern[j]) {
+            lps[i] = ++j;
             i++;
-        }
-        else{
-            if (j != 0){
+        } else {
+            if (j != 0) {
                 j = lps[j - 1];
-            }
-            else{
+            } else {
                 lps[i] = 0;
                 i++;
             }
@@ -30,36 +28,32 @@ vector<int> createPatternArray(string pattern)
     return lps;
 }
 
-vector<int> KMP(string text, string pattern){
-    std::vector<int> matches;
-    if (pattern.empty())
-        return matches;
-
+vector<int> KMP(string text, string pattern) {
+    vector<int> matches;
+    if (pattern.empty()) return matches;
     vector<int> lps = createPatternArray(pattern);
+    int i = 0, j = 0, n = text.size(), m = pattern.size();
 
-    int i = 0, j = 0;
-
-    while (i < text.length()){
-        if (pattern[j] == text[i]){
-            i++;
-            j++;
-        }
-
-        if (j == pattern.length()){
-            matches.push_back(i - j);
-            j = lps[j - 1];
-        }
-        else if (i < text.length() && pattern[j] != text[i]){
-            if (j != 0){
+    while (i < n) {
+        if (text[i] == pattern[j]) {
+            ++i;
+            ++j;
+            if (j == m) {
+                matches.push_back(i - j);
                 j = lps[j - 1];
+                // break;
             }
-            else {
-                i++;
+        } else {
+            if (j != 0) {
+                j = lps[j - 1];
+            } else {
+                ++i;
             }
         }
     }
     return matches;
 }
+
 
 int main(){
     string text = "abxabcdabxabcdabcdabcy", pattern = "abcdabcy";
